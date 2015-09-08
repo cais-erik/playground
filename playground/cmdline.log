@@ -1,0 +1,11 @@
+vi HelloWorld.java       (add change)
+git pull                 (which failed because of remote changes)
+git stash                (pushed onto stash stack)
+git pull                 (pulled down remote changes)
+git stash pop            (pop stash stack)
+vi HelloWorld.java       (file contains both lines plus some >> <<, resolve)
+git pull                 (error because of unresolved merge)
+git add HelloWorld.java  (tell git file was merged)
+git pull                 (no errors, no changes)
+git commit -m "updating HelloWorld (stash/pull/stash-pop/merge)"
+git push
