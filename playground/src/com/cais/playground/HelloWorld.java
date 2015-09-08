@@ -12,5 +12,6 @@ public class HelloWorld {
 		System.out.println("added with 7 commit from command line (branch/merge/commit/push)");
 		System.out.println("added from Erik's eclipse");
 		System.out.println("adding another change from Erik's eclipse, no merge necessary");
+		System.out.println("adding yet another change from Erik's eclipse, merge will be necessary");
 	}
 }
