@@ -9,3 +9,22 @@ git add HelloWorld.java  (tell git file was merged)
 git pull                 (no errors, no changes)
 git commit -m "updating HelloWorld (stash/pull/stash-pop/merge)"
 git push
+
+
+
+(approx)
+git branch eriksBranch      (create branch == master)
+git checkout eriksBranch    (declare wd is now branch instead of master)
+vi HelloWorld.java          (add changes)
+git commit -m "commit sysout to local branch"  (didn't work)
+git add HelloWorld.java     (not sure why I had to do this)
+git commit -m "commit sysout to local branch"  (worked)
+git checkout master         (switch to master branch)
+git pull                    (get remote changes)
+more HelloWorld.java        (confirmed changes are not there)
+<would run tests here, to confirm remote changes are 'good'>
+git merge eriksBranch       (pull changes in from branch, with some >> <<)
+vi HelloWorld.java          (clean up file)
+git add HelloWorld.java     (tell git the file is merged)
+git commit -m "merge"       
+git push                    
