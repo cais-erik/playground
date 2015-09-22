@@ -21,7 +21,7 @@ public class Bobby {
 		return "Don't hassle me, I'm local.";
 	}
 	
-	public void setSphinct() {
+	public void setSphincter() {
 		
 	}
 }
