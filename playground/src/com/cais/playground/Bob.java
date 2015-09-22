@@ -9,6 +9,8 @@ public class Bob {
 		//trying again
 		//Davies strikes again
 		//Orchestrating a conflict.
+		//Orchestrating a conflict again (manually merged)
 		//a change erik will commit and then merge into remote commits
+		//Orchestrating an opera (manually merged)
 	}
 }
