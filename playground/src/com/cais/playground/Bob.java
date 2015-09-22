@@ -20,4 +20,8 @@ public class Bob {
 	public String getShirt() {
 		return "Don't hassle me, I'm local.";
 	}
+	
+	public void setSphinct() {
+		
+	}
 }
