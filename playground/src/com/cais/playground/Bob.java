@@ -16,4 +16,8 @@ public class Bob {
 	public String getBobStuff() {
 		return "What about Bob?";
 	}
+
+	public String getShirt() {
+		return "Don't hassle me, I'm local.";
+	}
 }
