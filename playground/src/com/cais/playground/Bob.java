@@ -8,5 +8,6 @@ public class Bob {
 		//seeing if changing (but not yet committing) a file creates orig_head
 		//trying again
 		//Davies strikes again
+		//Orchestrating a conflict.
 	}
 }
