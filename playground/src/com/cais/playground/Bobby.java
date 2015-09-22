@@ -1,6 +1,6 @@
 package com.cais.playground;
 
-public class Bob {
+public class Bobby {
 
 	public void nervig() {
 		System.out.println("Difference!");
