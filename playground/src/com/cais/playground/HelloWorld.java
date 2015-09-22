@@ -1,5 +1,7 @@
 package com.cais.playground;
 
+import java.util.Date;
+
 public class HelloWorld {
 
 	public static void main(String[] args) {
@@ -20,5 +22,9 @@ public class HelloWorld {
 
 	public String notReally() {
 		return "Bite me.";
+	}
+
+	public String really() {
+		return new Date().toString();
 	}
 }
