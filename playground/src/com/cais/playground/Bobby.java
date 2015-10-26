@@ -14,14 +14,14 @@ public class Bobby {
 	}
 
 	public String getBobStuff() {
-		return "What about Bob?";
+		return "What about Bob?  This should create a conflict.";
 	}
 
 	public String getShirt() {
 		return "Don't hassle me, I'm local.";
 	}
-	
+
 	public void setSphincter() {
-		
+
 	}
 }

@@ -5,12 +5,12 @@ import java.util.Date;
 public class Tarzan {
 
 	// something to commit
-	//ORIG_HEAD test
-	
+	// ORIG_HEAD test
+
 	public void setSphincter() {
-		
+		System.out.println("love me some conflicts.");
 	}
-	
+
 	public String getSphinct() {
 		return "Erik's is operating within normal parameters.  Third Commit.";
 	}

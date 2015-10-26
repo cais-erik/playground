@@ -21,7 +21,7 @@ public class HelloWorld {
 	}
 
 	public String notReally() {
-		return "Bite me.";
+		return "Bite me.  And my conflict inducing change.";
 	}
 
 	public String really() {
