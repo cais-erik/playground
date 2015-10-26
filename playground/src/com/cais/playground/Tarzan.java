@@ -6,7 +6,8 @@ public class Tarzan {
 
 	// something to commit
 	// ORIG_HEAD test
-	// change that should conflict to rebase from Bob to master
+	// change to rebase from Bob to Master
+	// change 2 to rebase from Bob to Master
 
 	public void setSphincter() {
 		System.out.println("love me some conflicts.");
