@@ -18,6 +18,7 @@ public class HelloWorld {
 		System.out.println("Boots w/ the fuurrrrrr...part quattro.");
 		System.out.println("Part Trey.");
 		// ORIG_HEAD test
+		System.out.println("Change that really should conflict from Bob to Master");
 	}
 
 	public String notReally() {

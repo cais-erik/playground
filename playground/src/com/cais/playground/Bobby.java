@@ -11,6 +11,7 @@ public class Bobby {
 		// Orchestrating a conflict again (manually merged)
 		// a change erik will commit and then merge into remote commits
 		// Orchestrating an opera (manually merged)
+		System.out.println("Change that should conflict to rebase from Bob to Master");
 	}
 
 	public String getBobStuff() {
