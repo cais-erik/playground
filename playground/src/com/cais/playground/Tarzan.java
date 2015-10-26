@@ -7,6 +7,7 @@ public class Tarzan {
 	// something to commit
 	// ORIG_HEAD test
 	// change to rebase from Bob to Master
+	// change 2 to rebase from Bob to Master
 
 	public void setSphincter() {
 
