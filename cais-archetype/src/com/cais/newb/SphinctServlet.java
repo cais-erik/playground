@@ -15,7 +15,10 @@ public class SphinctServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath()).append("\n")
-				.append(new Library().getFileResourceContents());
+		String contents = new Library().getFileResourceContents();
+
+		System.out.println("Contents:  " + contents);
+
+		response.getWriter().append("Served at: ").append(request.getContextPath()).append("\n").append(contents);
 	}
 }
