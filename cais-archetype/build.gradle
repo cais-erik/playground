@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+webAppDirName='WebContent'
+
+repositories {
+	mavenCentral()
+}
+
+eclipse {
+	wtp {
+		facet {
+			facet name: 'jst.web', 		version: '3.1'
+			facet name: 'java', 		version: '1.8'
+			facet name: 'wst.jsdt.web', version: '1.0'
+		}
+	}
+}
+
+dependencies {
+	compile 'joda-time:joda-time:2.3'
+	testCompile 'junit:junit:4.8.2'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.3'
+}
