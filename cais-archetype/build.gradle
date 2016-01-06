@@ -20,6 +20,25 @@ eclipse {
 	}
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src'
+        }
+    }
+    test {
+    	java {
+            srcDir 'test-src'
+        }
+        resources {
+            srcDir 'test-src'
+        }
+    }
+}
+
 dependencies {
 	compile 'joda-time:joda-time:2.3'
 	testCompile 'junit:junit:4.8.2'
