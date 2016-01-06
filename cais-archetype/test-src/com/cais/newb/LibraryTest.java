@@ -1,6 +1,9 @@
+package com.cais.newb;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import com.cais.newb.Library;
 
 public class LibraryTest {
 
