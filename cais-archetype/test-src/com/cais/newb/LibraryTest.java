@@ -6,9 +6,9 @@ public class LibraryTest {
 
 	@Test
 	public void testSomeLibraryMethod() {
-		Library classUnderTest = new Library();
+		Library classUnderTest = new LibraryImpl();
 		String contents = classUnderTest.getFileResourceContents();
 
-		assert !contents.equals(Library.couldNotReadMsg) : "got the could-not-read msg of " + contents;
+		assert !contents.equals(LibraryImpl.couldNotReadMsg) : "got the could-not-read msg of " + contents;
 	}
 }

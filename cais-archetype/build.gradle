@@ -45,6 +45,7 @@ dependencies {
 	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
 	compile 'org.apache.tomcat:tomcat-servlet-api:8.0.28'
 	compile 'javax.servlet:jstl:1.2'
+	compile 'javax.inject:javax.inject:1'
 	
 	testCompile 'junit:junit:4.8.2'
 }

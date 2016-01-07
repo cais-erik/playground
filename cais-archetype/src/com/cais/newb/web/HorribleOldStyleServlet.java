@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-import com.cais.newb.Library;
+import com.cais.newb.LibraryImpl;
 
 public class HorribleOldStyleServlet extends HttpServlet {
 
@@ -17,7 +17,7 @@ public class HorribleOldStyleServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String contents = new Library().getFileResourceContents();
+		String contents = new LibraryImpl().getFileResourceContents();
 
 		System.out.println("Contents:  " + contents);
 
