@@ -1,8 +1,8 @@
 package com.cais.newb;
 
-import java.io.RandomAccessFile;
+import java.io.*;
 import java.lang.invoke.MethodHandles;
-import java.net.URL;
+import java.net.*;
 
 import org.apache.log4j.Logger;
 
@@ -20,8 +20,7 @@ public class Library {
 	}
 
 	public String getFileResourceContents() {
-		URL rsrcFileUrl = Library.class.getResource(resourcePath);
-		String fileContents = readResourceContents(rsrcFileUrl);
+		String fileContents = readResourceContents();
 		return fileContents;
 	}
 
@@ -29,13 +28,18 @@ public class Library {
 		log.warn("Resource file contains:  " + new Library().getFileResourceContents());
 	}
 
-	private static String readResourceContents(URL rsrcFileUrl) {
-		try (RandomAccessFile rsrcFile = new RandomAccessFile(rsrcFileUrl.getFile(), readOnlyMode)) {
-			String fileContents = rsrcFile.readLine();
-			return fileContents;
+	private static String readResourceContents() {
+		try {
+			URL rsrcFileUrl = Library.class.getResource(resourcePath);
+			URI rsrcFileUri = rsrcFileUrl.toURI();
+			File rsrcFileLoc = new File(rsrcFileUri);
+			try (RandomAccessFile rsrcFile = new RandomAccessFile(rsrcFileLoc, readOnlyMode)) {
+				String fileContents = rsrcFile.readLine();
+				return fileContents;
+			}
 		}
 		catch (Exception e) {
-			e.printStackTrace();
+			log.error("Exc while reading resource file:", e);
 		}
 
 		return couldNotReadMsg;

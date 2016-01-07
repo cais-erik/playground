@@ -1,9 +1,11 @@
-package com.cais.newb;
+package com.cais.newb.web;
 
 import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
+
+import com.cais.newb.Library;
 
 public class SphinctServlet extends HttpServlet {
 
