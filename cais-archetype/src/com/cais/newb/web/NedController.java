@@ -9,375 +9,375 @@ import org.springframework.web.bind.annotation.*;
 import com.cais.newb.Library;
 
 @Controller
-public class SphinctController {
+public class NedController {
 
 	private static final String	defaultEcho	= "someDefaultValue";
 
 	@Inject
 	private Library				lib;
 
-	@RequestMapping("/helloWorld")
-	public String helloWorldHandler(
+	@RequestMapping("/helloNed")
+	public String helloNedHandler(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
 		if (echo.equals(defaultEcho)) {
 			echo = lib.getFileResourceContents();
 		}
 
 		viewModel.addAttribute("echo", echo);
-		return "helloWorld.jsp";
+		return "helloNed.jsp";
 	}
 
-	@RequestMapping("/helloWorld2")
-	public String helloWorldHandler2(
+	@RequestMapping("/helloNed2")
+	public String helloNedHandler2(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld3")
-	public String helloWorldHandler3(
+	@RequestMapping("/helloNed3")
+	public String helloNedHandler3(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld4")
-	public String helloWorldHandler4(
+	@RequestMapping("/helloNed4")
+	public String helloNedHandler4(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld5")
-	public String helloWorldHandler5(
+	@RequestMapping("/helloNed5")
+	public String helloNedHandler5(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld6")
-	public String helloWorldHandler6(
+	@RequestMapping("/helloNed6")
+	public String helloNedHandler6(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld7")
-	public String helloWorldHandler7(
+	@RequestMapping("/helloNed7")
+	public String helloNedHandler7(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld8")
-	public String helloWorldHandler8(
+	@RequestMapping("/helloNed8")
+	public String helloNedHandler8(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld9")
-	public String helloWorldHandler9(
+	@RequestMapping("/helloNed9")
+	public String helloNedHandler9(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld10")
-	public String helloWorldHandler10(
+	@RequestMapping("/helloNed10")
+	public String helloNedHandler10(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld11")
-	public String helloWorldHandler11(
+	@RequestMapping("/helloNed11")
+	public String helloNedHandler11(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld12")
-	public String helloWorldHandler12(
+	@RequestMapping("/helloNed12")
+	public String helloNedHandler12(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld13")
-	public String helloWorldHandler13(
+	@RequestMapping("/helloNed13")
+	public String helloNedHandler13(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld14")
-	public String helloWorldHandler14(
+	@RequestMapping("/helloNed14")
+	public String helloNedHandler14(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld15")
-	public String helloWorldHandler15(
+	@RequestMapping("/helloNed15")
+	public String helloNedHandler15(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld16")
-	public String helloWorldHandler16(
+	@RequestMapping("/helloNed16")
+	public String helloNedHandler16(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld17")
-	public String helloWorldHandler17(
+	@RequestMapping("/helloNed17")
+	public String helloNedHandler17(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld18")
-	public String helloWorldHandler18(
+	@RequestMapping("/helloNed18")
+	public String helloNedHandler18(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld19")
-	public String helloWorldHandler19(
+	@RequestMapping("/helloNed19")
+	public String helloNedHandler19(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld20")
-	public String helloWorldHandler20(
+	@RequestMapping("/helloNed20")
+	public String helloNedHandler20(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld21")
-	public String helloWorldHandler21(
+	@RequestMapping("/helloNed21")
+	public String helloNedHandler21(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld22")
-	public String helloWorldHandler22(
+	@RequestMapping("/helloNed22")
+	public String helloNedHandler22(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld23")
-	public String helloWorldHandler23(
+	@RequestMapping("/helloNed23")
+	public String helloNedHandler23(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld24")
-	public String helloWorldHandler24(
+	@RequestMapping("/helloNed24")
+	public String helloNedHandler24(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld25")
-	public String helloWorldHandler25(
+	@RequestMapping("/helloNed25")
+	public String helloNedHandler25(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld26")
-	public String helloWorldHandler26(
+	@RequestMapping("/helloNed26")
+	public String helloNedHandler26(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld27")
-	public String helloWorldHandler27(
+	@RequestMapping("/helloNed27")
+	public String helloNedHandler27(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld28")
-	public String helloWorldHandler28(
+	@RequestMapping("/helloNed28")
+	public String helloNedHandler28(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld29")
-	public String helloWorldHandler29(
+	@RequestMapping("/helloNed29")
+	public String helloNedHandler29(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloWorld30")
-	public String helloWorldHandler30(
+	@RequestMapping("/helloNed30")
+	public String helloNedHandler30(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld1")
-	public String goodbyeWorldHandler31(
+	@RequestMapping("/goodbyeNed1")
+	public String goodbyeNedHandler31(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld2")
-	public String goodbyeWorldHandler2(
+	@RequestMapping("/goodbyeNed2")
+	public String goodbyeNedHandler2(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld3")
-	public String goodbyeWorldHandler3(
+	@RequestMapping("/goodbyeNed3")
+	public String goodbyeNedHandler3(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld4")
-	public String goodbyeWorldHandler4(
+	@RequestMapping("/goodbyeNed4")
+	public String goodbyeNedHandler4(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld5")
-	public String goodbyeWorldHandler5(
+	@RequestMapping("/goodbyeNed5")
+	public String goodbyeNedHandler5(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld6")
-	public String goodbyeWorldHandler6(
+	@RequestMapping("/goodbyeNed6")
+	public String goodbyeNedHandler6(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld7")
-	public String goodbyeWorldHandler7(
+	@RequestMapping("/goodbyeNed7")
+	public String goodbyeNedHandler7(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld8")
-	public String goodbyeWorldHandler8(
+	@RequestMapping("/goodbyeNed8")
+	public String goodbyeNedHandler8(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld9")
-	public String goodbyeWorldHandler9(
+	@RequestMapping("/goodbyeNed9")
+	public String goodbyeNedHandler9(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld10")
-	public String goodbyeWorldHandler10(
+	@RequestMapping("/goodbyeNed10")
+	public String goodbyeNedHandler10(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld11")
-	public String goodbyeWorldHandler11(
+	@RequestMapping("/goodbyeNed11")
+	public String goodbyeNedHandler11(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld12")
-	public String goodbyeWorldHandler12(
+	@RequestMapping("/goodbyeNed12")
+	public String goodbyeNedHandler12(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld13")
-	public String goodbyeWorldHandler13(
+	@RequestMapping("/goodbyeNed13")
+	public String goodbyeNedHandler13(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld14")
-	public String goodbyeWorldHandler14(
+	@RequestMapping("/goodbyeNed14")
+	public String goodbyeNedHandler14(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld15")
-	public String goodbyeWorldHandler15(
+	@RequestMapping("/goodbyeNed15")
+	public String goodbyeNedHandler15(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld16")
-	public String goodbyeWorldHandler16(
+	@RequestMapping("/goodbyeNed16")
+	public String goodbyeNedHandler16(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld17")
-	public String goodbyeWorldHandler17(
+	@RequestMapping("/goodbyeNed17")
+	public String goodbyeNedHandler17(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld18")
-	public String goodbyeWorldHandler18(
+	@RequestMapping("/goodbyeNed18")
+	public String goodbyeNedHandler18(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld19")
-	public String goodbyeWorldHandler19(
+	@RequestMapping("/goodbyeNed19")
+	public String goodbyeNedHandler19(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld20")
-	public String goodbyeWorldHandler20(
+	@RequestMapping("/goodbyeNed20")
+	public String goodbyeNedHandler20(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld21")
-	public String goodbyeWorldHandler21(
+	@RequestMapping("/goodbyeNed21")
+	public String goodbyeNedHandler21(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld22")
-	public String goodbyeWorldHandler22(
+	@RequestMapping("/goodbyeNed22")
+	public String goodbyeNedHandler22(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld23")
-	public String goodbyeWorldHandler23(
+	@RequestMapping("/goodbyeNed23")
+	public String goodbyeNedHandler23(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld24")
-	public String goodbyeWorldHandler24(
+	@RequestMapping("/goodbyeNed24")
+	public String goodbyeNedHandler24(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld25")
-	public String goodbyeWorldHandler25(
+	@RequestMapping("/goodbyeNed25")
+	public String goodbyeNedHandler25(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld26")
-	public String goodbyeWorldHandler26(
+	@RequestMapping("/goodbyeNed26")
+	public String goodbyeNedHandler26(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld27")
-	public String goodbyeWorldHandler27(
+	@RequestMapping("/goodbyeNed27")
+	public String goodbyeNedHandler27(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld28")
-	public String goodbyeWorldHandler28(
+	@RequestMapping("/goodbyeNed28")
+	public String goodbyeNedHandler28(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld29")
-	public String goodbyeWorldHandler29(
+	@RequestMapping("/goodbyeNed29")
+	public String goodbyeNedHandler29(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeWorld30")
-	public String goodbyeWorldHandler30(
+	@RequestMapping("/goodbyeNed30")
+	public String goodbyeNedHandler30(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloWorldHandler(echo, viewModel);
+		return helloNedHandler(echo, viewModel);
 	}
 }
