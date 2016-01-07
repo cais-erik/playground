@@ -1,13 +1,22 @@
 package com.cais.newb;
 
-import org.junit.Test;
+import javax.inject.Inject;
 
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "/WebContent/WEB-INF/applicationContext.xml" })
 public class LibraryTest {
+
+	@Inject
+	private Library lib;
 
 	@Test
 	public void testSomeLibraryMethod() {
-		Library classUnderTest = new LibraryImpl();
-		String contents = classUnderTest.getFileResourceContents();
+		String contents = lib.getFileResourceContents();
 
 		assert !contents.equals(LibraryImpl.couldNotReadMsg) : "got the could-not-read msg of " + contents;
 	}
