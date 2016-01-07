@@ -24,6 +24,6 @@ public class SphinctController {
 		}
 
 		viewModel.addAttribute("echo", echo);
-		return "helloWorld";
+		return "helloWorld.jsp";
 	}
 }

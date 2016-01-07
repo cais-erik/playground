@@ -25,17 +25,16 @@ public class LibraryImpl implements Library {
 		return fileContents;
 	}
 
-	public static void main(String[] args) {
-		log.warn("Resource file contains:  " + new LibraryImpl().getFileResourceContents());
-	}
-
 	private static String readResourceContents() {
+
 		try {
 			URL rsrcFileUrl = LibraryImpl.class.getResource(resourcePath);
 			URI rsrcFileUri = rsrcFileUrl.toURI();
 			File rsrcFileLoc = new File(rsrcFileUri);
 			try (RandomAccessFile rsrcFile = new RandomAccessFile(rsrcFileLoc, readOnlyMode)) {
 				String fileContents = rsrcFile.readLine();
+
+				log.warn("Resource file contains:  " + fileContents);
 				return fileContents;
 			}
 		}

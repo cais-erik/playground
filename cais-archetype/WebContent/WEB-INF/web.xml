@@ -4,17 +4,12 @@
 	version="3.1">
 
 	<servlet>
-		<servlet-name>SphincterBoy</servlet-name>
-		<servlet-class>com.cais.newb.web.HorribleOldStyleServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SphincterBoy</servlet-name>
-		<url-pattern>/julian</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
 		<servlet-name>SpringMvcDispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -22,11 +17,6 @@
 		<servlet-name>SpringMvcDispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/SpringMvcDispatcher-servlet.xml</param-value>
-	</context-param>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
