@@ -7,11 +7,11 @@ import javax.servlet.http.*;
 
 import com.cais.newb.Library;
 
-public class SphinctServlet extends HttpServlet {
+public class HorribleOldStyleServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	public SphinctServlet() {
+	public HorribleOldStyleServlet() {
 	}
 
 	@Override

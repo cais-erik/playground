@@ -5,7 +5,7 @@
 
 	<servlet>
 		<servlet-name>SphincterBoy</servlet-name>
-		<servlet-class>com.cais.newb.web.SphinctServlet</servlet-class>
+		<servlet-class>com.cais.newb.web.HorribleOldStyleServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>SphincterBoy</servlet-name>
