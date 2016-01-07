@@ -47,7 +47,9 @@ dependencies {
 	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
 	compile 'org.springframework:spring-test:4.2.4.RELEASE'
 	compile 'javax.inject:javax.inject:1'
-	
+	compile 'org.springframework.security:spring-security-web:4.0.3.RELEASE'
+	compile 'org.springframework.security:spring-security-config:4.0.3.RELEASE'
+
 	testCompile 'junit:junit:4.12'
 }
 
