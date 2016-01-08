@@ -12,7 +12,8 @@
 	<context:component-scan base-package="com.cais.newb.beans" />
 
 	<security:http auto-config="true">
-		<security:intercept-url pattern="/**" access="permitAll" />
+		<!-- <security:intercept-url pattern="/**" access="permitAll" /> -->
+		<security:intercept-url pattern="/**" access="isAuthenticated()" />
 	</security:http>
 
 	<security:authentication-manager />

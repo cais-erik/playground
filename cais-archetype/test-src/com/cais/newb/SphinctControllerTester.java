@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -23,7 +24,9 @@ public class SphinctControllerTester {
 	@Test
 	public void testReturnedView() throws Exception {
 
-		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).build();
+		FilterChainProxy springSecurityFilter = webAppContext.getBean(FilterChainProxy.class);
+		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).addFilter(springSecurityFilter, "/*")
+				.build();
 		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/helloWorld");
 
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();

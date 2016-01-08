@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.cais.newb.Library;
 
 @Controller
-public class JaneController {
+public class AddConfigWeight4Controller {
 
 	private static final String	defaultEcho	= "someDefaultValue";
 

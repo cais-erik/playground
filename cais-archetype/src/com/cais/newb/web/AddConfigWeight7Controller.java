@@ -9,375 +9,375 @@ import org.springframework.web.bind.annotation.*;
 import com.cais.newb.Library;
 
 @Controller
-public class BobController {
+public class AddConfigWeight7Controller {
 
 	private static final String	defaultEcho	= "someDefaultValue";
 
 	@Inject
 	private Library				lib;
 
-	@RequestMapping("/helloBob")
-	public String helloBobHandler(
+	@RequestMapping("/helloMary")
+	public String helloMaryHandler(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
 		if (echo.equals(defaultEcho)) {
 			echo = lib.getFileResourceContents();
 		}
 
 		viewModel.addAttribute("echo", echo);
-		return "helloBob.jsp";
+		return "helloMary.jsp";
 	}
 
-	@RequestMapping("/helloBob2")
-	public String helloBobHandler2(
+	@RequestMapping("/helloMary2")
+	public String helloMaryHandler2(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob3")
-	public String helloBobHandler3(
+	@RequestMapping("/helloMary3")
+	public String helloMaryHandler3(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob4")
-	public String helloBobHandler4(
+	@RequestMapping("/helloMary4")
+	public String helloMaryHandler4(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob5")
-	public String helloBobHandler5(
+	@RequestMapping("/helloMary5")
+	public String helloMaryHandler5(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob6")
-	public String helloBobHandler6(
+	@RequestMapping("/helloMary6")
+	public String helloMaryHandler6(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob7")
-	public String helloBobHandler7(
+	@RequestMapping("/helloMary7")
+	public String helloMaryHandler7(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob8")
-	public String helloBobHandler8(
+	@RequestMapping("/helloMary8")
+	public String helloMaryHandler8(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob9")
-	public String helloBobHandler9(
+	@RequestMapping("/helloMary9")
+	public String helloMaryHandler9(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob10")
-	public String helloBobHandler10(
+	@RequestMapping("/helloMary10")
+	public String helloMaryHandler10(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob11")
-	public String helloBobHandler11(
+	@RequestMapping("/helloMary11")
+	public String helloMaryHandler11(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob12")
-	public String helloBobHandler12(
+	@RequestMapping("/helloMary12")
+	public String helloMaryHandler12(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob13")
-	public String helloBobHandler13(
+	@RequestMapping("/helloMary13")
+	public String helloMaryHandler13(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob14")
-	public String helloBobHandler14(
+	@RequestMapping("/helloMary14")
+	public String helloMaryHandler14(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob15")
-	public String helloBobHandler15(
+	@RequestMapping("/helloMary15")
+	public String helloMaryHandler15(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob16")
-	public String helloBobHandler16(
+	@RequestMapping("/helloMary16")
+	public String helloMaryHandler16(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob17")
-	public String helloBobHandler17(
+	@RequestMapping("/helloMary17")
+	public String helloMaryHandler17(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob18")
-	public String helloBobHandler18(
+	@RequestMapping("/helloMary18")
+	public String helloMaryHandler18(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob19")
-	public String helloBobHandler19(
+	@RequestMapping("/helloMary19")
+	public String helloMaryHandler19(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob20")
-	public String helloBobHandler20(
+	@RequestMapping("/helloMary20")
+	public String helloMaryHandler20(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob21")
-	public String helloBobHandler21(
+	@RequestMapping("/helloMary21")
+	public String helloMaryHandler21(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob22")
-	public String helloBobHandler22(
+	@RequestMapping("/helloMary22")
+	public String helloMaryHandler22(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob23")
-	public String helloBobHandler23(
+	@RequestMapping("/helloMary23")
+	public String helloMaryHandler23(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob24")
-	public String helloBobHandler24(
+	@RequestMapping("/helloMary24")
+	public String helloMaryHandler24(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob25")
-	public String helloBobHandler25(
+	@RequestMapping("/helloMary25")
+	public String helloMaryHandler25(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob26")
-	public String helloBobHandler26(
+	@RequestMapping("/helloMary26")
+	public String helloMaryHandler26(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob27")
-	public String helloBobHandler27(
+	@RequestMapping("/helloMary27")
+	public String helloMaryHandler27(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob28")
-	public String helloBobHandler28(
+	@RequestMapping("/helloMary28")
+	public String helloMaryHandler28(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob29")
-	public String helloBobHandler29(
+	@RequestMapping("/helloMary29")
+	public String helloMaryHandler29(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloBob30")
-	public String helloBobHandler30(
+	@RequestMapping("/helloMary30")
+	public String helloMaryHandler30(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob1")
-	public String goodbyeBobHandler31(
+	@RequestMapping("/goodbyeMary1")
+	public String goodbyeMaryHandler31(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob2")
-	public String goodbyeBobHandler2(
+	@RequestMapping("/goodbyeMary2")
+	public String goodbyeMaryHandler2(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob3")
-	public String goodbyeBobHandler3(
+	@RequestMapping("/goodbyeMary3")
+	public String goodbyeMaryHandler3(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob4")
-	public String goodbyeBobHandler4(
+	@RequestMapping("/goodbyeMary4")
+	public String goodbyeMaryHandler4(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob5")
-	public String goodbyeBobHandler5(
+	@RequestMapping("/goodbyeMary5")
+	public String goodbyeMaryHandler5(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob6")
-	public String goodbyeBobHandler6(
+	@RequestMapping("/goodbyeMary6")
+	public String goodbyeMaryHandler6(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob7")
-	public String goodbyeBobHandler7(
+	@RequestMapping("/goodbyeMary7")
+	public String goodbyeMaryHandler7(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob8")
-	public String goodbyeBobHandler8(
+	@RequestMapping("/goodbyeMary8")
+	public String goodbyeMaryHandler8(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob9")
-	public String goodbyeBobHandler9(
+	@RequestMapping("/goodbyeMary9")
+	public String goodbyeMaryHandler9(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob10")
-	public String goodbyeBobHandler10(
+	@RequestMapping("/goodbyeMary10")
+	public String goodbyeMaryHandler10(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob11")
-	public String goodbyeBobHandler11(
+	@RequestMapping("/goodbyeMary11")
+	public String goodbyeMaryHandler11(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob12")
-	public String goodbyeBobHandler12(
+	@RequestMapping("/goodbyeMary12")
+	public String goodbyeMaryHandler12(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob13")
-	public String goodbyeBobHandler13(
+	@RequestMapping("/goodbyeMary13")
+	public String goodbyeMaryHandler13(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob14")
-	public String goodbyeBobHandler14(
+	@RequestMapping("/goodbyeMary14")
+	public String goodbyeMaryHandler14(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob15")
-	public String goodbyeBobHandler15(
+	@RequestMapping("/goodbyeMary15")
+	public String goodbyeMaryHandler15(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob16")
-	public String goodbyeBobHandler16(
+	@RequestMapping("/goodbyeMary16")
+	public String goodbyeMaryHandler16(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob17")
-	public String goodbyeBobHandler17(
+	@RequestMapping("/goodbyeMary17")
+	public String goodbyeMaryHandler17(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob18")
-	public String goodbyeBobHandler18(
+	@RequestMapping("/goodbyeMary18")
+	public String goodbyeMaryHandler18(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob19")
-	public String goodbyeBobHandler19(
+	@RequestMapping("/goodbyeMary19")
+	public String goodbyeMaryHandler19(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob20")
-	public String goodbyeBobHandler20(
+	@RequestMapping("/goodbyeMary20")
+	public String goodbyeMaryHandler20(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob21")
-	public String goodbyeBobHandler21(
+	@RequestMapping("/goodbyeMary21")
+	public String goodbyeMaryHandler21(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob22")
-	public String goodbyeBobHandler22(
+	@RequestMapping("/goodbyeMary22")
+	public String goodbyeMaryHandler22(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob23")
-	public String goodbyeBobHandler23(
+	@RequestMapping("/goodbyeMary23")
+	public String goodbyeMaryHandler23(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob24")
-	public String goodbyeBobHandler24(
+	@RequestMapping("/goodbyeMary24")
+	public String goodbyeMaryHandler24(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob25")
-	public String goodbyeBobHandler25(
+	@RequestMapping("/goodbyeMary25")
+	public String goodbyeMaryHandler25(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob26")
-	public String goodbyeBobHandler26(
+	@RequestMapping("/goodbyeMary26")
+	public String goodbyeMaryHandler26(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob27")
-	public String goodbyeBobHandler27(
+	@RequestMapping("/goodbyeMary27")
+	public String goodbyeMaryHandler27(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob28")
-	public String goodbyeBobHandler28(
+	@RequestMapping("/goodbyeMary28")
+	public String goodbyeMaryHandler28(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob29")
-	public String goodbyeBobHandler29(
+	@RequestMapping("/goodbyeMary29")
+	public String goodbyeMaryHandler29(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeBob30")
-	public String goodbyeBobHandler30(
+	@RequestMapping("/goodbyeMary30")
+	public String goodbyeMaryHandler30(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloBobHandler(echo, viewModel);
+		return helloMaryHandler(echo, viewModel);
 	}
 }

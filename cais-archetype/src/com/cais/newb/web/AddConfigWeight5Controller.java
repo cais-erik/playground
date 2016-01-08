@@ -9,375 +9,375 @@ import org.springframework.web.bind.annotation.*;
 import com.cais.newb.Library;
 
 @Controller
-public class AliceController {
+public class AddConfigWeight5Controller {
 
 	private static final String	defaultEcho	= "someDefaultValue";
 
 	@Inject
 	private Library				lib;
 
-	@RequestMapping("/helloAlice")
-	public String helloAliceHandler(
+	@RequestMapping("/helloJanice")
+	public String helloJaniceHandler(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
 		if (echo.equals(defaultEcho)) {
 			echo = lib.getFileResourceContents();
 		}
 
 		viewModel.addAttribute("echo", echo);
-		return "helloAlice.jsp";
+		return "helloJanice.jsp";
 	}
 
-	@RequestMapping("/helloAlice2")
-	public String helloAliceHandler2(
+	@RequestMapping("/helloJanice2")
+	public String helloJaniceHandler2(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice3")
-	public String helloAliceHandler3(
+	@RequestMapping("/helloJanice3")
+	public String helloJaniceHandler3(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice4")
-	public String helloAliceHandler4(
+	@RequestMapping("/helloJanice4")
+	public String helloJaniceHandler4(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice5")
-	public String helloAliceHandler5(
+	@RequestMapping("/helloJanice5")
+	public String helloJaniceHandler5(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice6")
-	public String helloAliceHandler6(
+	@RequestMapping("/helloJanice6")
+	public String helloJaniceHandler6(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice7")
-	public String helloAliceHandler7(
+	@RequestMapping("/helloJanice7")
+	public String helloJaniceHandler7(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice8")
-	public String helloAliceHandler8(
+	@RequestMapping("/helloJanice8")
+	public String helloJaniceHandler8(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice9")
-	public String helloAliceHandler9(
+	@RequestMapping("/helloJanice9")
+	public String helloJaniceHandler9(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice10")
-	public String helloAliceHandler10(
+	@RequestMapping("/helloJanice10")
+	public String helloJaniceHandler10(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice11")
-	public String helloAliceHandler11(
+	@RequestMapping("/helloJanice11")
+	public String helloJaniceHandler11(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice12")
-	public String helloAliceHandler12(
+	@RequestMapping("/helloJanice12")
+	public String helloJaniceHandler12(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice13")
-	public String helloAliceHandler13(
+	@RequestMapping("/helloJanice13")
+	public String helloJaniceHandler13(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice14")
-	public String helloAliceHandler14(
+	@RequestMapping("/helloJanice14")
+	public String helloJaniceHandler14(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice15")
-	public String helloAliceHandler15(
+	@RequestMapping("/helloJanice15")
+	public String helloJaniceHandler15(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice16")
-	public String helloAliceHandler16(
+	@RequestMapping("/helloJanice16")
+	public String helloJaniceHandler16(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice17")
-	public String helloAliceHandler17(
+	@RequestMapping("/helloJanice17")
+	public String helloJaniceHandler17(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice18")
-	public String helloAliceHandler18(
+	@RequestMapping("/helloJanice18")
+	public String helloJaniceHandler18(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice19")
-	public String helloAliceHandler19(
+	@RequestMapping("/helloJanice19")
+	public String helloJaniceHandler19(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice20")
-	public String helloAliceHandler20(
+	@RequestMapping("/helloJanice20")
+	public String helloJaniceHandler20(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice21")
-	public String helloAliceHandler21(
+	@RequestMapping("/helloJanice21")
+	public String helloJaniceHandler21(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice22")
-	public String helloAliceHandler22(
+	@RequestMapping("/helloJanice22")
+	public String helloJaniceHandler22(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice23")
-	public String helloAliceHandler23(
+	@RequestMapping("/helloJanice23")
+	public String helloJaniceHandler23(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice24")
-	public String helloAliceHandler24(
+	@RequestMapping("/helloJanice24")
+	public String helloJaniceHandler24(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice25")
-	public String helloAliceHandler25(
+	@RequestMapping("/helloJanice25")
+	public String helloJaniceHandler25(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice26")
-	public String helloAliceHandler26(
+	@RequestMapping("/helloJanice26")
+	public String helloJaniceHandler26(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice27")
-	public String helloAliceHandler27(
+	@RequestMapping("/helloJanice27")
+	public String helloJaniceHandler27(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice28")
-	public String helloAliceHandler28(
+	@RequestMapping("/helloJanice28")
+	public String helloJaniceHandler28(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice29")
-	public String helloAliceHandler29(
+	@RequestMapping("/helloJanice29")
+	public String helloJaniceHandler29(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/helloAlice30")
-	public String helloAliceHandler30(
+	@RequestMapping("/helloJanice30")
+	public String helloJaniceHandler30(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice1")
-	public String goodbyeAliceHandler31(
+	@RequestMapping("/goodbyeJanice1")
+	public String goodbyeJaniceHandler31(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice2")
-	public String goodbyeAliceHandler2(
+	@RequestMapping("/goodbyeJanice2")
+	public String goodbyeJaniceHandler2(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice3")
-	public String goodbyeAliceHandler3(
+	@RequestMapping("/goodbyeJanice3")
+	public String goodbyeJaniceHandler3(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice4")
-	public String goodbyeAliceHandler4(
+	@RequestMapping("/goodbyeJanice4")
+	public String goodbyeJaniceHandler4(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice5")
-	public String goodbyeAliceHandler5(
+	@RequestMapping("/goodbyeJanice5")
+	public String goodbyeJaniceHandler5(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice6")
-	public String goodbyeAliceHandler6(
+	@RequestMapping("/goodbyeJanice6")
+	public String goodbyeJaniceHandler6(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice7")
-	public String goodbyeAliceHandler7(
+	@RequestMapping("/goodbyeJanice7")
+	public String goodbyeJaniceHandler7(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice8")
-	public String goodbyeAliceHandler8(
+	@RequestMapping("/goodbyeJanice8")
+	public String goodbyeJaniceHandler8(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice9")
-	public String goodbyeAliceHandler9(
+	@RequestMapping("/goodbyeJanice9")
+	public String goodbyeJaniceHandler9(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice10")
-	public String goodbyeAliceHandler10(
+	@RequestMapping("/goodbyeJanice10")
+	public String goodbyeJaniceHandler10(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice11")
-	public String goodbyeAliceHandler11(
+	@RequestMapping("/goodbyeJanice11")
+	public String goodbyeJaniceHandler11(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice12")
-	public String goodbyeAliceHandler12(
+	@RequestMapping("/goodbyeJanice12")
+	public String goodbyeJaniceHandler12(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice13")
-	public String goodbyeAliceHandler13(
+	@RequestMapping("/goodbyeJanice13")
+	public String goodbyeJaniceHandler13(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice14")
-	public String goodbyeAliceHandler14(
+	@RequestMapping("/goodbyeJanice14")
+	public String goodbyeJaniceHandler14(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice15")
-	public String goodbyeAliceHandler15(
+	@RequestMapping("/goodbyeJanice15")
+	public String goodbyeJaniceHandler15(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice16")
-	public String goodbyeAliceHandler16(
+	@RequestMapping("/goodbyeJanice16")
+	public String goodbyeJaniceHandler16(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice17")
-	public String goodbyeAliceHandler17(
+	@RequestMapping("/goodbyeJanice17")
+	public String goodbyeJaniceHandler17(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice18")
-	public String goodbyeAliceHandler18(
+	@RequestMapping("/goodbyeJanice18")
+	public String goodbyeJaniceHandler18(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice19")
-	public String goodbyeAliceHandler19(
+	@RequestMapping("/goodbyeJanice19")
+	public String goodbyeJaniceHandler19(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice20")
-	public String goodbyeAliceHandler20(
+	@RequestMapping("/goodbyeJanice20")
+	public String goodbyeJaniceHandler20(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice21")
-	public String goodbyeAliceHandler21(
+	@RequestMapping("/goodbyeJanice21")
+	public String goodbyeJaniceHandler21(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice22")
-	public String goodbyeAliceHandler22(
+	@RequestMapping("/goodbyeJanice22")
+	public String goodbyeJaniceHandler22(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice23")
-	public String goodbyeAliceHandler23(
+	@RequestMapping("/goodbyeJanice23")
+	public String goodbyeJaniceHandler23(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice24")
-	public String goodbyeAliceHandler24(
+	@RequestMapping("/goodbyeJanice24")
+	public String goodbyeJaniceHandler24(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice25")
-	public String goodbyeAliceHandler25(
+	@RequestMapping("/goodbyeJanice25")
+	public String goodbyeJaniceHandler25(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice26")
-	public String goodbyeAliceHandler26(
+	@RequestMapping("/goodbyeJanice26")
+	public String goodbyeJaniceHandler26(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice27")
-	public String goodbyeAliceHandler27(
+	@RequestMapping("/goodbyeJanice27")
+	public String goodbyeJaniceHandler27(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice28")
-	public String goodbyeAliceHandler28(
+	@RequestMapping("/goodbyeJanice28")
+	public String goodbyeJaniceHandler28(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice29")
-	public String goodbyeAliceHandler29(
+	@RequestMapping("/goodbyeJanice29")
+	public String goodbyeJaniceHandler29(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 
-	@RequestMapping("/goodbyeAlice30")
-	public String goodbyeAliceHandler30(
+	@RequestMapping("/goodbyeJanice30")
+	public String goodbyeJaniceHandler30(
 			@RequestParam(value = "echo", required = false, defaultValue = defaultEcho) String echo, Model viewModel) {
-		return helloAliceHandler(echo, viewModel);
+		return helloJaniceHandler(echo, viewModel);
 	}
 }

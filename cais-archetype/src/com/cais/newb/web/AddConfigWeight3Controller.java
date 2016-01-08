@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.cais.newb.Library;
 
 @Controller
-public class JackController {
+public class AddConfigWeight3Controller {
 
 	private static final String	defaultEcho	= "someDefaultValue";
 
