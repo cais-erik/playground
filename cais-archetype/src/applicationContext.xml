@@ -13,13 +13,16 @@
 
 	<security:http auto-config="true">
 		<!-- <security:intercept-url pattern="/**" access="permitAll" /> -->
+		<security:intercept-url pattern="/youNeedHonkylipsRole" access="hasRole('ROLE_HONKYLIPS')" />
 		<security:intercept-url pattern="/**" access="isAuthenticated()" />
+
 	</security:http>
 
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<security:user-service>
 				<security:user name="bill" password="abc123" authorities="ROLE_USER" />
+				<security:user name="harvey" password="def456" authorities="ROLE_HONKYLIPS" />
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>

@@ -27,4 +27,8 @@ public class SphinctController {
 		return "helloWorld.jsp";
 	}
 
+	@RequestMapping("/youNeedHonkylipsRole")
+	public String honkylipsHandler() {
+		return "honkylips.jsp";
+	}
 }

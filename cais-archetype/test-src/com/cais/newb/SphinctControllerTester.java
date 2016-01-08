@@ -2,8 +2,12 @@ package com.cais.newb;
 
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 
+import java.io.UnsupportedEncodingException;
+import java.lang.invoke.MethodHandles;
+
 import javax.inject.Inject;
 
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -21,33 +25,100 @@ import org.springframework.web.context.WebApplicationContext;
 @WebAppConfiguration
 public class SphinctControllerTester {
 
+	private static final int				httpUnauthorizedStatus	= 403;
+	private static final String				contentExceptionMessage	= "[Couldn't retrieve content due to exception.]";
+
+	private static final Logger				log						= Logger
+			.getLogger(MethodHandles.lookup().lookupClass());
+
 	@Inject
-	private WebApplicationContext webAppContext;
+	private WebApplicationContext			webAppContext;
+
+	private MockMvc							mockMvc					= null;
+	private MockHttpServletRequestBuilder	requestBuilder			= null;
+	private MvcResult						result					= null;
+	private MockHttpServletResponse			response				= null;
 
 	@Test
 	public void testSpringSecurityPreventsNonAuthedAccess() throws Exception {
+		givenDestinationUri("/helloWorld");
 
-		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
-		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/helloWorld");
+		whenRequestIsExecuted();
 
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-		MockHttpServletResponse response = result.getResponse();
+		thenAssertRedirectedToLogin();
+	}
+
+	@Test
+	@WithMockUser()
+	public void testReturnedViewName() throws Exception {
+		givenDestinationUri("/helloWorld");
+
+		whenRequestIsExecuted();
+
+		thenAssertForwardDestinationWas("helloWorld.jsp");
+	}
+
+	@Test
+	@WithMockUser(authorities = "ROLE_USER")
+	public void testBadRole() throws Exception {
+		givenDestinationUri("/youNeedHonkylipsRole");
+
+		whenRequestIsExecuted();
+
+		thenAssertUnauthorized();
+	}
+
+	@Test
+	@WithMockUser(authorities = "ROLE_HONKYLIPS")
+	public void testGoodRole() throws Exception {
+		givenDestinationUri("/youNeedHonkylipsRole");
+
+		whenRequestIsExecuted();
+
+		thenAssertForwardDestinationWas("honkylips.jsp");
+	}
+
+	private void thenAssertForwardDestinationWas(String expectedViewName) {
+		String actualViewName = result.getModelAndView().getViewName();
+		assert expectedViewName.equals(actualViewName) : "Did not get routed to " + expectedViewName
+				+ ", instead was routed to " + actualViewName;
+	}
+
+	private void givenDestinationUri(String uri) {
+		mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
+		requestBuilder = MockMvcRequestBuilders.get(uri);
+	}
+
+	private void whenRequestIsExecuted() throws Exception {
+		result = mockMvc.perform(requestBuilder).andReturn();
+		response = result.getResponse();
+		logResponseBasics();
+	}
+
+	private void thenAssertUnauthorized() {
+		assert response.getStatus() == httpUnauthorizedStatus : response.getStatus()
+				+ " was what I got, but I expected " + httpUnauthorizedStatus;
+	}
+
+	private void thenAssertRedirectedToLogin() {
 		String redirectedUrl = response.getRedirectedUrl();
 		String expectedRedirectUrl = "login";
 		assert redirectedUrl.endsWith(expectedRedirectUrl) : redirectedUrl;
 	}
 
-	@Test
-	@WithMockUser
-	public void testReturnedViewName() throws Exception {
+	private void logResponseBasics() {
+		log.warn("Fwd Url:       " + response.getForwardedUrl());
+		log.warn("Content:       " + responseContent());
+		log.warn("Redirect Url:  " + response.getRedirectedUrl());
+		log.warn("Status:        " + response.getStatus());
+	}
 
-		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
-		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/helloWorld");
-
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-		String actualViewName = result.getModelAndView().getViewName();
-		String expectedViewName = "helloWorld.jsp";
-		assert expectedViewName.equals(actualViewName) : "Did Fnot get routed to " + expectedViewName
-				+ ", instead was routed to " + actualViewName;
+	private String responseContent() {
+		try {
+			return response.getContentAsString();
+		}
+		catch (UnsupportedEncodingException e) {
+			return contentExceptionMessage;
+		}
 	}
 }
