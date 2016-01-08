@@ -1,9 +1,11 @@
 package com.cais.newb;
 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.invoke.MethodHandles;
+import java.util.*;
 
 import javax.inject.Inject;
 
@@ -11,7 +13,8 @@ import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.mock.web.MockHttpServletResponse;
-import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -38,6 +41,7 @@ public class SphinctControllerTester {
 	private MockHttpServletRequestBuilder	requestBuilder			= null;
 	private MvcResult						result					= null;
 	private MockHttpServletResponse			response				= null;
+	private User							user;
 
 	@Test
 	public void testSpringSecurityPreventsNonAuthedAccess() throws Exception {
@@ -49,8 +53,9 @@ public class SphinctControllerTester {
 	}
 
 	@Test
-	@WithMockUser()
 	public void testReturnedViewName() throws Exception {
+
+		givenUser();
 		givenDestinationUri("/helloWorld");
 
 		whenRequestIsExecuted();
@@ -59,8 +64,9 @@ public class SphinctControllerTester {
 	}
 
 	@Test
-	@WithMockUser(authorities = "ROLE_USER")
 	public void testBadRole() throws Exception {
+
+		givenUser("ROLE_USER");
 		givenDestinationUri("/youNeedHonkylipsRole");
 
 		whenRequestIsExecuted();
@@ -69,13 +75,25 @@ public class SphinctControllerTester {
 	}
 
 	@Test
-	@WithMockUser(authorities = "ROLE_HONKYLIPS")
 	public void testGoodRole() throws Exception {
+
+		givenUser("ROLE_HONKYLIPS");
 		givenDestinationUri("/youNeedHonkylipsRole");
 
 		whenRequestIsExecuted();
 
 		thenAssertForwardDestinationWas("honkylips.jsp");
+	}
+
+	private void givenUser(String... roles) {
+
+		List<SimpleGrantedAuthority> list = new ArrayList<>();
+
+		for (String role : roles) {
+			list.add(new SimpleGrantedAuthority(role));
+		}
+
+		user = new User("Ray", "Finkel", list);
 	}
 
 	private void thenAssertForwardDestinationWas(String expectedViewName) {
@@ -87,6 +105,10 @@ public class SphinctControllerTester {
 	private void givenDestinationUri(String uri) {
 		mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
 		requestBuilder = MockMvcRequestBuilders.get(uri);
+		if (user != null) {
+			requestBuilder = requestBuilder.with(user(user));
+		}
+
 	}
 
 	private void whenRequestIsExecuted() throws Exception {
