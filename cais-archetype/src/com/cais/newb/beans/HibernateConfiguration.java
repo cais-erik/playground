@@ -15,6 +15,7 @@ import org.springframework.stereotype.*;
 import org.springframework.transaction.annotation.*;
 
 @Component
+@ComponentScan("com.cais.newb.dao")
 @PropertySource("classpath:hibernate.properties")
 @EnableTransactionManagement
 public class HibernateConfiguration {

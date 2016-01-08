@@ -53,6 +53,7 @@ dependencies {
 	compile 'com.h2database:h2:1.4.190'
 	compile 'org.springframework:spring-tx:4.2.4.RELEASE'
 	compile 'org.springframework:spring-orm:4.2.4.RELEASE'
+	compile 'javax.transaction:jta:1.1'
 
 	testCompile 'junit:junit:4.12'
 
