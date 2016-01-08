@@ -8,6 +8,7 @@ import org.junit.*;
 import org.junit.runner.*;
 import org.springframework.test.context.*;
 import org.springframework.test.context.junit4.*;
+import org.springframework.transaction.annotation.*;
 
 import com.cais.newb.entities.*;
 
@@ -19,6 +20,7 @@ public class WidgetDaoTester {
 	private WidgetDao dao;
 
 	@Test
+	@Transactional
 	public void testWidgetDao() {
 		List<Widget> list = dao.findAll();
 		assert list.isEmpty();
