@@ -24,9 +24,9 @@ public class HibernateConfiguration {
 	private Environment environment;
 
 	@Bean
-	public LocalSessionFactoryBean sessionFactory() {
+	public LocalSessionFactoryBean sessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-		sessionFactory.setDataSource(dataSource());
+		sessionFactory.setDataSource(dataSource);
 		sessionFactory.setPackagesToScan("com.cais.newb.entities");
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		return sessionFactory;
