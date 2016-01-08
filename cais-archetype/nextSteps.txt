@@ -1,0 +1,10 @@
+ 1)		Find a way to initialize the in-mem db in preparation for JUnit tests, ideally using java objects
+ 2)		Create a MockMvc test/method that goes thru the whole stack thus far, including the db
+ 3)		Create associations in Hbn and related tests
+ 4) 	Create the need for OpenSessionInView and related tests
+ 4.1)	hook in Hystrix, or maybe a Spring analog
+ 5.2)	Setup a REST/Jackson example, utilizing web security and hibernate
+ 5)		Get weird w/ transactions
+ 5.1)	hook in some Angular 2 for eval
+ 5.2)	hook in some EmberJS for eval 
+ 6)		Introduce Scala to the stack somewhere, make sure all is seamless while dev and building, has related tests
