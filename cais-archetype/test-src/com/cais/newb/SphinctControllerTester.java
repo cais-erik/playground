@@ -1,10 +1,12 @@
 package com.cais.newb;
 
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
+
 import javax.inject.Inject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.security.web.FilterChainProxy;
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -22,11 +24,22 @@ public class SphinctControllerTester {
 	private WebApplicationContext webAppContext;
 
 	@Test
-	public void testReturnedView() throws Exception {
+	public void testSpringSecurityPreventsNonAuthedAccess() throws Exception {
 
-		FilterChainProxy springSecurityFilter = webAppContext.getBean(FilterChainProxy.class);
-		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).addFilter(springSecurityFilter, "/*")
-				.build();
+		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
+		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/helloWorld");
+
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+		MockHttpServletResponse response = result.getResponse();
+		String redirectedUrl = response.getRedirectedUrl();
+		String expectedRedirectUrl = "login";
+		assert redirectedUrl.endsWith(expectedRedirectUrl) : redirectedUrl;
+	}
+
+	@Test
+	public void testReturnedViewName() throws Exception {
+
+		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
 		MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.get("/helloWorld");
 
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();

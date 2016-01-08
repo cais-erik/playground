@@ -40,17 +40,20 @@ sourceSets {
 }
 
 dependencies {
+
 	compile	'log4j:log4j:1.2.17'
 	compile 'org.apache.tomcat:tomcat-servlet-api:8.0.28'
 	compile 'javax.servlet:jstl:1.2'
 	compile 'org.springframework:spring-core:4.2.4.RELEASE'
 	compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
-	compile 'org.springframework:spring-test:4.2.4.RELEASE'
 	compile 'javax.inject:javax.inject:1'
 	compile 'org.springframework.security:spring-security-web:4.0.3.RELEASE'
 	compile 'org.springframework.security:spring-security-config:4.0.3.RELEASE'
 
 	testCompile 'junit:junit:4.12'
+
+	testRuntime 'org.springframework:spring-test:4.2.4.RELEASE'
+	testRuntime 'org.springframework.security:spring-security-test:4.0.3.RELEASE'
 }
 
 task wrapper(type: Wrapper) {
