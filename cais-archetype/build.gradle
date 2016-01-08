@@ -49,6 +49,10 @@ dependencies {
 	compile 'javax.inject:javax.inject:1'
 	compile 'org.springframework.security:spring-security-web:4.0.3.RELEASE'
 	compile 'org.springframework.security:spring-security-config:4.0.3.RELEASE'
+	compile 'org.hibernate:hibernate-core:5.0.6.Final'
+	compile 'com.h2database:h2:1.4.190'
+	compile 'org.springframework:spring-tx:4.2.4.RELEASE'
+	compile 'org.springframework:spring-orm:4.2.4.RELEASE'
 
 	testCompile 'junit:junit:4.12'
 
