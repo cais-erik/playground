@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -37,6 +38,7 @@ public class SphinctControllerTester {
 	}
 
 	@Test
+	@WithMockUser
 	public void testReturnedViewName() throws Exception {
 
 		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).apply(springSecurity()).build();
