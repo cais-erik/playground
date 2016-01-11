@@ -1,0 +1,25 @@
+<table class="notifications-list">
+    <thead>
+        <tr>
+            <th>Recipient</th>
+            <th>Email Notification</th>
+            <th style="width: 135px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#parties}}
+        <tr data-notificationType="{{notificationType}}" id="{{id}}{{^id}}new-party{{/id}}">
+            <td>{{name}}</td>
+            <td class="center">
+                {{#selectRadio notification}}
+                <input id="notificationYes{{id}}" type="radio" class="notification-radio" name="{{id}}" value="true" /><label for="notificationYes{{id}}">Yes</label>
+                <input id="notificationNo{{id}}" type="radio" class="notification-radio" name="{{id}}" value="false" /><label for="notificationNo{{id}}">No</label>
+                {{/selectRadio}}
+            </td>
+            <td class="right">
+                <div class="removeContact">remove</div>
+            </td>
+        </tr>
+        {{/parties}}
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+<div class="title" id="media"><a href="#" class="media-icon">News</a></div>
+{{#.}}
+<article class="marketing-media-article clearfix" id="{{id}}">
+	<h1><a href="{{link}}" target="_blank">{{title}}</a></h1>
+	<time class="published" datetime="{{publishedDate}}">{{formatDate publishedDate 'MMMM d yyyy'}}</time>
+	<p>{{{contentSnippet}}}</p>
+	<a class="read-more" target="_blank" href="{{link}}">- Read More</a>
+</article>
+{{/.}}
+{{^.}}
+<p style="margin-top: 1.5em;">The news could not be retreived at the time. Please view <a style="color: blue; text-decoration:underline;"href="https://www.caisgroup.com/about/press/" target="_blank">our press section</a>.</p>
+{{/.}}

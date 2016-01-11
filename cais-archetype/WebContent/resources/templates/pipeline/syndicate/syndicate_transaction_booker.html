@@ -1,0 +1,96 @@
+<div class="dialog-inner">
+	<div class="container_12 wrap">
+		<header class="booker-description clearfix">
+			<p>Review the details below and select the transactions you would like to book.</p>
+			<input class="name-filter" name="name-filter" type="text" placeholder="Filter name, email or firm...">
+			<span class="bulk-selectors">
+				<span class="selected-count">0</span> selected | 
+				<a class="sel-all" href="#">Select all</a> | <a class="deselect-all" href="#">Deselect all</a>
+			</span>
+		</header>
+		{{#.}}
+		<section class="booking-preview">
+			<header class="booking-header clearfix">
+				<div class="grid_4"><input name="selected" type="checkbox" data-id="{{id}}">{{accountName}}</div> 
+				<div class="grid_8">{{firmName}}, {{advisorName}}</div> 
+			</header>
+			<div class="content clearfix">
+				<div class="grid_6">
+					{{#bookingPreview}}
+					<dl class="spec-list">
+						<dt>CUSIP</dt>
+						<dd>{{cusip}}</dd>
+						
+						<dt>Account Type</dt>
+						<dd>{{accountType}}</dd>
+					
+						<dt>Executed Quantity</dt>
+						<dd>{{formatNumber executedQuantity 'n0'}}</dd>
+					
+						<dt>Exchange</dt>
+						<dd>{{exchange}}</dd>
+					
+						<dt>Contra Executing Broker</dt>
+						<dd>{{contraExecutingBroker}}</dd>
+
+						<dt>Contra Account</dt>
+						<dd>{{contraAccount}}</dd>
+
+						<dt>Trade Date</dt>
+						<dd>{{tradeDate}}</dd>
+
+						<dt>Settlement Date</dt>
+						<dd>{{settlementDate}}</dd>
+
+						<dt>Org Input Source</dt>
+						<dd>{{orgInputSource}}</dd>
+
+						<dt>Short Sale</dt>
+						<dd>{{shortSale}}</dd>
+					</dl>
+					{{/bookingPreview}}
+				</div>
+				<div class="grid_6">
+					{{#bookingPreview}}
+					<dl class="spec-list">
+						<dt>Transaction</dt>
+						<dd>{{transaction}}</dd>
+
+						<dt>Order Ref#</dt>
+						<dd>{{orderRefNo}}</dd>
+
+						<dt>Executed Price</dt>
+						<dd>{{formatNumber executedPrice 'c6'}}</dd>
+
+						<dt>Blotter Code</dt>
+						<dd>{{blotterCode}}</dd>
+
+						<dt>Contra Clearing Broker</dt>
+						<dd>{{contraClearingBroker}}</dd>
+
+						<dt>Execution Time</dt>
+						<dd>{{executionTime}}</dd>
+
+						<dt>Capacity Indicator</dt>
+						<dd>{{capacityIndicator}}</dd>
+
+						<dt>Prime Trade</dt>
+						<dd>{{primeTrade}}</dd>
+
+						<dt>Acct Type Ind.</dt>
+						<dd>{{acctTypeInd}}</dd>
+					</dl>
+					{{/bookingPreview}}
+				</div>
+			</div>
+		</section>
+		{{/.}}
+
+	</div>
+</div>
+<footer class="base-k-dialog-footer">
+	<ul class="confirm-buttons">
+		<li class="cancel-dialog command-button-black"><a href="#">Cancel</a></li>
+		<li class="confirm-dialog command-button btn-disabled"><span>Book</span></li>
+	</ul>
+</footer> 

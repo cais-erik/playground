@@ -1,0 +1,56 @@
+<form id="advisorInformation" class="form">   
+    <div class="entity-details-container clearfix container_12">
+        <div class="grid_6">
+            <div class="form-heading">Advisor</div>
+
+            <label class="form-label" data-tooltip="The firm this advisor belongs to.">Firm Name</label>
+            <input class="form-input-elem" name="firmName" type="text" disabled="disabled" value="{{firmName}}" />        
+
+            <label class="form-label" data-tooltip="Team Name">Team Name</label>
+            <input class="form-input-elem" name="advisorTeamName" type="text" disabled="disabled" value="{{advisorTeamName}}" />
+            
+            <br /><br/>
+            <div class="form-heading">Advisor Contact</div>
+            
+            <label class="form-label" data-tooltip="Advisor Name">Advisor Name</label>
+            <input class="form-input-elem" name="fullName" type="text" disabled="disabled" value="{{fullName}}" />
+
+            <label class="form-label" data-tooltip="Office Phone">Phone - Office</label>
+            <input class="form-input-elem" name="phone" type="tel" disabled="disabled" value="{{phone}}"/>
+            
+            <label class="form-label" data-tooltip="Fax Number">Fax</label>
+            <input class="form-input-elem" name="fax" type="tel" disabled="disabled" value="{{fax}}" />
+
+            <label class="form-label" data-tooltip="Advisor Email">Email</label>
+            <input class="form-input-elem" name="email" type="email" disabled="disabled" value="{{email}}"/>
+        </div>
+        <div class="grid_6">
+            <div class="form-heading">Advisor Address</div>
+
+            <label class="form-label" data-tooltip="Address">Address 1</label>
+            <input class="form-input-elem" name="street1" type="text" disabled="disabled" value="{{street1}}" />
+
+            <label class="form-label" data-tooltip="Address">Address 2</label>
+            <input class="form-input-elem" name="street2" type="text" disabled="disabled" value="{{street2}}" />
+
+            <div class="clearfix input-group-wrap">
+                <div class="grid_6 alpha">
+                    <label class="form-label">City</label>
+                    <input class="form-input-elem" name="city" type="text" disabled="disabled" value="{{city}}" />
+                    <div class="validation-wrapper"><span class="k-invalid-msg" data-for="city"></span></div>
+                </div>
+                <div class="grid_3">
+                    <label class="form-label">State/Prov.</label>
+                    <input class="form-input-elem" name="state" type="text" disabled="disabled" value="{{state}}" />
+                    <div class="validation-wrapper"><span class="k-invalid-msg" data-for="state"></span></div>
+                </div>
+                <div class="grid_3 omega">
+                    <label class="form-label">Zip/Postal</label>
+                    <input class="form-input-elem" name="postalCode" type="text" disabled="disabled"value="{{postalCode}}"/>
+                </div>
+            </div>
+            <label class="form-label" data-tooltip="Country">Country</label>
+            <input class="form-input-elem" name="country" type="text" disabled="disabled" value="{{country}}"/>
+        </div>
+    </div>
+</form>

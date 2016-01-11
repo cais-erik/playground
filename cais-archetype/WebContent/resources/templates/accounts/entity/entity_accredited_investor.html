@@ -1,0 +1,119 @@
+<form id="accreditedInvestor" class="form" data-panelId="10">
+    <div class="entity-details-container clearfix container_12">
+        <div id="accreditedInvestorCommunicator"></div>  
+        <div class="individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Accredited Investor Status: <span class="entityTypeLabel">Individual</span></div>
+                {{#selectRadio accreditedInvestorStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd0" type="radio" value="1"> Not an Accredited Investor.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd1" type="radio" value="2"> I have a net worth (or joint net worth together with my spouse) in excess of $1,000,000 (excluding the value of my primary residence), and I have no reason to believe that my net worth will not remain in excess of $1,000,000 (excluding the value of my primary residence)_ for the forseeable future.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd17" type="radio" value="17"> An individual retirement account, Keogh Plan or other self-directed plan (ie: a tax-qualified defined contribution plan in which a participant may exercise control over the investment of assets credited to his or her account) in which all of the participants are accredited investors because each participant has a net worth of a t least $1,000,000 or has had an individual income of at least $200,000 (or a joint income with spouse of at least $300,000) in each of the last two years</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd3" type="radio" value="16"> The Investor had individual income (exclusive of any income attributable to his or her spouse) of more than $200,000 in each of the past two years, or joint income with his or her spouse of more than $300,000 in each of those years, and reasonably expects to reach the same income level in the current year.</label>
+                </div>
+
+                <!-- <input name="accreditedInvestorStatusId" id="accreditedInvestorInd2" type="radio" value="3" /> 
+                <p><label for="accreditedInvestorInd2">I am an accredited Investor for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+                <!-- <p>Other Reason</p>
+                <textarea class="editor" maxlength="500" name="accreditedInvestorForReason">{{accreditedInvestorForReason}}</textarea>    -->
+            </div>   
+        </div>
+        <div class="non-individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Accredited Investor Status: <span class="entityTypeLabel">Non-Individual</span></div>
+                {{#selectRadio accreditedInvestorStatusId}}
+
+                <div class="checkbox-label-wrap">                    
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd16" type="radio" value="20"> Any trust that is an accredited investor because it is a revocable trust which may be amended or revoked at any time by the grantors thereof and all of the grantors are accredited investors</label>
+                </div>
+
+                <div class="checkbox-label-wrap">                    
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd14" type="radio" value="13"> Any trust, with total assets in excess of $5,000,000, not formed for the specific purpose of acquiring the Shares whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under Regulation D, promulgated under the Securities Act.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd15" type="radio" value="15"> The investor is a corporation, a partnership, a limited liability company, or a business trust that has total assets in excess of $5,000,000 and was not formed for the purpose of investing any CAIS product</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd18" type="radio" value="18"> Any employee benefit plan within the meaning of ERISA and has total assets in excess of US$5,000,000 and the decision to invest in the Fund was made solely by persons that are accredited investors.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="accreditedInvestorInd19" type="radio" value="19"> Any employee benefit plan within the meaning of ERISA, and the decision to invest in the fund was made by a plan fiduciary (as defined in Section 3(21) of ERISA), which is either a bank, savings and loan association, insurance company or registered investment advisor.</label>
+                    <label class="form-label">The name of such plan fiduciary is:</label>
+                    <input class="form-input-elem" type="text" name="planFiduciaryName" value="{{planFiduciaryName}}">
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd7" type="radio" value="10">Any plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if such a plan has total assets in excess of $5,000,000.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd9" type="radio" value="12"> Any organization described in Section 501(c)(3) of the Code, corporation, Massachusetts or similar business trust or partnership, not formed for the specific purpose of acquiring the Shares, with total assets in excess of $5,000,000.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd8" type="radio" value="11"> Any private business development company as defined in Section 202(a)(22) of the Investment Advisors Act of 1940, as amended.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd5" type="radio" value="8"> Any investment company registered under the Company Act or a business development company as defined in Section 2(a)(48) of the Company Act.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd6" type="radio" value="9"> Any Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd3" type="radio" value="6"> Any broker or dealer registered pursuant to Section 15 of the Securities Exchange Act of 1934, as amended (The "Exchange Act").</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd2" type="radio" value="5">  Any bank as defined in Section 3(a)(2) of the Securities Act, or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act whether acting in its individual or fiduciary capacity.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd4" type="radio" value="7"> Any insurance company as defined in Section 2(13) of the Securities Act.</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd14" type="radio" value="14"> Any entity (other than a trust) in which all of the equity owners are accredited investors</label>
+                </div>
+                
+                <div class="checkbox-label-wrap">
+                    <label><input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd1" type="radio" value="4"> Not an Accredited Investor.</label>
+                </div>
+                
+                
+
+
+
+
+                
+
+               
+
+                <!-- <input name="accreditedInvestorStatusId" id="ni_accreditedInvestorInd12" type="radio" value="15" /> 
+                <p><label for="ni_accreditedInvestorInd12">An accredited Investor for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+
+               <!--  <p>Other Reason</p>
+               <textarea class="editor" maxlength="500" name="accreditedInvestorForReason">{{accreditedInvestorForReason}}</textarea>   -->
+            </div>
+        </div>     
+    </div>
+</form>

@@ -1,0 +1,34 @@
+<img src="/resources/assets/page-dialog/dialog-close-icon.png" alt="close" class="close-icon cancel-dialog"/>
+<div class="editor-container">
+	<header class="editor-header container_12 clearfix">
+		<h1 class="grid_12">Edit Shareholder Letter</h1>
+	</header>
+	<form class="clearfix container_12 form">
+		<fieldset class="grid_4">
+			<div>
+				<label for="title">Letter Title</label>
+				<input type="text" name="title">
+			</div>
+			<div>
+				<label for="fromDate">Letter Date Range</label><br/>
+				<input name="fromDate" placeholder="from" data-role="datepicker" type="text" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-ddTHH:mm:ss.fffzzz','yyyy-MM-dd']">
+				-
+				<input name="toDate" placeholder="to" data-role="datepicker" type="text" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-ddTHH:mm:ss.fffzzz','yyyy-MM-dd']">
+			</div>
+			<h2>Attached Documents</h2>
+			<p>
+				<ul class="attached-documents"></ul>
+				<input type="file" name="file" data-role="kendoupload">
+			</p>
+		</fieldset>
+		<fieldset class="grid_8">
+			<textarea name="content" class="kendo-editor"></textarea>
+		</fieldset>
+	</form>
+	<footer class="editor-footer container_12 clearfix">
+		<div class="grid_12">
+			<a class="delete-letter" href="#">Delete letter</a>
+			<span class="command-button save-letter">Save Letter</span>
+		</div>
+	</footer>
+</div>

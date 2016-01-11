@@ -1,0 +1,141 @@
+<form class="form container_12" id="non-individual-entity" style="padding-top:1em;">
+    <div class="entity-details-container clearfix container_12">
+        <div id="detailsCommunicator"></div>  
+        <div class="grid_6">
+            <div class="form-heading">Non-individual Information</div>
+            <label class="form-label" data-tooltip="Nominee">Nominee*</label>
+            <input id="isNomineeInvestorFalse" name="isNomineeInvestor" type="radio" value="false" required validationMessage="Nominee is required" /><label for="isNomineeInvestorFalse">No</label>
+            <input id="isNomineeInvestorTrue" name="isNomineeInvestor" type="radio" value="true" required validationMessage="Nominee is required" /><label for="isNomineeInvestorTrue">Yes</label>
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="isNomineeInvestor"></span></div>
+
+            <label class="form-label" data-tooltip="niEntityName">Entity Name*</label>
+            <input name="entityName" class="form-input-elem" type="text" maxlength="150" required validationMessage="Entity Name is Required" />
+
+            <label class="form-label">Date of Formation/Incorporation</label>
+
+            <input name="dateOfFormation" data-role="datepicker" data-split-iso-date data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz']" type="date" />
+          
+            <label class="form-label" data-tooltip="First Name">Principal place of Business / Residence</label>
+            <input class="form-input-elem" name="jurisdictionOfFormation" type="text" maxlength="99">
+
+            <label class="form-label" data-tooltip="ssnTin">TIN/EIN*</label>
+            <input class="form-input-elem id-number" name="ssnTin" type="text" maxlength="44" required data-required-msg="TIN/EIN is required">
+           
+            <label class="form-label" data-tooltip="Nominee">Are you a disregarded entity for US Tax Purposes?</label>
+            <input id="entity_disregardedFalse" name="entity_disregarded" type="radio" value="false" /><label for="entity_disregardedFalse">No</label>
+            <input id="entity_disregardedTrue" name="entity_disregarded" type="radio" value="true" /><label for="entity_disregardedTrue">Yes</label>
+
+            <label class="form-label" data-tooltip="Nominee">Was the investor formed for the specific purpose of acquiring an interest into a single CAIS product?</label>
+            <input id="singleProductFalse" name="interestInCaisProduct" type="radio" value="false" /><label for="singleProductFalse">No</label>
+            <input id="singleProductTrue" name="interestInCaisProduct" type="radio" value="true" /><label for="singleProductTrue">Yes</label>
+           
+            <label class="form-label" data-tooltip="Tooltip here">Registered with the CFTC or the National Futures Association</label>
+            <input type="radio" name="cftcOrNfa" value="false" /><label>No</label>
+            <input type="radio" name="cftcOrNfa" value="true" /><label>Yes</label><br />
+
+            <div class="hidden" data-for="cftcOrNfa">
+                <label class="form-label">CFTC/NFA Registration number(s)</label>
+                <input class="form-input-elem" name="cftcRegistrationNumbers" type="text" />
+            </div>
+
+            <label class="form-label" data-tooltip="Tooltip here">Registered with a regulatory government agency?</label>
+            <input type="radio" name="regGovtAgency" value="false" /><label>No</label>
+            <input type="radio" name="regGovtAgency" value="true" /><label>Yes</label><br />
+
+            <div class="form-heading">Authorized Person Information</div>
+
+            <div class="clearfix input-group-wrap">
+                <div class="grid_5 alpha">
+                    <label class="form-label" data-tooltip="First Name">First Name*</label>
+                    <input name="authorizedFirstName" class="form-input-elem" type="text" maxlength="99" required data-required-msg="Authorized Person First Name is required">
+                </div>
+                <div class="grid_1">
+                    <label class="form-label" data-tooltip="middleInitial">M.I.</label>
+                    <input class="form-input-elem" name="authorizedMiddleInitial" maxlength="1" type="text" />
+                </div>
+                <div class="grid_6 omega">
+                    <label class="form-label" data-tooltip="lastName">Last Name*</label>
+                    <input name="authorizedLastName" class="form-input-elem" type="text" maxlength="99" required data-required-msg="Authorized Person Last Name is required" />
+                </div>
+            </div>
+
+            <div class="clearfix input-group-wrap">
+                <div class="grid_4 alpha">
+                    <label class="form-label">Title</label>
+                    <input class="form-input-elem" name="title" maxlength="14" type="text">
+                </div>
+                <div class="grid_4">
+                    <label class="form-label">SSN*</label>
+                    <input name="authorizedSSN" class="ssn form-input-elem id-number" type="text" maxlength="44" required data-required-msg="Social Security Number is required">
+                </div>
+                <div class="grid_4 omega">                
+                    <label class="form-label">Date of Birth*</label>
+                    <input name="dateOfBirth" data-role="datepicker" type="date" data-split-iso-date data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz']" required data-required-msg="Date of Birth is required">
+                </div>
+            </div>
+        </div>
+        <div class="grid_6"> 
+            <div class="form-heading">Affiliation</div>
+        
+            <label class="form-label">Does the investor have discretionary authority or control with respect to the assets of any fund listed on the CAIS platform?</label>
+            <label><input type="radio" name="affiliatedWithCaisFund" value="false">No</label>
+            <label><input type="radio" name="affiliatedWithCaisFund" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="affiliatedWithCaisFund">
+                <label class="form-label">Select the affiliated CAIS funds*</label>
+                <select name="affiliatedCaisFunds" class="cais-funds-select" multiple="multiple" data-placeholder="Select CAIS Funds..." validationMessage="Please select CAIS funds"></select>
+            </div>
+
+            <label class="form-label">Does the investor provide investment advice for a fee (direct or indirect) with respect to the assets of any fund on the CAIS platform?</label>
+            <label><input type="radio" name="caisFundAdvisor" value="false">No</label>
+            <label><input type="radio" name="caisFundAdvisor" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="caisFundAdvisor">
+                <label class="form-label">Select the affiliated CAIS funds*</label>
+                <select name="caisFundAdvisorFunds" class="cais-funds-select" multiple="multiple" data-placeholder="Select CAIS Funds..." validationMessage="Please select CAIS funds"></select>
+            </div>
+
+            <label class="form-label">Is the investor an affiliate of any such person described in the previous 2 questions?</label>
+            <label><input type="radio" name="indirectlyAffiliatedWithCaisFund" value="false">No</label>
+            <label><input type="radio" name="indirectlyAffiliatedWithCaisFund" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="indirectlyAffiliatedWithCaisFund">
+                <label class="form-label">Select the affiliated CAIS funds*</label>
+                <select name="indirectlyAffiliatedCaisFunds" class="cais-funds-select" multiple="multiple" data-placeholder="Select CAIS Funds..." validationMessage="Please select CAIS funds"></select>
+            </div>
+
+            <label class="form-label">Do you expect the investor to be affiliated with any other person that is, or whom you expect will become, an investor in the same fund?</label>
+            <label><input type="radio" name="expectedAffiliation" value="false">No</label>
+            <label><input type="radio" name="expectedAffiliation" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="expectedAffiliation">
+                <label class="form-label">Please provide name of person:*</label>
+                <input class="form-input-elem" name="expectedAffiliationName" maxlength="99" type="text" validationMessage="Name is required">
+            </div>
+
+
+            <label class="form-label">Is the Investor an Institutional Account as defined in FINRA Rule 4512(c)? <i  class="tooltip icon-info-circled" data-tooltipcontainer="#institutionalAccount-tooltip"></i></label>
+            <div class="tool-tip-content hidden" id="institutionalAccount-tooltip">
+                <p>For purposes of FINRA Rule 4512(c), the term “institutional account” means the account of:</p>
+                <ol>
+                    <li>A bank, savings and loan association, insurance company or registered investment company</li>
+                    <li>An investment advisor registered with the Securities and Exchange Commission under Section 203 of the Advisors Act or with a state securities commission (or any office performing like functions)</li>
+                    <li>Any other person (whether a natural person, corporation, partnership trust or otherwise) with total assets of at least $50 million.</li>
+                </ol>
+            </div>
+
+            <input type="radio" name="institutionalAccount" value="false" /><label>No</label>
+            <input type="radio" name="institutionalAccount" value="true" /><label>Yes</label><br />
+
+
+            <label class="form-label" data-tooltip="">Is the investor a private investment company or a non-US investment company that (i) is not required to register as an “investment company” under the Investment Company Act in reliance, in whole or in part, on Section 3(c)(1) or 3(c)(7) under the Investment Company Act and (ii) had one or more investors on or before April 30, 1996?</label>
+            
+            <input type="radio" name="nonRegisteredInvestorCompany" value="false" /><label>No</label>
+            <input type="radio" name="nonRegisteredInvestorCompany" value="true" /><label>Yes</label><br />
+
+            <div class="hidden" data-for="nonRegisteredInvestorCompany">
+                <label class="form-label">SEC Registration Number</label>
+                <input class="form-input-elem" name="invRegistrationNumbers" type="text" />
+            </div>
+
+            <div class="form-heading">Additional Authorized Signatories</div>
+            <div class="signatory-form-container"></div>
+        </div> 
+    </div>
+</form>

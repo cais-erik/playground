@@ -1,0 +1,175 @@
+<form id="details" class="form">
+    <div class="entity-details-container clearfix container_12">
+        <div id="nameDetailsCommunicator"></div>  
+        <div class="grid_12">
+            <div class="form-heading">Individual Information</div>
+        </div>
+        <div class="grid_6">
+            <div class="clearfix input-group-wrap">
+                <div class="grid_5 alpha">
+                    <label class="form-label" data-tooltip="First Name">First Name*</label>
+                    <input class="form-input-elem" name="primaryFirstName" maxlength="99" type="text"  validationMessage="First Name is required" required>
+                </div>
+                <div class="grid_1">
+                    <label class="form-label" data-tooltip="Middle Initial">MI</label>
+                    <input class="form-input-elem" name="primaryMiddleInitial" maxlength="1" type="text">
+                </div>
+                <div class="grid_6 omega">
+                    <label class="form-label" data-tooltip="Last Name">Last Name*</label>
+                    <input class="form-input-elem" name="primaryLastName" maxlength="99" type="text" required validationMessage="Last Name is required">
+                </div>
+            </div>
+
+            <div class="type-specific-info" data-typeid="47,49,50">
+                <label class="form-label">Plan Associated to Name*<i  class="tooltip icon-info-circled" data-tooltipcontainer="#planName-tooltip"></i></label>
+                <div class="tool-tip-content hidden" id="planName-tooltip">
+                    <p>Input the plan type which will be connected to the investor name. For example, John F. Smith Rollover IRA should input Rollover IRA into this space.</p>
+                </div>
+                <input class="form-input-elem required" name="planName" maxlength="99" type="text" required validationMessage="Plan name required">
+            </div>
+
+            <div class="clearfix input-group-wrap">
+                <div class="grid_6 alpha">
+                    <label class="form-label" data-tooltip="Date of Birth">Date of Birth*</label>
+                    <input name="dateOfBirth" data-role="datepicker" data-split-iso-date data-format="M-d-yyyy" data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz']" type="text" required data-required-msg="Date of Birth is required">
+                </div>
+                <div class="grid_6 omega">
+                    <label class="form-label" data-tooltip="Date of Birth">Citizenship*</label>
+                    <select data-role="dropdownlist" name="citizenship" required validationMessage="Citizenship is required">
+                        <option value="">Select country...</option>
+                        {{countryOptions citizenship}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="clearfix input-group-wrap">
+                <div class="grid_6 alpha">
+                    <label class="form-label">Marital Status</label>
+                    <select name="maritalStatus" validationMessage="Marital Status is required" >
+                        <option value="">Select...</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="separated">Separated</option>
+                        <option value="widowed">Widowed</option> 
+                    </select>
+                </div>
+                <div class="grid_6 omega">
+                    <label class="form-label" data-tooltip="Social Security Number">Social Security Number*</label>
+                    <input name="ssnTin" class="ssn form-input-elem" maxlength="25" type="text" required data-required-msg="Social Security Number is required">
+                </div>
+            </div>
+
+            <label class="form-label">Approximate net worth</label>
+            <input name="approximateValueOfNet" maxlength="14" type="text" data-role="numerictextbox">
+
+           <!--  <label class="form-label">Do you expect the investor to be affiliated with any other person that is, or whom you expect will become, an investor in the same fund?</label>
+            <label>
+            <input type="radio" name="invSameFund" value="false">No</label>
+            <label><input type="radio" name="invSameFund" value="true">Yes</label>
+            <label class="form-label">If Yes, what is the name?</label>
+            <input name="invSameFundName" class="form-input-elem" type="text"> -->
+        </div>
+        <div class="grid_6">
+            <label class="form-label" style="margin-top: 1em;">Is the investor an Institutional Account as defined in FINRA Rule 4512(c)? <i  class="tooltip icon-info-circled" data-tooltipcontainer="#institutionalAccount-tooltip"></i></label>
+            <div class="tool-tip-content hidden" id="institutionalAccount-tooltip">
+                <p>For purposes of FINRA Rule 4512(c), the term “institutional account” means the account of:</p>
+                <ol>
+                    <li>A bank, savings and loan association, insurance company or registered investment company</li>
+                    <li>An investment advisor registered with the Securities and Exchange Commission under Section 203 of the Advisors Act or with a state securities commission (or any office performing like functions)</li>
+                    <li>Any other person (whether a natural person, corporation, partnership trust or otherwise) with total assets of at least $50 million.</li>
+                </ol>
+            </div>
+            {{#selectRadio institutionalAccount}}
+            <input type="radio" name="institutionalAccount" value="false"><label>No</label>
+            <input type="radio" name="institutionalAccount" value="true"><label>Yes</label><br>
+            {{/selectRadio}}
+
+            <label class="form-label" data-tooltip="Tooltip here">Is the investor registered with the CFTC or the National Futures Association? <i  class="tooltip icon-info-circled" data-tooltipcontainer="#cftcOrNfa-tooltip"></i></label>
+            <div class="tool-tip-content hidden" id="cftcOrNfa-tooltip">
+                <p>The Commodity Futures Trading Commission (CFTC) oversees designated contract markets, swap execution facilities, derivatives clearing organizations, swap data repositories, swap dealers, futures commission merchants, commodity pool operators and other intermediaries.</p>
+            </div>
+            <input type="radio" name="cftcOrNfa" value="false"><label>No</label>
+            <input type="radio" name="cftcOrNfa" value="true"><label>Yes</label><br>
+            <div class="hidden" data-for="cftcOrNfa">
+                <label class="form-label">CFTC/NFA Registration number(s)</label>
+                <input class="form-input-elem" name="cftcRegistrationNumbers" type="text" />
+            </div>
+
+            <div class="form-heading">Affiliation</div>
+        
+            <label class="form-label">Does the investor have discretionary authority or control with respect to the assets of any fund listed on the CAIS platform?</label>
+            <label><input type="radio" name="affiliatedWithCaisFund" value="false">No</label>
+            <label><input type="radio" name="affiliatedWithCaisFund" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="affiliatedWithCaisFund">
+                <label class="form-label">Select the affiliated CAIS funds*</label>
+                <select name="affiliatedCaisFunds" class="cais-funds-select" multiple="multiple" data-placeholder="Select CAIS Funds..." validationMessage="Please select CAIS funds"></select>
+            </div>
+
+            <label class="form-label">Does the investor provide investment advice for a fee (direct or indirect) with respect to the assets of any fund on the CAIS platform? </label>
+            <label><input type="radio" name="caisFundAdvisor" value="false">No</label>
+            <label><input type="radio" name="caisFundAdvisor" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="caisFundAdvisor">
+                <label class="form-label">Select the affiliated CAIS funds*</label>
+                <select name="caisFundAdvisorFunds" class="cais-funds-select" multiple="multiple" data-placeholder="Select CAIS Funds..." validationMessage="Please select CAIS funds"></select>
+            </div>
+
+            <label class="form-label">Is the investor an affiliate of any such person described in the previous 2 questions?</label>
+            <label><input type="radio" name="indirectlyAffiliatedWithCaisFund" value="false">No</label>
+            <label><input type="radio" name="indirectlyAffiliatedWithCaisFund" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="indirectlyAffiliatedWithCaisFund">
+                <label class="form-label">Select the affiliated CAIS funds*</label>
+                <select name="indirectlyAffiliatedCaisFunds" class="cais-funds-select" multiple="multiple" data-placeholder="Select CAIS Funds..." validationMessage="Please select CAIS funds"></select>
+            </div>
+
+            <label class="form-label">Do you expect the investor to be affiliated with any other person that is, or whom you expect will become, an investor in the same fund?</label>
+            <label><input type="radio" name="expectedAffiliation" value="false">No</label>
+            <label><input type="radio" name="expectedAffiliation" value="true">Yes</label>
+            <div class="fund-multiselect hidden" data-for="expectedAffiliation">
+                <label class="form-label">Please provide name of person:*</label>
+                <input class="form-input-elem" name="expectedAffiliationName" maxlength="99" type="text" validationMessage="Name is required">
+            </div>
+
+        </div> 
+
+        <!-- joint specific info -->
+        <div class="type-specific-info" data-typeid="41,39">
+            <div class="grid_12">
+                <div class="form-heading">Joint Information</div>
+            </div>
+            <div class="grid_6">
+                <div class="clearfix input-group-wrap">
+                    <div class="grid_5 alpha">
+                        <label class="form-label" data-tooltip="First Name">First Name*</label>
+                        <input class="form-input-elem" name="jointFirstName" maxlength="99" type="text" validationMessage="First Name is required" required>
+                    </div>
+                    <div class="grid_1">
+                        <label class="form-label" data-tooltip="Middle Initial">M.I.</label>
+                        <input class="form-input-elem" name="jointMiddleInitial" maxlength="4" type="text">
+                    </div>
+                    <div class="grid_6 omega">
+                        <label class="form-label" data-tooltip="Last Name">Last Name*</label>
+                        <input class="form-input-elem" name="jointLastName" maxlength="99" type="text" validationMessage="Last Name is required" required>
+                    </div>
+                </div>
+                <div class="clearfix input-group-wrap">
+                    <div class="grid_6 alpha">
+                        <label class="form-label" data-tooltip="Date of Birth">Date of Birth*</label>
+                        <input name="jointDateOfBirth" data-role="datepicker" data-split-iso-date data-format="M-d-yyyy" data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz']" type="date" required>
+                    </div>
+                    <div class="grid_6 omega">
+                        <label class="form-label" data-tooltip="Date of Birth">Citizenship*</label>
+                        <select data-role="dropdownlist" name="jointCitizenship" required validationMessage="Citizenship is required">
+                            <option value="">Select country...</option>
+                            {{countryOptions jointCitizenship}}
+                        </select>
+                    </div>
+                    <div class="grid_6 alpha clearfix">
+                        <label class="form-label" data-tooltip="Joint Social Security Number">Social Security Number*</label>
+                        <input class="form-input-elem" name="jointSsnTin" class="ssn" maxlength="25" type="text" validationMessage="SSN is required" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

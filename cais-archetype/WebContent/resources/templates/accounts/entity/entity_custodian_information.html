@@ -1,0 +1,79 @@
+<form id="custodianInformation" class="form" data-panelId="8">
+    <div id="custodianCommunicator"></div>  
+    <div class="entity-details-container clearfix container_12">
+        <div class="grid_6">
+            <div class="form-heading">Custodian</div>
+
+            <label class="form-label" data-tooltip="needCustodianReport">Does this entity wish to receive custodial reporting?*</label>
+            <input name="needCustodianReport" type="radio" value="false" required validationMessage="Custodian report method is requried" /><span for="needCustodianReportFalse">No</span>
+            <input name="needCustodianReport" type="radio" value="true" required validationMessage="Custodian report method is requried" /><span for="needCustodianReportTrue">Yes</span>
+
+
+            <label class="form-label" data-tooltip="Custodian">Custodian*</label>
+            <select class="parse-int" name="custodianId" validationMessage="Custodian is requried" required></select>
+
+            <!-- <input name="fullyQulifiedCustodianName" type="text" readonly required validationMessage="Doc Entity Name is required"> -->
+            <!-- <div class="validation-wrapper"><span class="k-invalid-msg" data-for="fullyQulifiedCustodianName"></span></div> -->
+
+            <div class="other-custodian-name hidden">
+                <label class="form-label" for="otherCustodianName" data-tooltip="Custodian Prefix">Other Custodian Name*</label>
+                <input name="otherCustodianName" type="text" class="form-input-elem" validationMessage="Other Custodian Name is required" />
+            </div>
+
+            <label class="form-label" for="custodianPrefix" data-tooltip="Custodian Prefix">Custodian Prefix</label>
+            <input class="form-input-elem" name="custodianPrefix" type="text" validationMessage="Custodian Prefix is required" />
+
+            <label class="form-label" for="custodianPostfix" data-tooltip="Custodian Postfix">Custodian Postfix</label>
+            <input class="form-input-elem" name="custodianPostfix" type="text" validationMessage="Custodian Postfix is required" readonly />
+
+            <label class="form-label" data-tooltip="Entity Account Number">Entity Account Number*</label>
+            <input class="form-input-elem" name="custodianAccountNumber" maxlength="44" type="text" class="noparse" required validationMessage="Entity account number is requried" />
+            
+            <div class="form-heading">Custodian Contact</div>
+
+            <label class="form-label" data-tooltip="Primary Contact Name">Primary Contact Name*</label>
+            <input class="form-input-elem" name="custodianPrimaryContactName" maxlength="99" type="text" required validationMessage="Primary contact name is requried" class="noparse" />
+
+            <label class="form-label" data-tooltip="Office Phone #">Phone - Office</label>
+            <input name="phone" maxlength="44" type="text" class="noparse form-input-elem" />
+
+            <!-- <label class="form-label" data-tooltip="Fax #">Fax</label>
+            <input name="fax" maxlength="44" type="tel" class="noparse form-input-elem" /> -->
+
+            <label class="form-label" data-tooltip="Email">Email*</label>
+            <input class="validate-multi-email form-input-elem" name="email" maxlength="100" type="text" required validationMessage="Custodian Email is Required" />
+
+        </div>
+        <div class="grid_6">
+                
+            <div class="sub-doc-name-preview">
+                <div class="form-heading">Subscription Doc Entity Name</div>
+                <p>Save custodian details to preview the subscription document entity name.</p>
+                <strong name="fullyQulifiedCustodianName"></strong>
+            </div>
+<!-- 
+            <div class="form-heading">Custodian Address</div>
+
+            <label class="form-label" data-tooltip="Country">Country</label>
+            <select data-role="dropdownlist" name="country">
+                <option value="">Select country...</option>
+                {{countryOptions}}
+            </select>
+
+            <label class="form-label" data-tooltip="Address 1">Address 1</label>
+            <input class="noparse form-input-elem" name="street1" maxlength="99" type="text" />
+
+            <label class="form-label" data-tooltip="Address 2">Address 2</label>
+            <input class="noparse form-input-elem" name="street2" maxlength="99" type="text" />
+
+            <label class="form-label" data-tooltip="City">City</label>
+            <input class="noparse form-input-elem" name="city" maxlength="44" type="text" />
+
+            <label class="form-label" data-tooltip="State/Province">State/Province</label>
+            <input class="noparse form-input-elem" name="state" maxlength="44" type="text" />
+
+            <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code</label>
+            <input class="noparse form-input-elem" name="postalCode" class="noparse" maxlength="44" type="text" /> -->
+        </div> 
+    </div>
+</form>

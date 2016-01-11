@@ -1,0 +1,27 @@
+<h1>Add a New Document</h1>
+<form class="form clearfix" id="add-entity-statement" method="post" action="/uploadInvestmentDoc">
+	<div class="column">
+		<label class="form-label" for="document-type">Document Type*</label>
+		<select data-role="dropdownlist" name="categoryId">
+			<option value="25">Statement</option>
+			<option value="43">Audited Financial Statement</option>
+			<option value="27">K1</option>
+		</select>
+		<label class="form-label" for="fund-name">Product/Fund*</label>
+		<select data-role="dropdownlist" name="fundId" {{^products}}disabled{{/products}}>
+			{{^products}}<option><em>No products available</em></option>{{/products}}
+			{{#products}}<option value="{{fundId}}"><em>{{fundName}}</em></option>{{/products}}
+		</select>
+	</div>
+	<div class="column">
+		<label class="form-label" for="document-type">Select Document</label>
+		<input data-required="true" name="file" id="doc-file" type="file">
+
+		<label class="form-label" for="statment-date">Document Date</label>
+		<input data-role="datepicker" name="documentDate" type="date" required>
+	</div>
+	<div class="control-bar">
+	    <div class="primaryButton save"><div><span>SAVE</span></div></div>
+	    <div class="primaryButton cancel"><div><span>CANCEL</span></div></div>
+	</div>
+</form>

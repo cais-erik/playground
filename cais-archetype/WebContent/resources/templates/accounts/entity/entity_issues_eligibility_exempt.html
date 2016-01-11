@@ -1,0 +1,67 @@
+<form id="newIssuesEligibility" class="form" data-panelId="7">   
+	<div class="entity-details-container clearfix container_12">   
+		<div id="newIssuesEligibilityCommunicator"></div>    
+		<div class="grid_12">
+			<div class="form-heading">New Issues Eligibility - Exempt <i class="tooltip icon-info-circled" data-tooltipcontainer="#new-issues-tooltip"></i></div>
+			<div class="tool-tip-content hidden" id="new-issues-tooltip">
+                <p>New Issues refers to a security that has been registered, issued and is being sold on a market to the public for the first time. These securities are also referred to as primary shares or new offerings.</p>
+            </div>
+		</div>
+		<div class="grid_6 disable-container">
+		
+			<!-- <label class="form-label" data-tooltip="Restricted">Restricted</label> -->
+			
+			<div class="checkbox-label-wrap">
+				<label><input name="icaAct" type="checkbox"> An investment company registered under the Investment Company Act</label>
+			</div>
+
+			<div class="checkbox-label-wrap">
+				<label><input name="commonTrust" type="checkbox"> A common trust with investments from 1,000 or more accounts and such common trust fund is not limited principally to accounts of persons who are otherwise restricted or covered persons</label>
+			</div>
+
+			<!-- <label class="form-label" data-tooltip="Portfolio Managers">Portfolio Managers (and their immediate family members)</label> -->
+			<div class="checkbox-label-wrap">
+				<label><input name="insuranceCompanyGeneral" type="checkbox"> An insurance company general, separate or investment account with, or funded by premiums from 1,000 or more policyholders and such account is not limited principally to accounts of persons who are otherwise restricted or covered persons</label>
+			</div>
+
+			<div class="checkbox-label-wrap">
+				<label><input name="publicallyTradedEntity" type="checkbox"> A publically traded entity (other than broker-dealers or affiliates thereof, if such broker-dealer is authorized to engage in the public offering of "new issues" either as a selling group member or underwriter) that (i) is listed on a national securities exchange, or (ii) is a foreign issuer whose securities meet the quantitative designation criteria for listing on a national securities exchange</label>
+			</div>
+			
+			<!-- <label class="form-label" data-tooltip="Team Name">Broker-Dealer and/or Its Personnel</label> -->
+			<div class="checkbox-label-wrap">
+				<label><input name="oreignJurisdictionFund" type="checkbox"> A fund organized under the laws of a foreign jurisdiction whose securities are listed on a foreign exchange for sale to the public or are authorized for sale to the public by a foreign regulatory authority, and no person owning more than 5% of the shares of such a fund is a restricted or covered person</label>
+			</div>
+		</div>
+		<div class="grid_6 disable-container">
+			<div class="checkbox-label-wrap">
+				<label><input name="erisaBenefitPlan" type="checkbox"> A benefit plan established under ERISA that is qualified under Section 401(a) of the code, provided that such a plan is not sponsored by a broker-dealer</label>
+			</div>
+
+			<div class="checkbox-label-wrap">
+				<label><input name="taxExemptCharity" type="checkbox"> A tax exempt charitable organization under Section 501(c) of the code</label>
+			</div>
+
+			<div class="checkbox-label-wrap">
+				<label><input name="churchPlan" type="checkbox"> A church plan under Section 414(e) of the code</label>
+			</div>
+
+			<div class="checkbox-label-wrap">
+				<label><input name="benificialInterestsOfRestrictedPersons" type="checkbox"> A corporation, partnership, trust or other entity in which (i) the beneficial interests of restricted persons do not exceed in the aggregate 10% of such entity (an investor who limits the participation by restricted or covered persons in new issues to no more than 10% may check this item) and (ii) the beneficial interests of covered persons of any one particular company do not exceed in the aggregate 25% of such entity (an investor who limits the participation by covered persons of any particular company in new issues to no more than 25% may check this item.)</label>
+			</div>			
+
+			<div class="benificialInterestsOfRestrictedPersons-true hidden">
+				<div class="checkbox-label-wrap">
+					<label><input name="fundOfFunds" type="checkbox"> The investor is a fund of Funds</label>
+				</div>
+				<div class="checkbox-label-wrap">
+					<label><input name="investorPermitsBeneficiaryProfits" type="checkbox"> Does the investor permit its beneficial owners that are Restricted Persons, if any to participate in profits and losses allocated to the Investor that are attributable to the new issues securities</label>
+				</div>
+			</div>
+		</div>    
+		<div class="grid_12" style="text-align:right;">
+			<hr/>
+			<label class="form-label"><input name="newIssuesExemptDoNotApply" type="checkbox"> None of the above apply</label>
+		</div>    
+	</div>
+</form>

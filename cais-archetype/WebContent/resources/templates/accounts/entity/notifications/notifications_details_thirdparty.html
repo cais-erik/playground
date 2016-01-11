@@ -1,0 +1,70 @@
+<div class="grid_6 interested-party-form">
+    <div class="form-heading THIRD_PARTY">Interested Party</div>
+
+    <div id="thirdPartyContent">                 
+        <label class="form-label">Name*</label>
+        <input class="form-input-elem" name="name" type="text" required="required" validationMessage="Name is Required." value="{{selectedParty.name}}" />
+        <div class="validation-wrapper"><span class="k-invalid-msg" data-for="name"></span></div>
+                
+        <div class="validation-wrapper"><span class="k-invalid-msg" data-for="type"></span></div>
+        <label class="form-label">Type*</label>
+        <select name="type"
+                data-role="dropdownlist"
+                data-option-label="Select a Type"
+                required>
+                {{#select selectedParty.type}}
+                <option value="Accountant">Accountant</option>
+                <option value= "Authorized Signatory">Authorized Signatory</option>
+                <option value="Lawyer">Lawyer</option>
+                <option value="Trustee">Trustee</option>
+                <option value="Other">Other</option>
+                {{/select}}
+        </select>
+        <div class="validation-wrapper"><span class="k-invalid-msg" data-for="type"></span></div>
+    </div>
+    <br /><br />
+
+    <div class="form-heading THIRD_PARTY">Interested Party Contact</div>
+
+    <label class="form-label" data-tooltip="Email">Email*</label>
+    <input class="form-input-elem" name="email" type="email" value="{{selectedParty.email}}" required="required" validationMessage="Email is Required." />
+    <div class="validation-wrapper"><span class="k-invalid-msg" data-for="email"></span></div>
+
+    <label class="form-label" data-tooltip="Office Phone #">Phone - Office</label>
+    <input class="form-input-elem" name="phone" type="tel" value="{{selectedParty.phone}}" />
+
+    <label class="form-label" data-tooltip="Email">Fax</label>
+    <input class="form-input-elem" name="fax" type="tel" value="{{selectedParty.fax}}" />
+    <br /><br /><br/>
+
+    <div class="form-heading THIRD_PARTY">Interested Party Mailing Address</div>
+
+    <label class="form-label" data-tooltip="Country">Country</label>
+    <input class="form-input-elem" name="country" type="text" value="{{selectedParty.country}}" />
+
+    <label class="form-label" data-tooltip="Address 1">Address 1</label>
+    <input class="form-input-elem" name="street1" type="text" value="{{selectedParty.street1}}" />
+
+    <label class="form-label" data-tooltip="Address 2">Address 2</label>
+    <input class="form-input-elem" name="street2" type="text" value="{{selectedParty.street2}}"/>
+
+    <label class="form-label" data-tooltip="City">City</label>
+    <input class="form-input-elem" name="city" type="text" value="{{selectedParty.city}}" />
+
+    <label class="form-label" data-tooltip="State/Province">State/Province</label>
+    <input class="form-input-elem" name="state" type="text" value="{{selectedParty.state}}" />
+
+    <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code</label>
+    <input class="form-input-elem" name="postalCode" type="text" value="{{selectedParty.postalCode}}" />
+</div>
+<div class="grid_6">
+    <div style="text-align: center; margin-top: 60px;">
+        <div class="secondaryButton save-party">
+            <div>
+                <span>SAVE INTERESTED PARTY</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div style="clear: both;"></div>

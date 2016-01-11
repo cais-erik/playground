@@ -1,0 +1,18 @@
+<a href="#" class="remove-account" data-accountid="{{model.id}}"><i class="icon-cancel-circled"/></a>
+<header class="account-details clearfix">
+	<strong>{{model.accountName}}</strong>
+	<select data-role="dropdownlist" name="userId" data-accountid="{{model.id}}" required validationMessage="Advisor required">
+		<option value="">No advisors</option>
+	</select>
+	<select data-role="dropdownlist" name="advisorTeamId" data-accountid="{{model.id}}" required validationMessage="Advisor team required">
+		<option value="">No teams</option>
+	</select>
+</header>
+<ul class="product-list">
+	{{#products}}
+	<li class="clearfix">
+		<strong>{{name}}</strong>
+		<input data-role="numerictextbox" name="ioi" data-format="{0:n0}" data-productid="{{internalCusip}}" type="number" placeholder="Number of shares" validationMessage="Shares required" required>
+	</li>
+	{{/products}}	
+</ul>

@@ -1,0 +1,48 @@
+<div class="details-header"><span>Select signed documents to upload. When all required documents are uploaded, click the checkbox at the bottom, then click Submit.</span></div>
+<div class="scrollable-content">
+    <div class="drag-drop-container">
+        <div class="drag-drop-area">
+            <div class="left-arrow"></div>
+            <div class="label">DROP FILE</div>
+            <div class="right-arrow"></div>
+            <div class="label sub-label">OR</div>
+            <input name="docs" id="docs" type="file" />
+        </div>
+        <div class="drag-drop-documents">
+        
+        </div>
+    </div>
+    <div class="upload-documents-wrapper">            
+        <div class="uploaded-documents-title">Documents Uploaded</div>
+        <ul class="uploaded-documents documents-list">
+            {{#collection}}
+            <li>
+                <span class="delete-button" data-deletedocid="{{documentId}}"><i class="icon-cancel-circled"></i></span>
+                <span class="docs-received" id="{{documentId}}"><img class="download-doc" src="/resources/assets/icons/pdf-icon.png" alt="document" data-docid="{{documentId}}"></span>
+                <span class="doc-name">{{fileName}}</span>
+            </li>
+            {{/collection}}
+        </ul>
+        <div class="uploaded-documents-title">Attach Investment Entity Documents</div>
+        <ul class="kyc-documents documents-list">
+            {{#entityDocs}}
+            <li>
+                <label>
+                    <input type="checkbox" name="added-docs" value="{{documentId}}">
+                    <span class="docs-received" id="{{documentId}}"><img class="download-doc" src="/resources/assets/icons/pdf-icon.png" alt="document" data-docid="{{documentId}}"></span>
+                    <span class="doc-name">{{fileName}}</span>
+                </label>
+            </li>
+            {{/entityDocs}}
+            {{^entityDocs}}
+            <li><p>No documents to attach.</p></li>
+            {{/entityDocs}}
+        </ul>
+    </div>
+</div>
+<div class="details-footer">       		
+    <ul class="commands">
+    	<li id="sendToAdministrator" class="command-button" style="display: none;"><a href="#"><div class="inner">SUBMIT</div></a></li>
+    </ul>
+    <label id="requiredDocsUploadedConfirmation" class="footer-label"><input name="requiredDocsUploadedConfirmation" type="checkbox"> All executed documents required for this transaction have been uploaded.</label>
+</div>

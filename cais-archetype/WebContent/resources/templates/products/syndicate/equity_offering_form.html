@@ -1,0 +1,143 @@
+<h1 class="title-header" style="display:block; float:none">{{#options.editId}}Edit <span name="name"></span> {{options.offeringType}} Offering{{/options.editId}}{{^options.editId}}Create a New {{options.offeringType}} Offering{{/options.editId}}
+	<a data-bypass class="back-to-offers" href="/"><i class="icon-list"></i>Back to Offerings</a>
+</h1>
+
+<form id="insert-product" class="container_12 form clearfix gridded-form" action="api/products/syndicate" action="POST">
+	<p class="grid_12 clearfix" style="margin-bottom: 1em;">All fields marked with an astrisk(*) must be provided for offer to be published.</p>
+	<section class="clearfix">
+		<div class="grid_12 clearfix">
+			<h2>Issuer Information</h2>
+		</div>
+		<div class="clearfix">
+			<div class="grid_3">
+				<label for="name">Issuer*</label>
+				<input name="name" type="text" tabindex="1" required>
+
+				<label for="ticker">Ticker*</label>
+				<input name="ticker" type="text" tabindex="3" required>
+			</div>
+			<div class="grid_3">
+				<label for="industryGroup">Industry Group*</label>
+				<select data-role="dropdownlist" name="industryGroup" tabindex="2" required>
+					<option value="">Select a group...</option>
+					<option value="Basic Materials">Basic Materials</option>
+					<option value="Conglomerates">Conglomerates</option>
+					<option value="Consumer">Consumer</option>
+					<option value="Diversified">Diversified</option>
+					<option value="Energy">Energy</option>
+					<option value="Financial">Financial</option>
+					<option value="Healthcare">Healthcare</option>
+					<option value="Industrial">Industrial</option>
+					<option value="Metals/Mining">Metals/Mining</option>
+					<option value="MLP">MLP</option>
+					<option value="Real Estate">Real Estate</option>
+					<option value="Services">Services</option>
+					<option value="Technology">Technology</option>
+					<option value="Utilities">Utilities</option>
+				</select>
+				<label for="exchange">Exchange*</label>
+				<select data-role="dropdownlist" name="exchange" tabindex="4" required>
+					<option value="">Select exchange...</option>
+					<option value="AMEX">AMEX</option>
+					<option value="NASDAQ">NASDAQ</option>
+					<option value="NYSE">NYSE</option>
+					<option value="unlisted">Unlisted</option>
+				</select>
+			</div>
+			<div class="grid_6">
+				<label for="name">Issuer Description*</label>
+				<textarea class="kendo-editor" name="companyDescription" tabindex="5" required></textarea>
+			</div>
+		</div>
+	</section>
+	<section class="clearfix">
+		<h2 class="grid_12">Offering Details</h2>
+		<div class="grid_3">
+			<label for="offeringType">Offering Type*</label>
+			<select data-role="dropdownlist" name="offeringType" tabindex="6" required>
+				<option value="IPO">IPO</option>
+				<option value="Follow-on">Follow-on</option>
+				<option value="Follow-on (Block)">Follow-on (Block)</option>
+				<option value="Private Placement">Private Placement</option>
+			</select>
+			<label for="approxSize">Est. Offering Size (USD)*</label>
+			<input name="approxSize" class="parse-int" data-role="numerictextbox" data-decimals="0" data-format="c0" type="text" tabindex="8" required>
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="approxSize"></span></div>
+
+			<label for="priceRange">Price Range</label>
+			<input name="priceRange" type="text" tabindex="10">
+
+			<label for="bookRunner">Book Runners*</label>
+			<select data-role="multiselect" name="bookRunner" data-ignorecase multiple="multiple" tabindex="12" data-placeholder="Select bookrunners..." required>
+				{{#setupData}}<option value="{{id}}">{{shortName}}</option>{{/setupData}}
+			</select>
+			<label for="coManagers">Co-Managers</label>
+			<select data-role="multiselect" name="coManagers" data-ignorecase multiple="multiple" tabindex="15" data-placeholder="Select co-managers...">
+				{{#setupData}}<option value="{{id}}">{{shortName}}</option>{{/setupData}}
+			</select>
+			<label for="netRoadShow">Netroadshow URL</label>
+			<input name="netRoadShow" type="url" tabindex="17">
+		</div>
+		<div class="grid_3">
+			<label for="productType">Product Type*</label>
+			<select data-role="dropdownlist" name="productType" tabindex="7" required>
+				<option value="American Depository Receipts">American Depository Receipts</option>
+				<option value="American Depository Shares">American Depository Shares</option>
+				<option value="Common Stock">Common Stock</option>
+				<option value="Common Units">Common Units</option>
+			</select>
+
+			<label for="sharesOffered">Est. Deal Size (shares / units)*</label>
+			<input name="sharesOffered" class="parse-int" data-role="numerictextbox" data-format="n0" data-decimals="0" type="text" tabindex="9" required>
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="sharesOffered"></span></div>
+
+			<label for="overAllotmentOptionPrct">Over Allotment Option (%)*</label>
+			<input name="overAllotmentOptionPrct" class="parse-int" data-role="numerictextbox" data-format="#.#\%" data-decimals="0" type="text" tabindex="11" required>
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="overAllotmentOptionPrct"></span></div>
+
+			<!-- <label for="leadManagers">Lead Managers</label>
+			<select data-role="multiselect" name="leadManagers" multiple="multiple" tabindex="13" data-placeholder="Select lead managers...">
+				{{#setupData}}<option value="{{id}}">{{shortName}}</option>{{/setupData}}
+			</select> -->
+			<label for="prospectusId">Prospectus Document(PDF)*</label>
+			{{#offering.prospectusId}}
+			<a class="download-prospectus icon-download" href="/api/document/download?docId={{.}}" target="_blank">View</a>
+			{{/offering.prospectusId}}
+			<input type="file" name="file" data-attrName="prospectusId" tabindex="14">
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="file"></span></div>
+
+			<label for="netRoadShowDescription">Netroadshow Description</label>
+			<input name="netRoadShowDescription" type="text" tabindex="16">
+		</div>
+		<div class="grid_6">
+			<label for="useOfProceeds">Use of Proceeds</label>
+			<textarea class="kendo-editor" name="useOfProceeds" tabindex="18"></textarea> 
+		</div>		
+	</section>
+	<section class="clearfix">
+		<h2 class="grid_12">Offer Timing</h2>		
+		<div class="grid_6">
+			<label for="orderPeriodDesc">Order Period Description</label>
+			<input type="text" name="orderPeriodDesc" tabindex="18">
+		</div>
+		<div class="grid_3">
+			<label for="expectedTiming">Expected Timing Date*</label>
+			<input name="expectedTiming" data-futuredate data-role="datepicker" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-ddTHH:mm:ss.fffzzz','yyyy-MM-dd']" type="text" tabindex="19" required>
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="expectedTiming"></span></div>
+		</div>
+		<div class="grid_3">
+			<label for="orderPeriodEndDate">Order Period*</label>
+			<input data-role="datetimepicker" data-futuredate name="orderPeriodEndDate" type="text" data-parse-formats="['yyyy-MM-ddTHH:mm:ss.fffzzz']" tabindex="20" required>
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="orderPeriodEndDate"></span></div>
+		</div>	
+		<!-- <div class="grid_6">
+			<label for="expectedTimingWindow">Expected Timing Market Closing Window*</label>
+			<label class="radio-label"><input name="expectedTimingWindow" type="radio" value="Before market open" tabindex="22" required>Before market open</label>
+			<label class="radio-label"><input name="expectedTimingWindow" type="radio" value="After market close" tabindex="23" required>After market close</label>
+			<div class="validation-wrapper"><span class="k-invalid-msg" data-for="expectedTimingWindow"></span></div>
+		</div> -->
+	</section>
+	<button type="submit" tabindex="30">
+		<span class="command-button">{{#options.editId}}Update Offering{{/options.editId}}{{^options.editId}}Add Offering{{/options.editId}}</span>
+	</button>
+</form>

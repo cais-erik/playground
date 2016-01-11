@@ -1,0 +1,102 @@
+<form id="benefitPlan" class="form" data-panelId="6">   
+        <div class="entity-details-container clearfix container_12">
+        <div id="benefitPlanCommunicator"></div>     
+        <div class="grid_6">
+            <div class="form-heading">Benefit Plan</div>
+            
+            <label class="form-label" data-tooltip="The firm this advisor belongs to.">Are you a Benefit Plan Investor?<i  class="tooltip icon-info-circled" data-tooltipcontainer="#benefit-plan-tooltip"></i></label>
+            <div class="tooltip-content hidden" id="benefit-plan-tooltip">
+                <p>The term "Benefit Plan Investors," as defined under Section 3(42) of ERISA and any regulations promulgated thereunder, includes:</p>
+                <ol>
+                    <li>an "employee benefit plan" that is subject to the provisions of Title I of ERISA</li>
+                    <li>"plan" that is not subject to the provisions of Title I of ERISA, but that is subject to the prohibited transaction provisions of Section 4975 of the Code, such as individual retirement accounts and certain retirement plans for self-employed individuals; and</li>
+                    <li>a pooled investment fund whose assets are treated as "plan assets" under Section 3(42) of ERISA and any regulations promulgated thereunder because "employee benefit plans" or "plans" hold 25% or more of any class of equity interest in such pooled investment fund.  For purposes of this Subscription Booklet, the term "Benefit Plan Investor" also includes an insurance company general account which is deemed under 29 C.F.R. § 2550.401c-1 to hold plan assets of the foregoing benefit plans and accounts as a result of the investment by such plans and accounts in such insurance company general account.</li>
+                </ol>
+            </div>
+
+            <input name="isBenefitPlanInvestor" id="benefitPlanInvestorFalse" type="radio" value="false" /><label for="isBenefitPlanInvestor">No</label>
+            <input name="isBenefitPlanInvestor" id="benefitPlanInvestorTrue" type="radio" value="true" /><label for="benefitPlanInvestorTrue">Yes</label>       
+
+
+            <!-- <div class="no-benefit-plan-input hidden">
+                <label class="form-label">If not, please indicate whether the Investor is:</label>
+
+                <div class="checkbox-label-wrap">
+                    <label><input type="radio" name="investorType" value="Discretionary Authority"> (i) a person (including an entity) who has discretionary authority or control with respect to the assets of any fund of manager listed on the CAIS platform</label>
+                </div>
+                <div class="checkbox-label-wrap">
+                    <label><input type="radio" name="investorType" value="Investment Advisor">(ii) a person (including an entity) who provides investment advice for a fee (direct or indirect) with respect to such assets or an "affiliate" of any such person described in (i) and/or (ii). <br/><br/>
+
+                    For purposes of this representation, an "affiliate" is any person controlling, controlled by or under common control with any fund or manager listed on the CAIS platform or any of its investment advisers, including by reason of having the power to exercise a controlling influence over the management or policies of any fund or manager listed on the CAIS platform or its investment advisers(s)?</label>  
+
+                    <input name="isAffiliatedPerson" id="isAffiliatedPersonTrue" type="radio" value="true" /><label for="isAffiliatedPerson">Yes</label>
+                    <input name="isAffiliatedPerson" id="isAffiliatedPersonFalse" type="radio" value="false" /><label for="isAffiliatedPerson">No</label>
+
+                    <div class="fund-multiselect hidden">
+                        <select name="caisFunds" id="caisFunds" multiple="multiple" data-placeholder="Select CAIS Funds...">
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+
+            <label class="form-label" data-tooltip="Team Name">Are you a Pooled Investment Fund?</label>
+            <input name="invFundPooled" id="pooledInvestmentFundFalse" type="radio" value="false" /><label for="pooledInvestmentFundFalse">No</label>
+            <input name="invFundPooled" id="pooledInvestmentFundTrue" type="radio" value="true" /><label for="pooledInvestmentFundTrue">Yes</label>
+
+
+            <div class="pooled-inv-fund-inputs hidden">
+           		<input type="radio" name="bpiAnswer1" value="true" style="margin-left: 40px; float: left;" />
+            	<p style="margin-left: 60px;">25% or more of the value of any class of equity interests in the Investor (excluding from this computation interests held by (i) any individual or entity (other than a Benefit Plan Investor) 
+                	having discretionary authority or control over the assets of the investor, (ii) any individual or entity who provides investment advice for a fee (direct or indirect) with respect to the 
+                	assets of the Investor and (iii) any affiliate of such individuals or entities) is held by Benefit Plan Investors; and</p>     
+            	<br />
+
+                <input type="radio" name="bpiAnswer1" value="false" style="margin-left: 40px; float: left;" />            
+                <p style="margin-left: 60px;">Less than 25% of the value of each class of equity interests in the Investor (excluding from this computation interests held by (i) any individual or entity (other than a Beneift Plan Investor) 
+                    having discretionary authority or control over the assets of the Investor, (ii) any individual or entity who provides investment advice for a fee (direct or indicrect) with respect to the assets
+                     of the investor and (iii) any affiliate of such individuals or entities) is held by Benefit Plan Investors</p>  
+                <br />
+                
+                <p style="margin-left: 60px;">Percent of the equity interest in the Investor is held by Benefit Plan Investors?</p>
+                <span style="margin-left: 60px;" class="shortInputWrapper"><input style="width:150px;" type="text" data-spinners="false" data-role="numerictextbox" name="bpiPercentValue" value="{{bpiPercentValue}}" data-role="numerictextbox" /></span><span style="color: #454545; vertical-align: top; line-height: 34px;">%</span>
+
+            </div>        
+            
+        </div>
+        <div class="grid_6">
+            <div class="form-heading">ERISA</div>
+    
+            <label class="form-label" data-tooltip="Advisor Name">Is the investor subject to the provisions of, the Employee Retirement Income Security Act of 1974 (“ERISA”)?</label>
+            <input name="erisa" id="erisaFalse" type="radio" value="false" /><label for="erisaFalse">No</label>
+            <input name="erisa" id="erisaTrue" type="radio" value="true" /><label for="erisaTrue">Yes</label>
+            
+            <div class="erisa-input hidden">
+                <label class="form-label">If yes, please check all applicable options</label>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="assetsGreaterThan5m" id="assetsGreaterThan5m" type="checkbox"> It has total assets in excess of $5,000,000</label>
+                </div>
+                <div class="checkbox-label-wrap">
+                    <label><input name="planFiduciary" id="planFiduciary" type="checkbox"> The investment decision is being made by a plan fiduciary which is a bank, savings and loan association, insurance company or registered investment Advisor</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="selfDirectedPlan" id="selfDirectedPlan" type="checkbox"> It is a self-directed plan and the decision to invest is made by those participants investing, and each such participant qualifies as an “accredited investor” <i  class="tooltip icon-info-circled" data-tooltipcontainer="#selfDirectedPlanTooltip"></i></label>
+                    <div class="tooltip hidden" id="selfDirectedPlanTooltip">
+                        <p>A tax-qualified defined contribution plan in which a participant may exercise control over the investment of assets credited to his or her account.</p>
+                    </div>
+                </div>
+            </div>
+
+            <label class="form-label">Are you an insurance company who’s general account assets or the assets of a separate account or bank common or collective trust that has investors who are subject to the provisions of ERISA or are a plan under Section 4975 of the Internal Revenue Code of 1986, including a Keough plan or an individual retirement account (an “IRA”)?</label>
+            <input name="isIrisaInsuranceCo" id="isIrisaInsuranceCoFalse" type="radio" value="false" /><label for="isIrisaInsuranceCo">No</label>
+            <input name="isIrisaInsuranceCo" id="isIrisaInsuranceCoTrue" type="radio" value="true" /><label for="isIrisaInsuranceCo">Yes</label>
+            <div class="is-irisa-insurance-inputs hidden">
+                <label class="form-label">Please indicate the applicable percentage of investors who are subject to the provisions of ERISA:</label>
+                <input data-role="numerictextbox" name="percErisaInvestors" data-spinners="false" data-format="p" type="text" min="0" max="1" >
+                <label class="form-label">Please indicate the applicable percentage of investors who a plan under Section 4975 of the Internal Revenue Code of 1986, including a Keough plan or an individual retirement account (an “IRA”):</label>
+                <input name="percSection4975Investors" data-spinners="false" data-format="p" data-role="numerictextbox" type="text" min="0" max="1">
+            </div>
+        </div>        
+    </div>
+</form>

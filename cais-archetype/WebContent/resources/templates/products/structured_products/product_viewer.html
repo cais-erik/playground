@@ -1,0 +1,90 @@
+<header class="clearfix">
+	<div class="title-header">
+		{{model.title}} 
+		{{#user.caisemployee}}
+		{{^model.isExpired}}
+			{{#model.isPublished}}<span class="publish-status published">Published</span>{{/model.isPublished}}
+			{{^model.isPublished}}<span class="publish-status unpublished">Unpublished</span>{{/model.isPublished}}
+		{{/model.isExpired}}
+		{{#model.isExpired}}
+			<span class="publish-status expired">Expired</span>
+		{{/model.isExpired}}
+		{{/user.caisemployee}}
+	</div>
+	{{#user.caisemployee}}
+	<div class="admin-tools">
+		<ul class="navigation edit-offerings">
+			<li>
+				<a href="#">Product Admin <em class="caret-down"></em></a>
+				<ul class="action-menu">
+					{{^model.isExpired}}
+					<li {{#model.isPublished}}class="hidden"{{/model.isPublished}}><a class="publish" href="#"><i class="icon-tag"></i>Publish Product</a></li>
+					<li {{^model.isPublished}}class="hidden"{{/model.isPublished}}><a class="expire" href="#"><i class="icon-cancel"></i>Expire Offering</a></li>
+					<li><a data-bypass href="{{editUrl}}"><i class="icon-forward"></i>Edit Product</a></li>
+					<li><a class="deal-terms" href="#"><i class="icon-suitcase"></i> Final Deal Terms</a></li>
+					<!--<li><a class="preview-email" target="_blank" href="{{emailUrl}}"><i class="icon-menu"></i>Preview Notification</a></li>-->
+					<li><a class="send-email" href="#"><i class="icon-mail"></i>Send Notification</a></li>
+					{{/model.isExpired}}
+					<li><a class="delete-offering" href="#"><i class="icon-trash"></i>Delete</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	{{/user.caisemployee}}
+</header>
+
+<div class="container_12 detail-viewer clearfix">
+	<div class="grid_6">
+		{{#if model.tenor}}
+		<h3>Tenor</h3>
+		<p>{{model.tenor}}</p>
+		{{/if}}
+
+		{{#if model.underlying}}
+		<h3>Underlier</h3>
+		<p>{{model.underlying}}</p>
+		{{/if}}
+
+		{{#if model.keyTerms}}
+		<h3>Anticipated Key Terms</h3>
+		<p>{{{model.keyTerms}}}</p>
+		{{/if}}
+
+		{{#if model.price}}
+		<h3>Price</h3>
+		<p>{{formatNumber model.price 'p'}}</p>
+		{{/if}}
+	</div>
+	<div class="grid_6">
+		<dl>
+			{{#if model.settleDate}}
+			<dt>Expected Trade Date</dt>
+			<dd>{{formatDate model.settleDate 'd'}}</dd>
+			{{/if}}
+
+			
+
+			<!-- {{#if model.maturityDate}}
+			<dt>Term</dt>
+			<dd>{{formatDate model.maturityDate 'd'}}</dd>
+			{{/if}} -->
+
+			
+
+			{{#if model.cusip}}
+			<dt>Cusip</dt>
+			<dd>{{model.cusip}}</dd>
+			{{/if}}
+
+			{{#if model.terms}}
+			<dt>Prospectus Document</dt>
+			<dd><a href="/api/document/download?docId={{model.terms}}" target="_blank"><i class="icon-download"></i>View prospectus</a></dd>
+			{{/if}}
+		</dl>
+
+		{{#if user.caisemployee}}
+		<a class="command-button" style="margin-top: 1em;" href="{{emailUrl}}" target="_blank">Preview Offering Email</a>
+		{{/if}}
+		&nbsp;
+	</div>
+</div>

@@ -1,0 +1,68 @@
+<form id="qualifiedEligibilePerson" class="form" data-panelId="12">
+    <div class="entity-details-container clearfix container_12">
+        <div id="qualifiedEligibilePersonCommunicator"></div>  
+        <div class="individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Qualified Eligible Person Status: <span class="entityTypeLabel">Individual</span></div>
+                {{#selectRadio qualifiedEligiblePersonStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="qualifiedEligiblePersonRadio1" type="radio" value="1"> Not a Qualified Eligible Person.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="qualifiedEligiblePersonRadio2" type="radio" value="2"> The Subscriber owns securities (including participations in the Fund and other pools) of issuers not affiliated with the Investor and other investments (e.g. real estate held for the investment purpose) with an aggregate market value of at least $2,000,000.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="qualifiedEligiblePersonRadio3" type="radio" value="3"> The Subscriber has on deposit for its own account with a futures commission merchant, at any time during the preceding six (6) months, at least $2,000,000 in exchange-specified initial margin and option premium for futures and other commodity interest positions.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="qualifiedEligiblePersonRadio4" type="radio" value="4"> The Subscriber owns a portfolio comprised of a proportionate combination of 1 and 2 (e.g., $1,000,000 in securities and $100,000 in margin and premium.)</label>
+                </div>
+
+                <!-- <input name="qualifiedEligiblePersonStatusId" id="qualifiedEligiblePersonRadio5" type="radio" value="5" /> 
+                <p><label for="qualifiedEligiblePersonRadio5">A Qualified Eligible Person for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+
+                <!-- <p>Other Reason</p>
+    				<textarea class="editor" maxlength="500" name="qualifiedEligiblePersonForReason">{{qualifiedEligiblePersonForReason}}</textarea>
+                <br /><br /> -->
+            </div>   
+        </div>
+        <div class="non-individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Qualified Eligible Person Status: <span class="entityTypeLabel">Non-Individual</span></div>
+                {{#selectRadio qualifiedEligiblePersonStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="ni_qualifiedEligiblePersonRadio1" type="radio" value="6" data-bind="checked: entityDetails.qualifiedEligiblePersonStatusId"> Not a Qualified Eligible Person.</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="qualifiedEligiblePersonStatusId" id="ni_qualifiedEligiblePersonRadio2" type="radio" value="7" data-bind="checked: entityDetails.qualifiedEligiblePersonStatusId"> The Subscriber owns securities (including participations in the Fund and other pools) of issuers not affiliated with the Investor and other investments (e.g. real estate held for the investment purpose) with an aggregate market value of at least $2,000,000.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="ni_qualifiedEligiblePersonRadio3" type="radio" value="8" data-bind="checked: entityDetails.qualifiedEligiblePersonStatusId"> The Subscriber has on deposit for its own account with a futures commission merchant, at any time during the preceding six (6) months, at least $2,000,000 in exchange-specified initial margin and option premium for futures and other commodity interest positions.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedEligiblePersonStatusId" id="ni_qualifiedEligiblePersonRadio4" type="radio" value="9" data-bind="checked: entityDetails.qualifiedEligiblePersonStatusId"> The Subscriber owns a portfolio comprised of a proportionate combination of 1 and 2 (e.g., $1,000,000 in securities and $100,000 in margin and premium.)</label>
+                </div> 
+                
+
+                <!-- <input name="qualifiedEligiblePersonStatusId" id="ni_qualifiedEligiblePersonRadio5" type="radio" value="10" data-bind="checked: entityDetails.qualifiedEligiblePersonStatusId" /> 
+                <p><label for="ni_qualifiedEligiblePersonRadio5">A Qualified Eligible Person for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+
+                <!-- <p>Other Reason</p>
+    				<textarea name="qualifiedEligiblePersonForReason" class="editor" maxlength="500">{{qualifiedEligiblePersonForReason}}</textarea>
+                <br /><br /> -->
+            </div>
+        </div>     
+    </div>
+</form>

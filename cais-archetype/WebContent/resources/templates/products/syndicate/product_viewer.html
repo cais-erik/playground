@@ -1,0 +1,233 @@
+<header class="clearfix">
+	<div class="title-header">
+		{{model.name}} 
+		{{#if bondOrPref }}{{#model.offerTicker}}(Ticker: {{.}}/{{../model.offerExchange}}){{/model.offerTicker}}{{else}}{{#model.ticker}}(Ticker: {{.}}/{{../model.exchange}}){{/model.ticker}}{{/if}}
+		{{#user.caisemployee}}
+		{{^model.isExpired}}
+			{{#model.published}}<span class="publish-status published">Published</span>{{/model.published}}
+			{{^model.published}}<span class="publish-status unpublished">Unpublished</span>{{/model.published}}
+		{{/model.isExpired}}
+		{{#model.isExpired}}
+			<span class="publish-status expired">Expired</span>
+		{{/model.isExpired}}
+		{{^model.visible}}
+			<span class="publish-status expired">Hidden</span>
+		{{/model.visible}}
+		{{/user.caisemployee}}
+	</div>
+	{{#user.caisemployee}}
+	<div class="admin-tools">
+		<ul class="navigation edit-offerings">
+			<li>
+				<a href="#">Offering Admin <em class="caret-down"></em></a>
+				<ul class="action-menu">
+					{{^model.isExpired}}
+					<li><a class="preview-email" target="_blank" href="{{emailUrl}}"><i class="icon-menu"></i>Preview Notification</a></li>
+					<li><a class="send-email" href="#"><i class="icon-mail"></i>Send Notification</a></li>
+					<li><a data-bypass href="{{editUrl}}"><i class="icon-forward"></i>Edit Offering</a></li>
+					<li {{^model.published}}class="hidden"{{/model.published}}><a class="expire" href="#"><i class="icon-cancel"></i>Expire Offering</a></li>
+					<li {{#model.published}}class="hidden"{{/model.published}}><a class="publish" href="#"><i class="icon-tag"></i>Publish Offering</a></li>
+					{{#model.published}}
+					{{#model.visible}}
+					<li><a class="hide-offering" href="#"><i class="icon-eye-off"></i>Hide Offering</a></li>
+					{{/model.visible}}
+					{{^model.visible}}
+					<li><a class="show-offering" href="#"><i class="icon-eye"></i>Show Offering</a></li>
+					{{/model.visible}}
+					{{/model.published}}
+					{{/model.isExpired}}
+
+					<li><a class="delete-offering" href="#"><i class="icon-trash"></i>Delete</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	{{/user.caisemployee}}
+	{{^user.caisemployee}}
+	{{#model.published}}
+	<div class="admin-tools">
+		<ul class="navigation edit-offerings">
+			<li>
+				<a class="send-email" href="#">Notify Investor of Preliminary Prospectus</a>
+				<!-- <ul class="action-menu">
+					{{^model.isExpired}}
+					<li {{#model.published}}class="hidden"{{/model.published}}><a class="publish" href="#"><i class="icon-tag"></i>Publish Offering</a></li>
+					<li {{^model.published}}class="hidden"{{/model.published}}><a class="expire" href="#"><i class="icon-cancel"></i>Expire Offering</a></li>
+					<li><a data-bypass href="{{editUrl}}"><i class="icon-forward"></i>Edit Offering</a></li>
+					<li><a class="preview-email" target="_blank" href="{{emailUrl}}"><i class="icon-menu"></i>Preview Notification</a></li>
+					<li><a class="send-email" href="#"><i class="icon-mail"></i>Send Notification</a></li>
+					{{/model.isExpired}}
+					<li><a class="delete-offering" href="#"><i class="icon-trash"></i>Delete</a></li>
+				</ul> -->
+			</li>
+		</ul>
+	</div>
+	{{/model.published}}
+	{{/user.caisemployee}}
+
+</header>
+
+<div class="container_12 detail-viewer clearfix">
+	<div class="grid_6">
+		{{#if model.companyDescription}}
+		<h3>Company Description</h3>
+		<div class="html-output">{{{model.companyDescription}}}</div>
+		{{/if}}
+
+		{{#if model.useOfProceeds}}
+		<h3>Use of Proceeds</h3>
+		<div class="html-output">{{{model.useOfProceeds}}}</div>
+		{{/if}}
+
+		{{#if model.orderPeriodDesc}}
+		{{^if model.finalized}}
+		<h3>Expected Timing</h3>
+		<p>{{model.orderPeriodDesc}} {{formatDate model.expectedTiming 'D'}}</p>
+		{{/if}}
+		{{/if}}
+
+		{{#if model.statedMaturity}}
+		<h3>Stated Maturity</h3>
+		<p>{{model.statedMaturity}}</p>
+		{{/if}}
+
+		{{#if model.callability}}
+		<h3>Callability</h3>
+		<p>{{model.callability}}</p>
+		{{/if}}
+
+		{{#if model.securityRanking}}
+		<h3>Security Ranking</h3>
+		<p>{{model.securityRanking}}</p>
+		{{/if}}
+
+		{{#if model.otherFeatures}}
+		<h3>Other Features</h3>
+		<p>{{model.otherFeatures}}</p>
+		{{/if}}
+
+	</div>
+	<div class="grid_6">
+		<dl>
+			{{#if model.industryGroup}}
+			<dt>Industry Group</dt>
+			<dd>{{model.industryGroup}}</dd>
+			{{/if}}
+
+			{{#if model.offeringType}}
+			<dt>Offering Type</dt>
+			<dd>{{model.offeringType}}</dd>
+			{{/if}}
+
+			{{#if model.productType}}
+			<dt>Product Type</dt>
+			<dd>{{model.productType}}</dd>
+			{{/if}}
+
+			{{#if model.offerTicker}}
+			<dt>Proposed Ticker</dt>
+			<dd>{{model.offerTicker}}</dd>
+			{{/if}}
+
+			{{#if model.offerExchange}}
+			<dt>Proposed Exchange</dt>
+			<dd>{{model.offerExchange}}</dd>
+			{{/if}}
+
+			{{#if model.approxSize}}
+			{{#if model.finalized}}
+			<dt>Finalized Deal Value</dt>
+			<dd>{{formatNumber model.dealValue 'c0'}}</dd>
+			{{else}}
+			<dt>Est. Deal Value</dt>
+			<dd>{{formatNumber model.approxSize 'c0'}}</dd>
+			{{/if}}
+			{{/if}}
+
+			{{#if model.sharesOffered}}
+			{{#if model.finalized}}
+			<dt>Finalized Deal Size {{#if bondOrPref }}(shares / notes){{else}}(shares / units){{/if}}</dt>
+			<dd>{{formatNumber model.dealSize 'n0'}}</dd>
+			{{else}}
+			<dt>Est. Deal Size {{#if bondOrPref }}(shares / notes){{else}}(shares / units){{/if}}</dt>
+			<dd>{{formatNumber model.sharesOffered 'n0'}}</dd>
+			{{/if}}
+			
+			{{/if}}
+
+			{{^if model.finalized}}
+				{{#if model.priceRange}}
+				<dt>Price Range</dt>
+				<dd>{{model.priceRange}}</dd>
+				{{/if}}
+			{{else}}
+				{{^if showDivRangeEditor}}
+					{{#if model.publicOfferingPrice}}
+					<dt>Offering Price</dt>
+					<dd>{{formatNumber model.publicOfferingPrice 'c0'}}</dd>
+					{{/if}}
+				{{/if}}
+			{{/if}}
+
+			{{#if model.paymentSchedule}}
+			<dt>Payment Schedule</dt>
+			<dd>{{model.paymentSchedule}}</dd>
+			{{/if}}
+
+			{{#if model.overAllotmentOptionPrct}}
+			{{^if model.finalized}}
+			<dt>Over Allotment Option (%)</dt>
+			<dd>{{formatNumber model.overAllotmentOptionPrct '#.#\%'}}</dd>
+			{{/if}}
+			{{/if}}
+
+			{{#if model.denominations}}
+			<dt>Denominations</dt>
+			<dd>{{model.denominations}}</dd>
+			{{/if}}
+
+			{{^if model.finalized}}
+			{{#if model.dividendRange}}
+			<dt>Dividend/Coupon Range</dt>
+			<dd>{{model.dividendRange}}</dd>
+			{{/if}}
+			{{/if}}
+			
+			{{#if showDivRangeEditor}}
+			<dt>Finalized Dividend/Coupon</dt>
+			<dd class="editable">
+				<div class="content"><span class="finalized-div-range">{{#if model.finalizedDividendRange}}{{model.finalizedDividendRange}}{{else}}Not available{{/if}}</span> {{#user.caisemployee}}<a class="edit-finalized-coupon" href="#">edit</a>{{/user.caisemployee}}</div>
+				<span class="editor">
+					<input type="text" name="finalizedDividendRange" value="{{model.finalizedDividendRange}}">
+					<input class="update-div-range" type="submit" value="Save">
+					<button class="edit-finalized-coupon">Cancel</button>
+				</span>
+			</dd>
+			{{/if}}
+
+			{{#if model.bookRunnerObject}}
+			<dt>Book Runners</dt>
+			<dd>{{joinList model.bookRunnerObject ', ' 'bankshtname'}}</dd>
+			{{/if}}
+
+			{{#if model.coManagerObject}}
+			<dt>Co-Managers</dt>
+			<dd>{{joinList model.coManagerObject ', ' 'bankshtname'}}</dd>
+			{{/if}}
+
+			{{#if model.prospectusId}}
+			{{^if model.finalized}}
+			<dt>Preliminary Prospectus</dt>
+			<dd><a href="/api/document/download?docId={{model.prospectusId}}" target="_blank"><i class="icon-download"></i>View prospectus</a></dd>
+			{{/if}}
+			{{/if}}
+
+			{{#if model.netRoadShow}}
+			{{^if model.finalized}}
+			<dt>Netroadshow</dt>
+			<dd><a href="{{model.netRoadShow}}" target="_blank">{{model.netRoadShow}}</a></dd>
+			{{/if}}
+			{{/if}}
+		</dl>
+	</div>
+</div>

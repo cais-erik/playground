@@ -1,0 +1,38 @@
+<form class="form gridded-form" data-role="validator">
+	<div class="base-k-dialog-content container_12" style="margin: 10px 0; width: 100%;">
+		<div class="grid_4">
+			<div class="past-months">
+				<h2>Past Months</h2>
+				{{#if collection}}
+				<ul>
+					{{#collection}}
+					<li class="clearfix"><a class="edit-date" data-id="{{id}}" href="#">{{formatDate settlementDate 'MMMM, \'yy'}} <span class="revenue-data">{{formatNumber revenue 'c'}}</span></a></li>
+					{{/collection}}
+				</ul>
+				{{else}}
+				No prior data.
+				{{/if}}
+			</div>
+		</div>
+		<div class="grid_4">
+			<label for="date">Reporting Date*</label><br/>
+			<input name="settlementDate" data-role="datepicker" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-ddTHH:mm:ss.fffzzz']" type="text" required>
+		</div>
+		<div class="grid_4">			
+			<label class= for="netRevenue">Net Revenue*</label><br/>
+			<input title="Net Revenue" name="revenue" type="text" data-role="numerictextbox" data-format="c" required>
+		</div>
+		<div class="grid_12 clearfix">
+			<br/>
+			{{#if model.id}}<span class="command-button delete-month" data-id="{{id}}">Delete</span>{{/if}}
+			<span class="command-button add-month">Save Details</span>
+		</div>
+	</div>
+
+	<footer class="base-k-dialog-footer">
+		<ul class="confirm-buttons">
+			<!-- <li class="cancel-dialog command-button-black"><a href="#">Done</a></li> -->
+		    <li class="cancel-dialog command-button"><span>Done</span></li>
+		</ul>
+	</footer>
+</form>

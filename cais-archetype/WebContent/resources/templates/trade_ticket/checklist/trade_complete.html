@@ -1,0 +1,23 @@
+<div class="details-header"><span>Review the following trade details</span></div>
+<div class="scrollable-content">
+<div class="documents-section">
+        <div class="title">Trade Documents</div>
+        <ul class="docs-received-list document-list">
+        	{{^collection}}
+            <li><span>No Documents Found</span></li>
+            {{/collection}}
+            {{#collection}}
+            <li class="docs-received" id="{{documentId}}">
+                <img src="/resources/assets/icons/pdf-icon.png" alt="document" data-docid="{{documentId}}">
+                <span class="doc-name">{{fileName}}</span>
+                <span class="doc-date">{{createDate}}</span>
+            </li>
+            {{/collection}}
+        </ul>
+    </div>
+</div>
+<div class="details-footer">
+    <ul class="commands">
+        <li id="downloadDocsReceived" class="command-button"><a><div class="inner">DOWNLOAD</div></a></li>
+    </ul>
+</div>

@@ -1,0 +1,35 @@
+{{^editing}}
+<div class="clearfix">
+	<div class="grid_12 firm-selector">
+	</div>
+</div>
+{{/editing}}
+<div class="clearfix team-member-form">
+	<div class="grid_6">
+		<label class="form-label" for="advisorName">Team Name*</label>
+		<input class="form-input-elem" type="text" required="required" name="advisorName" id="advisorName" validationMessage="Team name is required">
+
+		<label class="form-label">Country*</label>
+		<select data-role="dropdownlist" name="country" required validationMessage="Country is required">
+            <option value="">Select country...</option>
+            {{countryOptions}}
+        </select>
+
+		<label class="form-label">Address 1*</label>
+		<input class="form-input-elem" name="street1" type="text" required validationMessage="Address is required">
+
+		<label class="form-label">Address 2</label>
+		<input class="form-input-elem" name="street2" type="text">
+	</div>
+	<div class="grid_6">
+
+		<label class="form-label">City*</label>
+		<input class="form-input-elem" name="city" type="text" required validationMessage="City is required">
+
+		<label class="form-label">State*</label>
+		<input class="form-input-elem" name="state" type="text" required validationMessage="State is required">
+
+		<label class="form-label">Postal Code *</label>
+		<input class="form-input-elem" name="postalCode" type="text" required validationMessage="Postal Code is required">
+	</div>
+</div>

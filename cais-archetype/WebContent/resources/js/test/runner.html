@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="mocha.css"/>
+	<script type="text/javascript" src="js/lib/require.js"></script>
+
+	<script type="text/javascript">
+		require(['../apps/common.js'], function() {
+			require.config({
+				baseUrl: '../',
+			});
+			require(['require', 'test/js/lib/chai', 'test/js/lib/mocha'], function(require){
+				mocha.setup('bdd');
+				
+				require([
+					'test/js/spec/test.user', 
+					'test/js/spec/test.CapMarketEquityOffering',
+					'test/js/spec/test.PipelineAppModel'], function(module){
+					console.log("module: ", module);
+					mocha.run();
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="mocha"></div>
+</body>
+</html>

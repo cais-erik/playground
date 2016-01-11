@@ -1,0 +1,36 @@
+<div class="container_16 clearfix report-main">
+	<header class="report-section-hdr">
+		<h1>{{sectionTitle}}</h1>
+	</header>
+	<section class="grid_4">
+		<div class="numbers-container">
+			<div class="number big">
+				<h2>Flows $M</h2>
+				<span class="in-progress big-number">${{flow}}m</span>
+			</div>
+			<div class="number small">
+				<h2>RM Introductions</h2>
+				<span class="days-to-ta count big-number">{{rmIntro}}</span>
+			</div>
+			<div class="number small">
+				<h2>Executed Contracts</h2>
+				<span class="converted-count big-number">{{executedContracts}}</span>
+			</div>
+			<div class="number small">
+				<h2>Conversions</h2>
+				<span class="in-progress big-number">{{conversions}}</span>
+			</div>
+		</div>
+		<div class="pie-chart"></div>
+	</section>
+	<section class="grid_12">
+		<div class="vector-map" id="chart_div" style="height:700px;"></div>
+	</section>
+
+	<section class="grid_16 reports-container">
+		<div class="report">
+			<h1>Total IWS National Coverage by the Numbers</h1>
+			<div class="report-content coverage-grid"></div>
+		</div>
+	</section>
+</div>

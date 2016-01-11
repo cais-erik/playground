@@ -1,0 +1,78 @@
+<form id="entityEmployment" class="form" data-panelId="2">
+    <div class="entity-details-container clearfix container_12">
+        <div id="employmentCommunicator"></div>  
+        <div class="grid_12 clearfix">
+                <div class="form-heading">Employment Details</div>
+            </div>
+        <div class="grid_6">
+            <label class="form-label" data-tooltip="Occupation">Occupation</label>
+            <input class="form-input-elem" name="occupation"  maxlength="45" type="text" value="{{occupation}}"  />
+
+            <label class="form-label" data-tooltip="Employer Name">Employer Name</label>
+            <input class="form-input-elem" name="employerName" type="text"  maxlength="80" value="{{employerName}}" />
+
+            <label class="form-label" data-tooltip="Positions and Dutie">Title</label>
+            <input class="form-input-elem" name="positionsAndDuties" type="text"  maxlength="150" value="{{positionsAndDuties}}" />
+        </div>
+        <div class="grid_6">
+            <label class="form-label" data-tooltip="Country">Country</label>
+            <select data-role="dropdownlist" name="country" value="{{country}}" validationMessage="Country is required">
+                <option value="">Select country...</option>
+                {{countryOptions country}}
+            </select>
+
+            <label class="form-label" data-tooltip="Address">Address 1</label>
+            <input class="form-input-elem" name="street1" type="text" maxlength="150" value="{{street1}}" />
+
+            <label class="form-label" data-tooltip="Address">Address 2</label>
+            <input class="form-input-elem" name="street2" type="text" maxlength="150" value="{{street2}}" />
+
+            <label class="form-label">City</label>
+            <input class="form-input-elem" name="city" type="text" maxlength="45" value="{{city}}" />
+
+            <label class="form-label">State/Province</label>
+            <input class="form-input-elem" name="state" type="text" maxlength="45" value="{{state}}" />
+
+            <label class="form-label">Zip/Postal Code</label>
+            <input class="form-input-elem noparse" name="postalCode" type="text" maxlength="45" value="{{postalCode}}" />
+        </div>
+        <div class="type-specific-info clearfix" data-typeid="41,39">
+            <div class="grid_12 clearfix">
+                <div class="form-heading">Joint Employment Details</div>
+            </div>
+            <div class="grid_6">
+                <label class="form-label" data-tooltip="Joint Occupation">Occupation</label>
+                <input class="form-input-elem" name="joint_occupation"  maxlength="45" type="text" value="{{joint_occupation}}"  />
+
+                <label class="form-label" data-tooltip="Joint Employer Name">Employer Name</label>
+                <input class="form-input-elem" name="joint_employerName" type="text"  maxlength="80" value="{{joint_employerName}}" />
+
+                <label class="form-label" data-tooltip="Joint Positions and Dutie">Title</label>
+                <input class="form-input-elem" name="joint_positionsAndDuties" type="text"  maxlength="150" value="{{joint_positionsAndDuties}}" />
+            </div>
+            <div class="grid_6">
+
+                <label class="form-label" data-tooltip="Joint Country">Country</label>
+                <select data-role="dropdownlist" name="joint_country" value="{{joint_country}}" validationMessage="Country is required">
+                    <option value="">Select country...</option>
+                    {{countryOptions joint_country}}
+                </select>
+
+                <label class="form-label" data-tooltip="Joint Address">Address 1</label>
+                <input class="form-input-elem" name="joint_street1" type="text" maxlength="150" value="{{joint_street1}}" />
+
+                <label class="form-label" data-tooltip="Joint Address">Address 2</label>
+                <input class="form-input-elem" name="joint_street2" type="text" maxlength="150" value="{{joint_street2}}" />
+
+                <label class="form-label">City</label>
+                <input class="form-input-elem" name="joint_city" type="text" maxlength="45" value="{{joint_city}}" />
+
+                <label class="form-label">State/Province</label>
+                <input class="form-input-elem" name="joint_state" type="text" maxlength="45" value="{{joint_state}}" />
+
+                <label class="form-label">Zip/Postal Code</label>
+                <input class="form-input-elem noparse" name="joint_postalCode" type="text" maxlength="45" value="{{joint_postalCode}}" />
+            </div>
+        </div> 
+    </div>
+</div>

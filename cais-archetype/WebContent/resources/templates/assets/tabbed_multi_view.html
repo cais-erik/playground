@@ -1,0 +1,18 @@
+<div class="tab-container">
+    <div class="tabs">
+        <ul>
+            {{#subViews}}
+            <li data-uri="{{uri}}">
+                {{name}}
+            </li>
+            {{/subViews}}
+        </ul>
+        {{#subViews}}
+        <div>
+            <div class="view-container">
+                {{name}} 
+            </div>
+        </div>
+        {{/subViews}}
+    </div>
+</div>

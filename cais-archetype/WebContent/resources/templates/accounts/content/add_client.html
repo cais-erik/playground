@@ -1,0 +1,60 @@
+
+<form id="clientInformation" class="form">    
+    <div class="entity-details-container clearfix container_12">  
+        <div id="clientCommunicator"></div>   
+        <div class="select-destination grid_12 clearfix">
+            <h1 class="accounts-heading">Add a New Client</h1>
+        </div> 
+        <div class="grid_6">
+            
+            <div class="form-heading">Client</div>
+
+            <label class="form-label" data-tooltip="The firm this advisor belongs to.">Client Name*</label>
+            <input class="form-input-elem" name="name" type="text" value="{{name}}" required="required" validationMessage="Name is required">
+
+            <div class="input-group-wrap clearfix">
+                <div class="grid_6 alpha">
+                    <label class="form-label" data-tooltip="Advisor Email">Email*</label>
+                    <input class="form-input-elem" name="email" type="email" value="{{address.email}}" required validationMessage="Email is required"> 
+                </div>
+                <div class="grid_6 omega">
+                    <label class="form-label" data-tooltip="Office Phone">Phone</label>
+                    <input class="form-input-elem" name="phone" type="tel" value="{{address.phone}}">
+                </div>
+            </div>
+            
+            <label class="form-label" data-tooltip="Fax Number">Fax</label>
+            <input class="form-input-elem" name="fax" type="tel" value="{{address.fax}}">
+        </div>
+
+        <div class="grid_6">
+            <div class="form-heading">Client Address</div>
+
+            <label class="form-label" data-tooltip="Country">Country</label>
+            <select data-role="dropdownlist" name="country" value="{{address.country}}" required validationMessage="Country is required">
+                <option value="">Select country...</option>
+                {{countryOptions address.country}}
+            </select>
+
+            <label class="form-label" data-tooltip="Address">Address Line 1</label>
+            <input class="form-input-elem" name="street1" type="text" value="{{address.street1}}"> 
+
+            <label class="form-label" data-tooltip="Address">Address Line 2</label>
+            <input class="form-input-elem" name="street2" type="text" value="{{address.street2}}">
+
+            <label class="form-label">City</label>
+            <input class="form-input-elem" name="city" type="text" value="{{address.city}}"> 
+
+            <label class="form-label">State/Province</label>
+            <input class="form-input-elem" name="state" type="text" value="{{address.state}}"> 
+
+            <label class="form-label">Zip/Postal Code</label>
+            <input class="form-input-elem" name="postalCode" type="text" value="{{address.postalCode}}"> 
+        </div>
+    </div>
+</form>
+<div class="control-bar">
+    <div class="primaryButton save create-entity"><div><span>SAVE & CREATE ENTITY</span></div></div>
+    <div class="primaryButton save"><div><span>SAVE</span></div></div>
+    <div class="primaryButton delete"><div><span>DELETE CLIENT</span></div></div>
+</div>

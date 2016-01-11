@@ -1,0 +1,65 @@
+<form id="entityDocuments" class="form" data-panelId="4">
+	<div class="entity-details-container clearfix container_12">
+		<div class="grid_12 clearfix">
+			<div class="form-heading">Relevant Documents</div>
+		</div>
+		<div class="grid_6">
+			<label class="form-label">Photo ID</label>
+			<input name="doc" type="file" data-docType="0" data-docName="photoId_doc_name" />
+			<div class="document-info{{^photoId_doc_name}} hidden{{/photoId_doc_name}}" data-docid="{{photoId_doc_id}}">
+				<a href="/api/document/download?docId={{photoId_doc_id}}" class="documentLink" target="_blank">{{photoId_doc_name}}</a>
+				<div class="removeDocument" data-docType="0">Remove</div>
+			</div>
+			<hr>
+
+			<label class="form-label">Address Verification 1</label>
+			<input name="doc" type="file" data-docType="1" data-docName="addressVerification1_doc_name" />
+			<div class="document-info{{^addressVerification1_doc_name}} hidden{{/addressVerification1_doc_name}}" data-docid="{{addressVerification1_doc_id}}">
+				<a href="/api/document/download?docId={{addressVerification1_doc_id}}" class="documentLink" target="_blank">{{addressVerification1_doc_name}}</a>
+				<div class="removeDocument" data-docType="1">Remove</div>
+			</div>
+			<hr>
+
+			<label class="form-label">Address Verification 2</label>
+			<input name="doc" type="file" data-docType="2" data-docName="addressVerification1_doc_name" />
+			<div class="document-info{{^addressVerification2_doc_name}} hidden{{/addressVerification2_doc_name}}" data-docid="{{addressVerification2_doc_id}}">
+				<a href="/api/document/download?docId={{addressVerification2_doc_id}}" class="documentLink" target="_blank">{{addressVerification2_doc_name}}</a>
+				<div class="removeDocument" data-docType="2">Remove</div>
+			</div>
+			<hr>
+
+			<label class="form-label">Authorized Signatory List</label>
+			<input name="doc" type="file" data-docType="3" data-docName="authorizedSignatoryList_doc_name" />
+			<div class="document-info{{^authorizedSignatoryList_doc_name}} hidden{{/authorizedSignatoryList_doc_name}}" data-docid="{{authorizedSignatoryList_doc_id}}">
+				<a href="/api/document/download?docId={{authorizedSignatoryList_doc_id}}" class="documentLink" target="_blank">{{authorizedSignatoryList_doc_name}}</a>
+				<div class="removeDocument" data-docType="3">Remove</div>
+			</div>
+			<hr>
+		</div>
+		<div class="grid_6">
+
+			<label class="form-label">Trust Deed</label>
+			<input name="doc" type="file" data-docType="4" data-docName="trustDeed_doc_name" />
+			<div class="document-info{{^trustDeed_doc_name}} hidden{{/trustDeed_doc_name}}" data-docid="{{trustDeed_doc_id}}">
+				<a href="/api/document/download?docId={{trustDeed_doc_id}}" class="documentLink" target="_blank">{{trustDeed_doc_name}}</a>
+				<div class="removeDocument" data-docType="4">Remove</div>
+			</div>
+			<hr>
+
+			<label class="form-label">Certificate of Formation/Incorporation</label>
+			<input name="doc" type="file" data-docType="5" data-docName="certificateOfFormation_doc_name" />
+			<div class="document-info{{^certificateOfFormation_doc_name}} hidden{{/certificateOfFormation_doc_name}}" data-docid="{{certificateOfFormation_doc_id}}">
+				<a href="/api/document/download?docId={{certificateOfFormation_doc_id}}" class="documentLink" target="_blank">{{certificateOfFormation_doc_name}}</a>
+				<div class="removeDocument" data-docType="5">Remove</div>
+			</div>
+			<hr>
+	   
+			<label class="form-label">Constitutive Documents</label>
+			<input name="doc" type="file" data-docType="6" data-docName="constitutiveDocuments_doc_name" />
+			<div class="document-info{{^constitutiveDocuments_doc_name}} hidden{{/constitutiveDocuments_doc_name}}" data-docid="{{constitutiveDocuments_doc_id}}">
+				<a href="/api/document/download?docId={{constitutiveDocuments_doc_id}}" class="documentLink" target="_blank">{{constitutiveDocuments_doc_name}}</a>
+				<div class="removeDocument" data-docType="6">Remove</div>
+			</div>
+		</div>        
+	</div>
+</form>

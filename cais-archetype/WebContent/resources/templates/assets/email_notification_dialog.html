@@ -1,0 +1,54 @@
+<div class="email-notification-dialog dialog-inner">
+	<img src="/resources/assets/page-dialog/dialog-close-icon.png" alt="close" class="close-icon cancel"/>
+	<div class="doc-loading"><img src="/resources/assets/CAISloader-white.gif?v=1" alt="loading..." /></div>
+	<div class="email-notifier">
+        <div class="tabs">
+            <ul>
+                <li class="test-distro">
+                    Test Distribution
+                </li>
+                <li class="live-distro">
+                    Live Distribution
+                </li>
+            </ul>
+            <div>
+                <div class="distribution test clearfix">
+                	<p>Select which clients should receive this notification email.</p>
+					<div class="filter hidden">
+						<div class="form">
+							<a class="group-select unselect-all" href="\#">Unselect all shown</a> | <a class="group-select all" href="\#">Select all shown</a>
+							<div class="filter-input">
+								<label>Filter</label>
+								<input name="name-filter" type="text" placeholder="Name, email or firm...">
+							</div>
+						</div>
+					</div>
+					<div class="grid email-list-test"></div>
+					<ul class="confirm-buttons">
+				    	<li class="command-button-black cancel"><a><div class="inner">{{cancel_text}}</div></a></li>
+				        <li class="command-button confirm"><a><div class="inner">Send Test Emails</div></a></li>
+				    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="distribution live clearfix">
+                	<p>Select which clients should receive this notification email.</p>
+					<div class="filter hidden">
+						<div class="form">
+							<a class="group-select unselect-all" href="\#">Unselect all shown</a> | <a class="group-select all" href="\#">Select all shown</a>
+							<div class="filter-input">
+								<label>Filter</label>
+								<input name="name-filter" type="text" placeholder="Name, email or firm...">
+							</div>
+						</div>
+					</div>
+					<div class="grid email-list"></div>
+					<ul class="confirm-buttons">
+				    	<li class="command-button-black cancel"><a><div class="inner">{{cancel_text}}</div></a></li>
+				        <li class="command-button confirm"><a><div class="inner">{{confirm_text}}</div></a></li>
+				    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

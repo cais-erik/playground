@@ -1,0 +1,70 @@
+<form id="details" class="form">
+    <div class="entity-details-container clearfix container_12">
+        <div id="nameDetailsCommunicator"></div>  
+        <div class="grid_12 clearfix">
+            <div class="form-heading">Political Affiliation</div>
+        </div>
+        <div class="grid_6">
+            <label class="form-label">Is the investor or, if applicable, any Underlying Beneficial owner, a current or former senior foreign political figure, or any immediate family member or close associate of a senior foreign political figure?</label>
+            <input name="hasPoliticalAffiliation" type="radio" value="true" required><label for="hasPoliticalAffiliation">Yes</label>
+            <input name="hasPoliticalAffiliation" type="radio" value="false" required><label for="hasPoliticalAffiliation">No</label>
+
+            <div class="has-political-affiliation hidden">
+                <label class="form-label">For which government?</label>
+                <input class="form-input-elem" name="affiliatedGovernment" type="text"  validationMessage="Government is required">
+
+                <label class="form-label">What position in the government?</label>
+                <input class="form-input-elem" name="affiliatedGovernmentPosition" type="text"  validationMessage="Position is required">
+
+                <label class="form-label">If an immediate family member or close associate of a senior foreign political figure, what relationship to the senior foreign political figure? <i  class="tooltip icon-info-circled" data-tooltipcontainer="#affiliatedGovernmentFamilyRelation-tooltip"></i></label>
+                <div class="tool-tip-content hidden" id="affiliatedGovernmentFamilyRelation-tooltip">
+                    <ol>
+                        <li>A <strong>senior foreign political figure</strong> is defined as a current or former senior official in the executive, legislative, administrative, military or judicial branches of a non-U.S. government (whether elected or not), a current or former senior official of a major non-U.S. political party, or a current or former senior executive of a non-U.S. government-owned commercial enterprise. In addition, a "senior foreign political figure" includes any corporation, business, or other entity that has been formed by, or for the benefit of, a senior foreign political figure.  For purposes of this definition, a "senior official" or "senior executive" means an individual with substantial authority over policy, operations, or the use of government-owned resources. </li>
+                        <li>An <strong>immediate family member</strong> of a senior foreign political figure means spouses, parents, siblings, children and a spouse's parents and siblings.</li>
+                        <li>A <strong>close associate</strong> of a senior foreign political figure means a person who is widely and publicly known (or is actually known) to be a close associate of a senior foreign political figure.</li>
+                    </ol>
+                </div>
+                <textarea class="form-input-elem" name="affiliatedGovernmentFamilyRelation"></textarea>
+            </div>
+
+            <label class="form-label">Are you an entity that is substantially owned by a government entity and the investment decisions of such entity are made or directed by such government entity? </label>
+            <input name="entityOwnedByGovernment" type="radio" value="true" required><label for="entityOwnedByGovernment">Yes</label>
+            <input name="entityOwnedByGovernment" type="radio" value="false" required><label for="entityOwnedByGovernment">No</label>
+
+            <div class="has-entityOwnedByGovernment hidden">
+                <label class="form-label">For which government?</label>
+                <input class="form-input-elem" name="entityOwnedByGovernmentName" type="text"  validationMessage="Government is required">
+            </div>
+        </div>
+        <div class="grid_6">
+            <div class="non-individual-fields">
+                <label class="form-label">Is the investor a government entity or subscribing on behalf of a government entity?<i  class="tooltip icon-info-circled" data-tooltipcontainer="#isGovernmentEntity-tooltip"></i></label>
+                <div class="tool-tip-content hidden" id="isGovernmentEntity-tooltip">
+                    <p>For these purposes, "government entity" means any U.S. state (including any U.S. state, the District of Columbia, Puerto Rico, the U.S. Virgin Islands or any other possession of the United States) or political subdivision of a state, including</p>
+                    <ol>
+                        <li>Any agency, authority, or instrumentality of the state or political subdivision;</li>
+                        <li>A pool of assets sponsored or established by the state or political subdivision or any agency, authority or instrumentality thereof, including, but not limited to a “defined benefit plan,” as defined in section 414(j) of the Code, or a state general fund;</li>
+                        <li>A plan or program of a government entity; and</li>
+                        <li>Officers, agents or employees of the state or political subdivision or any agency, authority or instrumentality thereof, acting in their official capacity.  (Note that any such officers, agents or employees will not be considered a government entity if they are making an investment in the Fund not in their official capacity).</li>
+                    </ol>
+                </div>
+                <input name="isGovernmentEntity" type="radio" value="true" required><label for="isGovernmentEntity">Yes</label>
+                <input name="isGovernmentEntity" type="radio" value="false" required><label for="isGovernmentEntity">No</label>
+
+                <div class="is-government-entity hidden">
+                    <label class="form-label">For which government?</label>
+                    <input class="form-input-elem" name="entityAffiliatedGovernment" type="text"  validationMessage="Government is required">
+
+                    <label class="form-label">Will any “pay to play” or other similar compliance obligations, other than the Pay to Play Rule, be imposed on the any Fund, a Master Fund, the Manager, the Master Fund Manager or their respective Affiliates in connection with the Investor’s subscription?</label>
+                    <input name="payToPlay" type="radio" value="true" /><label for="payToPlay">Yes</label>
+                    <input name="payToPlay" type="radio" value="false" /><label for="payToPlay">No</label>
+
+                    <div class="is-pay-to-play hidden">
+                        <label class="form-label">Please list all other “pay to play” laws, rules or guidelines, or lobbyist disclosure laws or rules, the Fund, the Master Fund, the Manager, the Master Fund Manager or their respective Affiliates, employees or third-party placement agents would be subject to in connection with the Investor’s subscription:</label>
+                        <textarea class="form-input-elem" name="payToPlayList" validationMessage="This field is required"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

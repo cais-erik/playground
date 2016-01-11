@@ -1,0 +1,20 @@
+<header class="clearfix">
+    <div class="title-header"><span>Syndicate Offerings</span></div> 
+    {{#user.caisemployee}}
+    <ul class="navigation add-offering-link">
+		<li>
+			<a href="#">Add Offering <em class="caret-down"></em></a>
+			<ul class="action-menu">
+				<li><a data-bypass href="edit/equity"><i class="icon-plus"></i>Equity</a></li>
+				<li><a data-bypass href="edit/preferred"><i class="icon-plus"></i>Preferred</a></li>
+				<li><a data-bypass href="edit/bond"><i class="icon-plus"></i>Bond</a></li>
+			</ul>
+		</li>
+	</ul>
+    {{/user.caisemployee}}
+</header>
+<div class="main-column-content">
+	<div class="product-list"></div>
+	<div class="selected-products-container"></div>
+    <div class="product-viewer"></div>
+</div>

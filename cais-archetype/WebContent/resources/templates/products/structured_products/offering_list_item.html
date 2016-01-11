@@ -1,0 +1,51 @@
+{{#if user.caisemployee}}
+<ul class="navigation edit-offerings on-click">
+	<li>
+		<a class="edit-menu" href="#"><i class="icon-down-dir"></i></a>
+		<ul class="action-menu">
+			{{^model.isExpired}}
+			<li {{#model.isPublished}}class="hidden"{{/model.isPublished}}><a class="publish" href="#"><i class="icon-tag"></i>Publish Product</a></li>
+			<li {{^model.isPublished}}class="hidden"{{/model.isPublished}}><a class="expire" href="#"><i class="icon-cancel"></i>Expire Offering</a></li>
+			<li><a data-bypass href="{{editUrl}}"><i class="icon-forward"></i>Edit Product</a></li>
+			<li><a class="deal-terms" href="#"><i class="icon-suitcase"></i> Final Deal Terms</a></li>
+			<!--<li><a class="preview-email" target="_blank" href="{{emailUrl}}"><i class="icon-menu"></i>Preview Notification</a></li>-->
+			<li><a class="send-email" href="#"><i class="icon-mail"></i>Send Notification</a></li>
+			{{/model.isExpired}}
+			<li><a class="delete-offering" href="#"><i class="icon-trash"></i>Delete</a></li>
+		</ul>
+	</li>
+</ul>
+{{/if}}
+<h2 class="offering-heading">
+	<a data-bypass href="offerings/{{model.id}}">{{model.underlying}} {{model.tenor}}</a>
+	{{^model.isPublished}}<span class="publish-status">Unpublished</span>{{/model.isPublished}}
+</h2>
+<div class="offering-content">
+	{{#if model.spKeyTerms}}
+	<ul class="key-terms-list">
+		{{#model.spKeyTerms}}
+		<li>
+			<h3>{{{name}}}</h3>
+		</li>
+		{{/model.spKeyTerms}}
+	</ul>
+	{{/if}}
+	<h3><strong>{{closingLabel}}:</strong> <abbr class="timeago" title="{{model.closingDate}}"></abbr></h3>
+	<p style="margin: .5em 0" class="shrunk"><strong>Price:</strong> {{formatNumber model.price 'p'}}</p>
+	<p style="margin: .5em 0" class="shrunk"><strong>CUSIP:</strong> {{model.cusip}}</p>
+	<p class="shrunk download-link"><a href="/api/document/download?docId={{model.terms}}" target="_blank"><i class="icon-download"></i> Download Prospectus</a></p>
+
+	<div class="clearfix">
+		{{#if model.logoUrl}}
+		<div class="issuer-logo-container">
+			<img class="issuer-logo" src="{{model.logoUrl}}">
+		</div>
+		{{/if}}
+        {{#if model.terms}}
+        <p class="download-link" style="color: #48AEE7"><a href="/api/document/download?docId={{model.terms}}" target="_blank"><i class="icon-download"></i>View Prospectus</a></p>
+        {{/if}}
+		{{#if model.isFeeBased}}
+		<p class="offering-type">Fee based only</p>
+		{{/if}}
+	</div>
+</div>

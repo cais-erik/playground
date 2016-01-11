@@ -1,0 +1,48 @@
+<div class="grid_6">
+    <div class="form-heading ADVISOR">Advisor Contact</div>
+
+    <div id="advisorContent">
+        <label class="form-label">Firm Name</label>
+        <input type="text" disabled="disabled" value="{{selectedParty.firmName}}" readonly />
+
+        <label class="form-label">Team Name</label>
+        <input type="text" disabled="disabled" value="{{selectedParty.advisorTeamName}}" readonly />
+    </div>
+
+    <div id="advisorName">
+        <label class="form-label">Advisor Name</label>
+        <input type="text" disabled="disabled" value="{{selectedParty.fullName}}" readonly />
+    </div>
+
+    <label class="form-label" data-tooltip="Office Phone #">Phone - Office</label>
+    <input name="partyOffice" type="tel" value="{{selectedParty.phone}}" readonly />
+
+    <label class="form-label" data-tooltip="Email">Fax</label>
+    <input name="partyFax" type="tel" value="{{selectedParty.fax}}" readonly />
+
+    <label class="form-label" data-tooltip="Email">Email*</label>
+    <input name="partyEmail" type="email" value="{{selectedParty.email}}" required="required" validationMessage="Email is Required." readonly />
+    <div class="validation-wrapper"><span class="k-invalid-msg" data-for="partyEmail"></span></div>
+</div>
+<div class="grid_6">
+<!--     <div class="form-heading ADVISOR">Advisor Address</div>
+
+    <label class="form-label" data-tooltip="Country">Country</label>
+    <input name="partyCountry" type="text" value="{{selectedParty.country}}" readonly />
+
+    <label class="form-label" data-tooltip="Address 1">Address 1</label>
+    <input name="partyAddress1" type="text" value="{{selectedParty.street1}}" readonly />
+
+    <label class="form-label" data-tooltip="Address 2">Address 2</label>
+    <input name="partyAddress2" type="text" value="{{selectedParty.street2}}" readonly/>
+
+    <label class="form-label" data-tooltip="City">City</label>
+    <input name="partyCity" type="text" value="{{selectedParty.city}}" readonly />
+
+    <label class="form-label" data-tooltip="State/Province">State/Province</label>
+    <input name="partyStateProvince" type="text" value="{{selectedParty.state}}" readonly />
+
+    <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code</label>
+    <input name="partyPostalCode" type="text" value="{{selectedParty.postalCode}}" readonly /> -->
+</div>
+<div style="clear: both;"></div>

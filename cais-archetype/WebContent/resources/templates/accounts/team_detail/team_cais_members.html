@@ -1,0 +1,14 @@
+<div class="container_12 clearfix">
+	{{#.}}
+    <div class="grid_3 member">
+        <h3>{{memberName}}</h3>
+        {{phone}}<br/>
+        <a href="mailto:{{email}}">{{email}}</a>
+    </div>
+    {{/.}}
+    {{^.}}
+    <div class="grid_12 member">
+    	No CAIS members for this team's selected firm.
+    </div>
+    {{/.}}
+</div>

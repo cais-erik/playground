@@ -1,0 +1,19 @@
+<h3 class="form-heading">Advisors on Account</h3>
+<div class="available-members">
+    <div class="select-all-firm">Select all at firm</div>
+    <input type="text" placeholder="Find team or advisor..." class="search-input form-input-elem">
+    <div class="selection-section-list">
+        <ul class="selection-list">
+            {{#teams}}
+            <li class="advisor" id="{{id}}">
+                <label><h2>{{advisorTeamName}} <a class="select-all" href="#">Select all</a> <a class="remove-all" href="#">Deselect all</a></h2></label>
+                <ul>
+                    {{#members}}
+                    <li><label><input class="member-select" type="checkbox" value="{{userId}}" data-advisorteamid="{{../id}}"> {{firstName}} {{lastName}}</label></li>
+                    {{/members}}
+                </ul>
+            </li>
+            {{/teams}}
+        </ul>
+    </div>
+</div>

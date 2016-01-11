@@ -1,0 +1,36 @@
+<header class="open-arch-header clearfix">
+    <div class="clearfix">
+        <div>
+            {{#if user.caisemployee}}
+            <!-- <a data-bypass="" class="add-offering-link add-strategy-link" href="edit"><i class="icon-plus"></i>Add Strategy</a> -->
+            {{/if}}
+            <h1 class="sp-offering-header"> Structured Solutions Offerings</h1>
+            <div class="command-button-black pricing-tool">Pricing Tool</div>
+            <ul class="sp-offerings-list open-arch-list-filters clearfix">
+                {{#filters}}
+                <li data-category="{{name}}" data-category-id="{{id}}">
+                    <h2>{{name}} <span class="count">({{count}})</span></h2>
+                    <!-- <a class="command-button-black" href="{{url}}" target="_blank">Learn More</a> -->
+                </li>
+                {{/filters}}
+            </ul>
+            <p class="category-desc">&nbsp;</p>
+        </div>
+    </div>
+</header>
+
+<div class="clearfix open-arch-list-container">
+    <div class="container_12 structured-solutions-container">
+        {{#if user.caisemployee}}
+        <header class="grid_12 clearfix">
+            <a data-bypass="" class="add-offering-link" href="edit"><i class="icon-plus"></i>Add Product</a>
+        </header>
+        {{/if}}
+        <ul class="sp-offerings-list open-arch-list grid_12">
+
+        </ul>
+        <footer class="product-list-footer">
+            <p class="general-disclaimer">The summary of terms above is preliminary and is subject to change. Either a registration statement relating to these securities has been filed with the Securities and Exchange Commission and is effective or the securities have not been, and will not be, registered under the Securities Act of 1933, as amended (the “Securities Act”), or the state securities laws of any state of the United States or the securities laws of any other jurisdiction and are being offered pursuant to the registration exemption contained in Section 3(a) (2) of the Securities Act.  Those securities that are being offered pursuant to registration may not be sold, nor may offers to buy be accepted, prior to the time the relevant registration statement becomes effective. Under no circumstances shall the foregoing summary of terms constitute an offer to sell or a solicitation of an offer to buy, nor shall there be any sale of these securities, in any jurisdiction in which such offer, solicitation or sale would be unlawful prior to registration or qualification under the securities law of any such jurisdiction. </p>
+        </footer>
+    </div>
+</div>

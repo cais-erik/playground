@@ -1,0 +1,39 @@
+<div class="grid_6">
+    <label class="form-label" for="fullName">Firm Name*</label>
+    <input class="form-input-elem" type="text" required="required" name="fullName" id="firmName" maxlength="50" validationMessage="Firm name is required">
+    
+    <label class="form-label">Country*</label> 
+    <select data-role="dropdownlist" name="country" required validationMessage="Country is required">
+        <option value="">Select country...</option>
+        {{countryOptions}}
+    </select>
+
+    <label class="form-label">Address 1*</label> 
+    <input class="form-input-elem" name="street1" type="text"  maxlength="50" required validationMessage="Street is required">
+    
+    <label class="form-label">Address 2</label> 
+    <input class="form-input-elem" name="street2" type="text"  maxlength="50" validationMessage="Street is required">
+
+    <label class="form-label">City*</label> 
+    <input class="form-input-elem" name="city" type="text" maxlength="25" required validationMessage="City is required">
+    
+    <label class="form-label">State*</label> 
+    <input class="form-input-elem" name="state" type="text" maxlength="20" required validationMessage="State is required">
+    
+    <label class="form-label">Postal Code*</label> 
+    <input class="form-input-elem" name="postalCode" type="text" maxlength="10" required validationMessage="Postal code is required">
+</div>
+<div class="grid_6">
+    <label for="clientType" class="form-label">Firm Type*</label>
+    <select data-role="dropdownlist" name="clientType" type="text" required validationMessage="Firm type is required">
+        <option value="" selected="selected">Select a firm type</option>
+        <option value="Broker Dealer">Broker Dealer</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="RIA">RIA</option>
+        <option value="Family Office">Family Office</option>
+        <option value="Other">Other</option>
+    </select>
+    <label class="form-label" for="groupId">Firm Status*</label>
+    <select name="groupId" data-role=dropdownlist required validationMessage="Firm type is required">
+    </select>
+</div>

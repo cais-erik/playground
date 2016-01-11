@@ -1,0 +1,19 @@
+<li><div class="item"><a class="view-details" href="entry-details">Item Details</a></div></li>
+{{#user.contextMenuPermissions.addUsers}}
+<!--<li><div class="item"><a data-bypass href="add_team_member">Add Team Member</a></div></li>
+<li><div class="item"><a data-bypass href="add_existing_team_member">Add Existing Member</a></div></li> -->
+{{/user.contextMenuPermissions.addUsers}}
+{{#user.clientSupervisor}}
+<!--<li><div class="item"><a data-bypass href="add_supervisor">Add Supervisor</a></div></li> -->
+<li><div class="item"><a data-bypass href="add_team">Add Team</a></div></li>
+{{/user.clientSupervisor}}
+{{#user.caisemployee}}
+<!--<li><div class="item"><a data-bypass href="add_supervisor">Add Supervisor</a></div></li>-->
+<li><div class="item"><a data-bypass href="add_team">Add Team</a></div></li>
+<li><div class="item"><a data-bypass href="add_firm">Add Firm</a></div></li>
+<li><div class="item"><a data-bypass href="migrate_investor">Move Investor</a></div></li>
+{{/user.caisemployee}}
+{{#user.contextMenuPermissions.addInvestors}}
+<li><div class="item"><a data-bypass href="add_client">Add Client</a></div></li>
+{{/user.contextMenuPermissions.addInvestors}}
+<li><div class="item"><a data-bypass href="add_entity">Add Investment Entity</a></div></li>

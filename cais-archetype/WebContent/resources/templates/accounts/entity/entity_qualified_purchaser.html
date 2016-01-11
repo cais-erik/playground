@@ -1,0 +1,75 @@
+<form id="qualifiedPurchaser" class="form" data-panelId="13">
+    <div class="entity-details-container clearfix container_12">
+        <div id="qualifiedPurchaserCommunicator"></div>  
+        <div class="individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Qualified Purchaser Status: <span class="entityTypeLabel">Individual</span></div>
+                {{#selectRadio qualifiedPurchaserStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="qualifiedPurchaserRadio1" type="radio" value="1"> Not a Qualified Purchaser.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="qualifiedPurchaserRadio2" type="radio" value="2"> An individual that owns (separately, or through a joint, community property or other similar shared ownership interest with such person's spouse) not less than $5,000,000 in "Net Investments".</label>
+                </div>
+                <!-- 
+                <input name="qualifiedPurchaserStatusId" id="qualifiedPurchaserRadio3" type="radio" value="3" /> 
+                <p><label for="qualifiedPurchaserRadio3">A Qualified Purchaser for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+                <!-- 
+                <p>Other Reason</p>
+        		<textarea class="editor" maxlength="500" name="qualifiedPurchaserForReason" value="{{qualifiedPurchaserForReason}}">{{qualifiedPurchaserForReason}}</textarea>
+        		<br /><br /> -->
+            </div>   
+        </div>
+        <div class="non-individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Qualified Purchaser Status: <span class="entityTypeLabel">Non-individual</span></div>
+                {{#selectRadio qualifiedPurchaserStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio1" type="radio" value="4" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> Not a Qualified Purchaser.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio2" type="radio" value="5" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> A company, partnership, trust or other entity that (i)is owned directly or indirectly by, or for, two or more natural persons who are related as siblings, spouses (including former spouses), direct lineal descendants by birth or adoption, spouses of such persons, the estates of such persons or foundations, charitable organizations or trusts established by, or for the benefit of, such persons, (ii) owns not less than $5,000,000 in Net Investments (each such entity satisfying (i) and (ii) constituting a "Family Company") and (iii)was not  formed for the specific purpose of participating in the Platform or investing in any Subscribed Conduit Vehicle.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio3" type="radio" value="6" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> A trust (other than a Family Company) that (i) was not formed for the specific purpose of participating in the Platform or investing in any Subscribed Conduit Vehicle and (ii) as to which the trustee (or other person authorized to make decisions with respect to the trust) and each settlor or other person who has contributed assets to the trust is a "qualified purchaser" (a "Contributing Trustee QP").</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio4" type="radio" value="7" data-bind="checked: entityDetails.qualifiedPurchaserStatusId" /> A company, partnership, trust or other entity that (i) was not formed for the specific purpose of participating in the Platform or investing in any Subscribed Conduit Vehicle, (ii) acts for its own account or the accounts of other "qualified purchasers" and (iii) in the aggregate, owns and invests on a discretionary basis not less than $25,000,000 in "Net Investments."</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio5" type="radio" value="8" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> Certain "qualified institutional buyers" as defined in Rule 144A under the Securities Act (primarily institutions that manage at least $100 million in securities including banks, savings and loans, insurance companies, investment companies, employee benefit plans or an entity owned entirely by qualified investors. Also included are registered broker-dealers owning and investing, on a discretionary basis, $10,000,000 in securities of non-affiliates).</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio6" type="radio" value="9" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> A "Charitable Corporation" (i) of which all of the persons who have contributed assets are related in one or more of the ways enumerated above in respect of a Family Company, (ii) that owns not less than $5,000,000 in Net Investments and (iii) that was not formed for the specific purpose of participating in the Platform or investing any Subscribed Conduit Vehicle.</label>
+                </div>
+
+                <div class="checkbox-label-wrap"> 
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio7" type="radio" value="10" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> A "Charitable Corporation" (i) of which each person authorized to make investment decisions, and each person who has contributed assets, is a "qualified purchaser" (other than a Contributing Trustee QP) and (ii) was not formed for the specific purpose of participating in the Platform or investing in any Subscribed Conduit Vehicle.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio8" type="radio" value="11" data-bind="checked: entityDetails.qualifiedPurchaserStatusId"> A company, partnership or other entity whose securities are beneficially owned exclusively by "qualified purchasers."</label>
+                </div>                 
+                
+
+                <!-- <input name="qualifiedPurchaserStatusId" id="ni_qualifiedPurchaserRadio9" type="radio" value="12" data-bind="checked: entityDetails.qualifiedPurchaserStatusId" /> 
+                <p><label for="ni_qualifiedPurchaserRadio9">A Qualified Purchaser for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+                <!-- <p>Other Reason</p>
+        			<textarea class="editor" maxlength="500" name="qualifiedPurchaserForReason" value="{{qualifiedPurchaserForReason}}">{{qualifiedPurchaserForReason}}</textarea>
+                <br /><br /> -->
+            </div>
+        </div>     
+    </div>
+</form>

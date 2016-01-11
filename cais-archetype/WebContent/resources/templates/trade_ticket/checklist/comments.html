@@ -1,0 +1,55 @@
+<table id="taskComments-1">
+	<tr class="task-row">
+		<td class="comment-editors">ADD COMMENT</td>
+		<td class="comment-content"><textarea class="add-comment-textbox" id="comments-1"></textarea></td>
+		<td class="task-comment-commands" id="taskCommentsCommands-1">
+			<span class="label">Notify:</span>
+			<select multiple="multiple" data-role="multiselect" data-placeholder="Select individuals..." name="notify">
+
+			</select>
+			<br/>
+
+			<ul class="command-buttons">
+				<li>
+					<a class="command-button post-comment">POST COMMENT</a>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	{{^collection}}
+	<tr class="comment-row" id="{{taskCommentsId}}">
+		<td class="comment-editors"></td>
+		<td class="comment-content">No comments have been entered.</td>
+		<td class="task-comment-commands">
+		</td>
+	</tr>
+	{{/collection}}
+	{{#collection}}
+	<tr class="comment-row" id="{{taskCommentsId}}">
+		<td class="comment-editors">
+			Posted By {{postedBy}}<br>
+			{{postDate}}<br>
+			{{#closedDate}}<br>
+			Closed by {{../closedBy}}<br>
+			{{.}}
+			{{/closedDate}}
+
+		</td>
+		<td class="comment-content">{{comment}}</td>
+		<td class="task-comment-commands"><br>
+			<ul class="command-buttons">
+				{{^closedDate}}
+				<li>
+					<a class="command-button close-comment"><div class="inner">Mark as closed</div></a>
+				</li>
+				{{/closedDate}}
+				{{#closedDate}}
+				<li>
+					<a class="command-button reopen-comment"><div class="inner">Reopen Comment</div></a>
+				</li>
+				{{/closedDate}}
+			</ul>
+		</td>
+	</tr>
+	{{/collection}}
+</table>

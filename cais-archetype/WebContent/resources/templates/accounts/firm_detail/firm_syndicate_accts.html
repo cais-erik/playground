@@ -1,0 +1,92 @@
+<div class="clearfix">
+    <div class="grid_12" id="notifications">
+        <h2>Syndicate Accounts</h2>
+        <table class="notifications-list">
+            <thead>
+                <tr>
+                    <th style="padding-left: 8px; text-align:left;">Account Name</th>
+                    <th style="padding-left: 8px; text-align:left;">Account Type</th>
+                    <!-- <th>Email Notification</th> -->
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="empty">
+                    <td colspan="4">No Syndicate accounts.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="grid_12">
+        <div class="secondaryButton create-new-party">
+            <div><span><i class="icon-plus-circled"></i>Add Account</span></div>
+        </div>
+    </div>
+</div>
+<form class="hidden" id="add-cap-market-acct" method="POST">
+    <div class="common-fields clearfix">
+        <div class="grid_6 acct-type-selector">
+            <label class="form-label">Type*</label> 
+            <select name="accountType" data-role="dropdownlist" required>
+                <option value="Broker Dealer">Broker Dealer</option>
+                <option value="RIA">RIA</option>
+            </select>
+        </div>
+    </div>
+    <div class="broker-dealer-attrs grid_6">
+
+            <h3 class="form-heading">Settlement Instruction</h3>
+            <label for="licenseName" class="form-label">Account Legal Trading Name*</label> 
+            <input class="form-input-elem" name="licenseName" type="text" validationMessage="License Name is required." required>
+
+            <label class="form-label" for="accountName">Account Short Name*</label>
+            <input class="form-input-elem" type="text" name="accountName" id="name" validationMessage="Name is required." required><br/>
+
+            <label for="dtcClearingNo" class="form-label">DTC Clearing Number*</label> 
+            <input class="form-input-elem" name="dtcClearingNo" type="text" validationMessage="DTC Clearing Number is required." required>
+            
+            <label for="mpid" class="form-label">MPID*</label> 
+            <input class="form-input-elem" name="mpid" type="text" validationMessage="MPID is required." required>
+
+            <label class="form-label">Default Selling Concession (%)*</label> 
+            <input type="text" name="sellingConcession" data-spinners="false" data-role="numerictextbox" data-format="p" required validationMessage="Selling concession is required."><br/>
+
+            <h3 class="form-heading">Back Office Contact</h3>
+            <label class="form-label" for="contactName">Name</label>
+            <input class="form-input-elem" name="contactName" type="text" validationMessage="Name is required.">
+
+            <label class="form-label" for="contactPhone">Phone</label>
+            <input class="form-input-elem" name="contactPhone" type="text" validationMessage="Phone is required.">
+
+            <label class="form-label" for="contactEmail">Email</label>
+            <input class="form-input-elem" name="contactEmail" type="email" required="required" validationMessage="Email is required.">
+    </div>
+    <div class="ria-attrs grid_6">
+            <h3 class="form-heading">Settlement Instruction</h3>
+            <label class="form-label" for="accountName">Name*</label>
+            <input class="form-input-elem" type="text" name="accountName" id="name" validationMessage="Name is required." required><br/>
+        
+            <label for="dtcClearingNo" class="form-label">DTC Clearing Number*</label> 
+            <input class="form-input-elem" name="dtcClearingNo" type="text" validationMessage="DTC Clearing Number is required." required>
+
+            <label for="institutionalId" class="form-label">Institutional Id*</label> 
+            <input class="form-input-elem" name="institutionalId" type="text" validationMessage="Institutional Id is required." required>
+
+            <label for="internalAccountNo" class="form-label">Internal Account Number*</label> 
+            <input class="form-input-elem" name="internalAccountNo" type="text" validationMessage="Internal Account Number is required." required>
+
+            <label for="pershingAcctNum" class="form-label">Pershing Account Number*</label>
+            <input class="form-input-elem" name="pershingAcctNum" type="text" validationMessage="Pershing Account Number is required." required>
+
+            <h3 class="form-heading">Back Office Contact</h3>
+            <label class="form-label" for="contactName">Name</label>
+            <input class="form-input-elem" name="contactName" type="text" validationMessage="Name is required.">
+
+            <label class="form-label" for="contactPhone">Phone</label>
+            <input class="form-input-elem" name="contactPhone" type="text" validationMessage="Phone is required.">
+
+            <label class="form-label" for="contactEmail">Email</label>
+            <input class="form-input-elem" name="contactEmail" type="email" required="required" validationMessage="Email is required.">
+    </div>
+    <div class="cap-market-permissioner-container grid_6"></div>
+</form>

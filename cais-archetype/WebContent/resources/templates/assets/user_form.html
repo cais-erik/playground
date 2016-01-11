@@ -1,0 +1,83 @@
+<form class="user-edit-form clearfix">
+
+    <div class="container-roleId">
+        <label><input class="parse-int" name="roleId" type="radio" value="3">Wealth Advisor</label>
+        <label><input class="parse-int" name="roleId" type="radio" value="4">Sales Associate</label>
+    </div>
+
+    <div class="grid_5">
+        <label class="form-label">First Name*</label>
+        <input class="form-input-elem" name="firstName" type="text" validationMessage="First Name is required" required>
+    </div>
+    <div class="grid_1">
+        <label class="form-label">M.I.</label>
+        <input class="form-input-elem" name="middleInitial" type="text" maxlength="1">
+    </div>
+    <div class="grid_6">
+        <label class="form-label">Last Name*</label>
+        <input class="form-input-elem" name="lastName" type="text" required validationMessage="Last Name is required">
+    </div>
+    <div class="grid_3">
+        <label class="form-label">Email*</label>
+        <input class="form-input-elem" name="email" type="email" required validationMessage="Email is required">
+    </div>
+    <div class="grid_3">
+        <label class="form-label">Alt. Email</label>
+        <input class="form-input-elem" name="alternateEmail" type="email">
+    </div>
+    <div class="grid_6">
+        <label class="form-label">Phone</label>
+        <input class="form-input-elem" name="phone" type="phone">
+    </div>
+    <div class="grid_6">
+        <label class="form-label">Address 1*</label>
+        <input class="form-input-elem" name="street1" type="text" required validationMessage="Address is required">
+    </div>
+    <div class="grid_6">
+        <label class="form-label">Address 2</label>
+        <input class="form-input-elem" name="street2" type="text">
+    </div>
+    <div class="grid_4">
+        <label class="form-label">City*</label>
+        <input class="form-input-elem" name="city" type="text" required validationMessage="City is required">
+    </div>
+    <div class="grid_2">
+        <label class="form-label">State*</label>
+        <input class="form-input-elem" name="state" type="text" required validationMessage="State is required">
+    </div>
+    <div class="grid_2">
+        <label class="form-label">Postal Code *</label>
+        <input class="form-input-elem" name="postalCode" type="text" required validationMessage="Postal Code is required">
+    </div>
+    <div class="grid_4">
+        <label class="form-label">Country*</label>
+        <select data-role="dropdownlist" name="country" required validationMessage="Country is required">
+            <option value="">Select country...</option>
+            {{countryOptions}}
+        </select>
+    </div>
+    <div class="grid_3">
+        <label class="form-label">AI Point Of Contact</label>
+        <select name="pointOfContactAI" data-role="pointOfContacts">
+            {{#each pointOfContacts}}<option value="{{userId}}">{{firstName}} {{lastName}}</option>{{/each}}
+        </select>
+    </div>
+    <div class="grid_3">
+        <label class="form-label">Syndicate Point Of Contact</label>
+        <select name="pointOfContactCM" data-role="pointOfContacts">
+            {{#each pointOfContacts}}<option value="{{userId}}">{{firstName}} {{lastName}}</option>{{/each}}
+        </select>
+    </div>
+    <div class="grid_3">
+        <label class="form-label">SP Point Of Contact</label>
+        <select name="pointOfContactSP" data-role="pointOfContacts">
+            {{#each pointOfContacts}}<option value="{{userId}}">{{firstName}} {{lastName}}</option>{{/each}}
+        </select>
+    </div>
+    <ul class="permList clearfix">
+        {{#permissions}}<li class="grid_6"><label class="form-label"><input class="permission-check" type="checkbox" value="{{id}}">{{name}}</label></li>{{/permissions}}
+    </ul>
+    <div class="secondaryButton save-user">
+        <div><span><i class="icon-plus-circled"></i>Add user</span></div>
+    </div>
+</form>

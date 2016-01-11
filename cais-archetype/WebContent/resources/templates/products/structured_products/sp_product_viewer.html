@@ -1,0 +1,48 @@
+<div class="cancel-dialog cancel-dialog-icon">
+    <i class="icon-cancel"></i>
+</div>
+<div class="base-k-dialog-content">
+    <div class="offering-content">
+        <header class="offering-header">
+            <h2 class="offering-heading">{{model.underlying}}</h2>
+            {{model.tenor}}
+            {{^model.isPublished}}<span class="publish-status">Unpublished</span>{{/model.isPublished}}
+            {{#if model.cusip}}
+            <p><strong>CUSIP:</strong> {{model.cusip}}</p>
+            {{/if}}
+            </h2>
+        </header>
+        {{#if model.spKeyTerms}}
+        <ul class="key-terms-list">
+            {{#model.spKeyTerms}}
+            <li>
+                <h3>{{{name}}}</h3>
+                <p>{{{description}}}</p>
+            </li>
+            {{/model.spKeyTerms}}
+        </ul>
+        {{/if}}
+        <footer class="offering-footer">
+            {{#if model.logoUrl}}
+            <div class="issuer-logo-container">
+                <img class="issuer-logo" src="{{model.logoUrl}}">
+            </div>
+            {{/if}}
+            {{#if model.closingDate}}
+            <p><strong>Closes:</strong> <abbr class="timeago" title="{{model.closingDate}}"></abbr></p>
+            {{/if}}
+            {{#if model.terms}}
+            <p class="download-link" style="color: #48AEE7"><a href="/api/document/download?docId={{model.terms}}" target="_blank"><i class="icon-download"></i><b>View Prospectus</b></a></p>
+            {{/if}}
+            {{#if model.price}}
+            <p><strong>Price:</strong> {{formatNumber model.price 'p'}}</p>
+            {{/if}}
+
+        </footer>
+    </div>
+</div>
+<footer class="base-k-dialog-footer">
+    <ul class="confirm-buttons">
+        <li class="command-button cancel-dialog"><a><div class="inner">Done</div></a></li>
+    </ul>
+</footer>

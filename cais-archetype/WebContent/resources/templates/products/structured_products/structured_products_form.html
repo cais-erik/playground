@@ -1,0 +1,164 @@
+<h1 class="title-header" style="display:block; float:none">
+	{{#options.editId}}Edit <span name="name"></span> Stuctured Solution{{/options.editId}}
+	{{^options.editId}}
+		Create a New Structured Solution 
+		<div class="form-prepopulator">
+			<select data-role="dropdownlist" name="preload-model">
+				<option value="">Prepopulate offering from previous...</option>
+				{{#collection}}
+				<option value="{{id}}">{{title}} | {{underlying}} | {{parseDate closingDate 'd'}}</option>
+				{{/collection}}
+			</select>	
+		</div>
+	{{/options.editId}}
+	<a data-bypass class="back-to-offers" href="/"><i class="icon-list"></i>Back to Products</a>
+</h1>
+<form id="insert-product" class="container_12 form clearfix gridded-form" action="api/products/structured_products" action="POST">
+	<section class="clearfix">
+		<div class="grid_12 clearfix">
+			<h2>Issuer Information</h2>
+		</div>
+		<div class="clearfix">
+			<div class="grid_3">
+				<label for="productTypeId">Offering Status*</label>
+				<select class="parse-int" data-role="dropdownlist" tabindex="1" name="productTypeId" required>
+					<option value="">Select status...</option>
+					<option value="2">Product Concept</option>
+					<option value="1">Active</option>
+				</select>
+				<!--
+				<label for="name">Name*</label>
+				<input name="name" type="text" tabindex="1" max-length="20" required>
+				-->
+
+				<label for="issuerId">Issuer* <a href="#" class="edit-issuers"><i class="icon-plus-circled"></i>Add/edit Issuers</a></label>
+				<select class="parse-int" data-role="dropdownlist" tabindex="4" name="issuerId" required>
+					<option value="">Select...</option>
+					{{#setupData.spissuer}}<option value="{{issuerId}}">{{issuerName}}</option>{{/setupData.spissuer}}
+				</select>
+
+
+
+				<label for="cusip">Fact Sheet URL</label>
+				<input name="factSheetURL" data-validurl="true" type="text" tabindex="7">
+
+
+			</div>
+			<div class="grid_3">
+				<label for="creditRating">Credit Rating</label>
+				<input name="creditRating" type="text" tabindex="2" max-length="20" readonly>
+
+				<label for="assetClass">Asset Class*</label>
+				<select data-role="dropdownlist" name="assetClass" tabindex="5">
+					<option value="">Select class...</option>
+					{{#setupData.assetClass}}<option value="{{value}}">{{value}}</option>{{/setupData.assetClass}}
+				</select>
+
+				<label for="cusip">Term Sheet URL</label>
+				<input name="prospectusURL" data-validurl="true" type="text" tabindex="8">
+			</div>
+			<div class="grid_3">
+				<label for="type">Title*</label>
+				<input name="title" type="text" tabindex="3" required>	
+				<label for="type">Category* <a href="#" class="edit-categories"><i class="icon-plus-circled"></i>Add/edit Categories</a></label>
+				<select class="parse-int" data-role="dropdownlist" tabindex="6" name="spCategoryId" required>
+					<option value="">Select category...</option>
+					{{#setupData.categories}}<option value="{{id}}">{{name}}</option>{{/setupData.categories}}
+				</select>
+
+
+				<label for="terms">Red Herring / Prospectus(PDF)*</label>
+				{{#offering.terms}}
+				<a class="download-prospectus icon-download" href="/api/document/download?docId={{.}}" target="_blank">View</a>
+				{{/offering.terms}}
+				<input type="file" name="file" data-attrName="terms">
+				<div class="validation-wrapper"><span class="k-invalid-msg" data-for="file"></span></div>
+			</div>
+			<div class="grid_3">
+				
+			</div>
+		</div>
+	</section>
+	<section class="clearfix">
+		<div class="grid_12 clearfix">
+			<h2>Offer Information</h2>
+		</div>
+		<div class="clearfix">
+			<div class="grid_3">
+				<label for="offering">Offering*</label>
+				<select data-role="dropdownlist" name="offering" tabindex="9" required>
+					<option value="">Select offering...</option>
+					{{#setupData.offering}}<option value="{{value}}">{{value}}</option>{{/setupData.offering}}
+				</select>
+
+				<label for="payment">Payment*</label>
+				<select data-role="dropdownlist" name="payment" tabindex="11" required>
+					<option value="">Select method...</option>
+					{{#setupData.payment}}<option value="{{value}}">{{value}}</option>{{/setupData.payment}}
+				</select>
+
+				<label for="price">Price</label>
+				<input name="price" data-role="numerictextbox" data-format="p" data-decimals="4" data-spinners="false" max="1" type="text" tabindex="13">
+
+				<label for="sellingConcession">Selling Concession</label>
+				<input name="sellingConcession" type="text" max-length="20" tabindex="15">
+
+				<label for="cusip">CUSIP*</label>
+				<input name="cusip" type="text" max-length="20" tabindex="17" required>
+
+				<label for="underlying">Underlyer*</label>
+				<input name="underlying" type="text" tabindex="19" required>				
+				<!-- <select data-role="dropdownlist" name="underlying" tabindex="14" required>
+					<option value="">Select underlying...</option>
+					{{#setupData.underlying}}<option value="{{value}}">{{value}}</option>{{/setupData.underlying}}
+				</select> -->
+			</div>
+			<div class="grid_3">
+				<label for="strategy">Strategy *</label>
+				<input name="strategy" type="text" tabindex="10" required>
+
+				<label for="bid">Bid</label>
+				<input name="bid" type="number" tabindex="12">
+
+				<label for="ask">Ask</label>
+				<input name="ask" type="number" tabindex="14">
+
+				<label for="tenor">Tenor</label>
+				<input name="tenor" type="text" tabindex="16">
+
+				<label for="investmentTheme">Investment Theme</label>
+				<input name="investmentTheme" type="text" tabindex="18">
+
+				<label style="margin-top: 42px;"><input type="checkbox" name="isFeeBased" tabindex="19"> Fee based offering</label>
+			</div>
+			<div class="grid_6">
+				<div class="key-terms-selector"></div>
+			</div>
+		</div>
+	</section>
+	<section class="clearfix">
+		<div class="grid_12 clearfix">
+			<h2>Offer Timing</h2>
+		</div>
+		<div class="clearfix">
+			<div class="grid_3">
+				<label for="closingDate">Anticipated Closing Date*</label>
+				<input name="closingDate" data-role="datepicker" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz', 'M/d/yyyy', 'MM/dd/yyy', 'M/dd/yyyy', 'MM/d/yyyy']" type="text" tabindex="20" required>
+				<div class="validation-wrapper"><span class="k-invalid-msg" data-for="closingDate"></span></div>
+			</div>
+			<div class="grid_3">
+				<label for="settleDate">Anticipated Trade Date*</label>
+				<input name="settleDate" data-role="datepicker" type="text" tabindex="21" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz', 'M/d/yyyy', 'MM/dd/yyy', 'M/dd/yyyy', 'MM/d/yyyy']" required>
+				<div class="validation-wrapper"><span class="k-invalid-msg" data-for="settleDate"></span></div>
+			</div>
+			<div class="grid_3">
+				<label for="maturityDate">Maturity Date*</label>
+				<input name="maturityDate" data-role="datepicker" data-format="MMM dd, yyyy" data-parse-formats="['yyyy-MM-dd', 'yyyy-MM-ddTHH:mm:ss.fffzzz', 'M/d/yyyy', 'MM/dd/yyy', 'M/dd/yyyy', 'MM/d/yyyy']" type="text" tabindex="22" required>
+				<div class="validation-wrapper"><span class="k-invalid-msg" data-for="maturityDate"></span></div>
+			</div>
+		</div>
+	</section>
+	<button type="submit" tabindex="23">
+		<span class="command-button">{{#options.editId}}Update Product{{/options.editId}}{{^options.editId}}Add Product{{/options.editId}}</span>
+	</button>
+</form>

@@ -1,0 +1,84 @@
+<div class="grid_6">
+    <div class="form-heading THIRD_PARTY">Interested Party</div>
+    <div class="form-heading ADVISOR">Firm/Advisor</div>
+    <div class="form-heading CLIENT">Client</div>
+
+    <div id="thirdPartyContent">                 
+        <label class="form-label">Name*</label>
+        <input class="form-input-elem" name="partyName" type="text" data-bind="value: selectedParty.name" required="required" validationMessage="Name is Required.">
+        <div class="validation-wrapper"><span class="k-invalid-msg" data-for="partyName">{{selectedParty.partyName}}</span></div>
+                
+        <div class="validation-wrapper"><span class="k-invalid-msg" data-for="partyType">{{selectedParty.partyType}}</span></div>
+        <label class="form-label">Type*</label>
+        <select name="otherType"
+                data-role="dropdownlist"
+                data-option-label="Select a Type"
+                data-change="accountViewModel.dropDownListChangeHandler"
+                data-bind="value: selectedParty.other" required>
+                <option>Accountant</option>
+                <option>Authorized Signatory</option>
+                <option>Lawyer</option>
+                <option>Trustee</option>
+                <option>Other</option>
+        </select>
+        <div class="validation-wrapper"><span class="k-invalid-msg" data-for="otherType">{{selectedParty.otherType}}</span></div>
+    </div>
+
+    <div id="advisorContent">
+        <label class="form-label">Firm Name</label>
+        <input class="form-input-elem" type="text" data-bind="value: selectedParty.firmName" disabled="disabled" value="{{selectedParty.firmName}}" />
+
+        <label class="form-label">Team Name</label>
+        <input class="form-input-elem" type="text" data-bind="value: selectedParty.advisorTeamName" disabled="disabled" value="{{selectedParty.advisorTeamName}}" />
+    </div>
+
+    <div id="clientContent">
+        <label class="form-label">Client Name</label>
+        <input class="form-input-elem" type="text" data-bind="value: selectedParty.name" disabled="disabled" value="{{selectedParty.name}}" />
+    </div>
+    <br /><br />
+
+    <div class="form-heading THIRD_PARTY">Interested Party Contact</div>
+    <div class="form-heading ADVISOR">Advisor Contact</div>
+    <div class="form-heading CLIENT">Client Contact</div>
+
+    <div id="advisorName">
+        <label class="form-label">Advisor Name</label>
+        <input class="form-input-elem" type="text" data-bind="value: selectedParty.fullName" disabled="disabled" value="{{selectedParty.fullName}}" />
+    </div>
+
+    <label class="form-label" data-tooltip="Office Phone #">Phone - Office</label>
+    <input class="form-input-elem" name="partyOffice" type="tel" data-bind="value: selectedParty.phone" value="{{selectedParty.phone}}" />
+
+    <label class="form-label" data-tooltip="Email">Fax</label>
+    <input class="form-input-elem" name="partyFax" type="tel" data-bind="value: selectedParty.fax" value="{{selectedParty.fax}}" />
+
+    <label class="form-label" data-tooltip="Email">Email*</label>
+    <input class="form-input-elem" name="partyEmail" type="email" value="{{selectedParty.email}}" required="required" validationMessage="Email is Required." />
+    <div class="validation-wrapper"><span class="k-invalid-msg" data-for="partyEmail"></span></div>
+</div>
+<div class="grid_6">
+    <div class="form-heading THIRD_PARTY">Interested Party Mailing Address</div>
+    <div class="form-heading ADVISOR">Advisor Address</div>
+    <div class="form-heading CLIENT">Client Address</div>
+
+    <label class="form-label" data-tooltip="Country">Country</label>
+    <input class="form-input-elem" name="partyCountry" data-bind="value: selectedParty.country" type="text" value="{{selectedParty.country}}" />
+
+    <label class="form-label" data-tooltip="Address 1">Address 1</label>
+    <input class="form-input-elem" name="partyAddress1" type="text" data-bind="value: selectedParty.street1"  value="{{selectedParty.street1}}" />
+
+    <label class="form-label" data-tooltip="Address 2">Address 2</label>
+    <input class="form-input-elem" name="partyAddress2" type="text" data-bind="value: selectedParty.street2" value="{{selectedParty.street2}}"/>
+
+    <label class="form-label" data-tooltip="City">City</label>
+    <input class="form-input-elem" name="partyCity" type="text" data-bind="value: selectedParty.city" value="{{selectedParty.city}}" />
+
+    <label class="form-label" data-tooltip="State/Province">State/Province</label>
+    <input class="form-input-elem" name="partyStateProvince" type="text" data-bind="value: selectedParty.state" value="{{selectedParty.state}}" />
+
+    <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code</label>
+    <input class="form-input-elem" name="partyPostalCode" type="text" data-bind="value: selectedParty.postalCode" value="{{selectedParty.postalCode}}" />
+</div>
+<div style="clear: both;"></div>
+<div style="text-align: center; margin-top: 10px;"><div data-bind="visible: addInterestedPartyVisible, click: savePartyDetails" class="secondaryButton"><div><span>Add Interested Party to Notifications List</span></div></div></div>

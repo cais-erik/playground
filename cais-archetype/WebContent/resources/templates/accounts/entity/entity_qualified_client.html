@@ -1,0 +1,52 @@
+<form id="qualifiedClient" class="form" data-panelId="11">
+    <div class="entity-details-container clearfix container_12">
+
+        <div id="qualifiedClientCommunicator"></div>  
+        <div class="individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Qualified Client Status: <span class="entityTypeLabel">Individual</span></div>
+                {{#selectRadio qualifiedClientStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedClientStatusId" id="qualifiedClientRadio1" type="radio" value="1"> Not a Qualified Client.</label>
+                </div>
+                
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedClientStatusId" id="qualifiedClientRadio2" type="radio" value="2">A natural person with a net worth of at least $2,000,000 as of the date herof, either alone or with assets held jointly with such person's spouse, or it will invest at least $1,000,000 in a single investment. For purposes of determining a natural person's net worth, (i) the person's primary residence shall not be included as an asset; (ii) indebtedness that is secured by the person's primary residence up to the estimates fiar market value of the primary residence at the time of the proposed subscription date, shall not be included as a liability (except that if the amount of such indebtedness outstanding at the proposed exceeds the amount outstanding 60 days before such date, other than as a result of the acquisition of the primary residence, the amount of such excess shall be included as a liability); and (iii) indebtedness that is secured by the person's primary residence in excess of the estimates fiar market value of the primary residence at the proposed subscription date shall be included as a liability.</label>
+                </div>
+
+                <!-- <input name="qualifiedClientStatusId" id="qualifiedClientRadio3" type="radio" value="3" /> 
+                <p><label for="qualifiedClientRadio3">I am a Qualified Client for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+                <!-- <p>Other Reason</p>
+    			<textarea name="qualifiedClientForReason" class="editor" maxlength="500" value="qualifiedClientForReason">{{qualifiedClientForReason}}</textarea>
+                <br /><br /> -->
+            </div>   
+        </div>
+        <div class="non-individual-fields">
+            <div class="grid_12">
+                <div class="form-heading">Qualified Client Status: <span class="entityTypeLabel">Non-Individual</span></div>
+                {{#selectRadio qualifiedClientStatusId}}
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedClientStatusId" id="ni_qualifiedClientRadio1" type="radio" value="4"> Not an Qualified Client.</label>
+                </div>
+
+                <div class="checkbox-label-wrap">
+                    <label><input name="qualifiedClientStatusId" id="ni_qualifiedClientRadio2" type="radio" value="5"> The Subscriber is a corporation, partnership, association, joint stock company, trust or other organized group of persons with a net worth (i.e., total assets minus total liabilities) of at least $2,000,000 as of the date hereof, or it will invest at least $1,000,000 in a single investment and declares, represents and warrants that if it is (x) an entity that would be a registered investment company but for the exception provided from that definition in Section 3(c)(1) of the Investment Company Act, (y) a registered investment company under the Investment Company Act or (z) a business development company within the meaning of Section 202(a)(22) of the Advisors Act, each of its equity owners independently meet the requirements of category (i) or (ii) of this Qualified Client Section.</label>
+                </div>
+
+                
+
+                <!-- <input name="qualifiedClientStatusId" id="ni_qualifiedClientRadio3" type="radio" value="6" /> 
+                <p><label for="qualifiedClientStatusId">I am a Qualified Client for reasons other than those listed above.</label></p>
+                <br /> -->
+                {{/selectRadio}}
+                <!-- <p>Other Reason</p>
+    			<textarea name="qualifiedClientForReason" class="editor" maxlength="500" value="qualifiedClientForReason">{{qualifiedClientForReason}}</textarea>
+                <br /><br /> -->
+            </div>
+        </div>     
+    </div>
+</form>

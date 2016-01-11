@@ -1,0 +1,24 @@
+<div class="details-header"><span>Review the generated document</span></div>
+<div class="scrollable-content" style="padding:0; overflow: hidden;">
+    {{^collection}}
+    <span>No Documents Found</span>
+    {{/collection}}
+    {{#collection}}
+    <div class="pdf-bkg-loader" style="height:100%;">
+        <div id="review-pdf" class="pdf-viewer" style="text-align:center; height: 100%;">
+            <div class="title">Download the below document</div>
+            <a class="download-doc" href="#" data-docId="{{documentId}}">
+                <img src='/resources/assets/icons/pdf-icon.png' alt='document'>
+                <span class='doc-name'>{{fileName}}</span><span class='doc-date'></span>
+            </a>
+        </div>
+    </div>
+    {{/collection}}
+</div>
+<div class="details-footer">
+    <ul class="commands">
+        <!-- <li class="command-button" id="download"><a><div class="inner">DOWNLOAD</div></a></li> -->
+        <li class="command-button" id="approve"><a><div class="inner">Approve</div></a></li>
+		<li class="command-button" id="reject"><a><div class="inner">Reject</div></a></li>
+    </ul>
+</div>

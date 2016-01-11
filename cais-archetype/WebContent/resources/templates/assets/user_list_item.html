@@ -1,0 +1,5 @@
+<li>
+	<h3>{{firstName}}{{#middleInitial}} {{.}}.{{/middleInitial}} {{lastName}}</h3>
+	Phone: {{#address.phone}}<a href="tel:{{.}}">{{.}}</a>{{/address.phone}} {{^address.phone}}None provided{{/address.phone}}<br/>
+	<a href="mailto:{{address.email}}">{{address.email}}</a>
+</li>

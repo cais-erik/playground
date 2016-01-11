@@ -1,0 +1,38 @@
+<div class="content">
+	<header>
+		<span class="close"><i class="icon-cancel-circled"></i></span>
+		<h1>IOI Details | <span name="accountName"></span> (<span name="firmName"></span>)</h1>
+		
+	</header>
+	<div class="container_12">
+		<div class="grid_6 alpha">
+			<dl class="spec-list">
+				<dt>IOI:</dt>
+					<dd class="clearfix" data-numberformatter="n0" name="ioi"></dd>
+				<dt>Allocation:</dt> 
+					<dd class="clearfix" data-numberformatter="n0" name="allotted"></dd>
+				<dt>Broker Selling Concession:</dt> 
+					<dd class="clearfix" data-numberformatter="$##,#.00####" name="brokerSellingConcession"></dd>
+				<dt>Allocation Price Per Share:</dt>
+				 	<dd class="clearfix" data-numberformatter="$##,#.00####" name="allocationPricePerShare"></dd>
+				<dt>Allocation Value:</dt>
+					<dd class="clearfix" data-numberformatter="$##,#.00####" name="allocationValue"></dd>
+				<dt>Total Broker Selling Concession:</dt>
+					<dd class="clearfix" data-numberformatter="$##,#.00####" name="totalBrokerSellingConcession"></dd>
+			</dl>
+		</div>
+		<div class="grid_6 omega">
+		</div>
+	</div>
+	<footer class="pipeline-detail-footer">
+		<ul class="action-btns">
+			{{#if offering.finalProspectusId}}
+			{{#if caisemployee}}<li><a class="button-option notify-final-prospectus icon-mail" href="#">Notify of Final Prospectus</a></li>{{/if}}
+			<li><a class="button-option download-final-prospectus icon-download" href="/api/document/download?docId={{offering.finalProspectusId}}" target="_blank">View Final Prospectus</a></li>
+			{{else}}
+			{{#if caisemployee}}<li><a class="button-option notify" href="">Notify <span name="accountName"></span></a></li>{{/if}}
+			{{/if}}
+		</ul>
+	</footer>
+</div>
+<!-- <em class="indicator"></em> -->

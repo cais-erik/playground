@@ -1,0 +1,224 @@
+<form id="entityInformation" class="form" data-panelId="0">
+    <div class="entity-details-container clearfix container_12">
+        <div id="informationCommunicator"></div> 
+        <div class="clearfix grid_12"> 
+            <h1 class="accounts-heading hidden">Create a New Investment Entity</h1>
+        </div>
+
+        <div class="grid_6">
+            <div class="form-heading">Entity Type*</div>
+            <!-- Entity Type Details  -->
+            {{#selectRadio entityTypeOtherId}}
+            
+            <div class="validation-wrapper static"><span class="k-invalid-msg" data-for="entityTypeOtherId"></span></div>
+            
+            <label class="form-label" data-tooltip="Entity Type Details">Individual</label>            
+            <ul>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail38" value="38" required />
+                    <label for="entityTypeDetail38">Individual</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail47" value="47" required />
+                    <label for="entityTypeDetail47">IRA</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail39" value="39" required />
+                    <label for="entityTypeDetail39">Joint with Rights of Survivorship</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail41" value="41" required />
+                    <label for="entityTypeDetail41">Joint Tenants in Common</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail49" value="49" required />
+                    <label for="entityTypeDetail49">Keough Plan</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail50" value="50" required />
+                    <label for="entityTypeDetail50">Other Self-Directed Retirement Account</label>
+                </li>
+            </ul>
+
+            <label class="form-label" data-tooltip="Entity Type Details">Non-Individual</label>      
+            <ul>
+                 <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail11" value="11" required />
+                    <label for="entityTypeDetail11">Grantor Trust</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail45" value="45" required />
+                    <label for="entityTypeDetail45">Revocable Trust</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail46" value="46" required />
+                    <label for="entityTypeDetail46">Irrevocable Trust</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail6" value="6" required />
+                    <label for="entityTypeDetail6">Simple Trust</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail15" value="15" required />
+                    <label for="entityTypeDetail15">Complex Trust</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail10" value="10" required />
+                    <label for="entityTypeDetail10">Corporation</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail14" value="14" required />
+                    <label for="entityTypeDetail14">Partnership</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail42" value="42" required />
+                    <label for="entityTypeDetail42">Limited Liability Company</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail43" value="43" required />
+                    <label for="entityTypeDetail43">Fund of Funds</label>
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail51" value="51" required />
+                    <label for="entityTypeDetail51">Other</label><br />
+                    <div class="show-for-entityTypeDetail51 hidden">
+                        <label class="form-label">Please describe:</label>
+                        <input class="form-input-elem" type="text" name="otherNonIndivDescription" value="{{otherNonIndivDescription}}">
+                    </div>
+                </li>
+            </ul>
+
+                   
+
+                    
+
+            <label class="form-label" data-tooltip="Entity Type Details">Tax-exempt Organization</label>      
+            <ul>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail12" value="12" required />
+                    <label for="entityTypeDetail12">Private Foundation</label><br />
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail44" value="44" required />
+                    <label for="entityTypeDetail44">Endowment</label><br />
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail48" value="48" required />
+                    <label for="entityTypeDetail48">Benefit Plan</label><br />
+                </li>
+                <li>
+                    <input type="radio" name="entityTypeOtherId" id="entityTypeDetail16" value="16" required />
+                    <label for="entityTypeDetail16">Other Tax-exempt organization</label><br />
+                </li>
+            </ul>
+<!--             
+
+            <input type="text" name="entityTypeOtherText" id="entityOtherTextInput" style="margin-left: 40px; display:none;" validationMessage="Other Entity Type is Required." placeholder="Describe other entity type..."/>
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="entityOther"></span></div> -->
+            {{/selectRadio}}
+
+            <!-- <input type="radio" name="entityTypeOtherId" id="entityTypeDetail40" value="40" required />
+            <label for="entityTypeDetail40">Qualified retirement plan</label><br /> -->
+            <!-- <input type="radio" name="entityTypeOtherId" id="entityTypeDetail7" value="7" required />
+            <label for="entityTypeDetail7">Estate</label><br />        -->     
+
+
+            {{#selectRadio entityTypeId}}
+            <div class="form-heading">Investor Type - Form PF*</div>
+            <div class="validation-wrapper static"><span class="k-invalid-msg" data-for="entityTypeId"></span></div>
+
+    		<input type="radio" name="entityTypeId" id="entityType11" value="19" required />
+            <label for="entityType11">Individual that is a United States Person (or a trust of such a person)</label><br />
+            
+            <input type="radio" name="entityTypeId" id="entityType1" value="2" required />
+            <label for="entityType1">Individual that is not a US person (or a trust of such a person)</label><br />
+          
+            <input type="radio" name="entityTypeId" id="entityType2" value="30" required />
+            <label for="entityType2">Broker-Dealer</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType3" value="27" required />
+            <label for="entityType3">Insurance Company</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType4" value="28" required />
+            <label for="entityType4">Investment Company registered with the US SEC</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType5" value="36" required />
+            <label for="entityType5">Private Fund</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType6" value="29" required />
+            <label for="entityType6">Non-profit organization (including endowments and foundation)</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType7" value="35" required />
+            <label for="entityType7">Pension plan (other than a governmental pension plan)</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType8" value="26" required />
+            <label for="entityType8">Banking or thrift institution (proprietary)</label><br />
+
+    		<input type="radio" name="entityTypeId" id="entityType12" value="41" required />
+            <label for="entityType12">US state or municipal government entity (excl. governmental pension plans)</label><br />
+            
+    		<input type="radio" name="entityTypeId" id="entityType13" value="42" required />
+            <label for="entityType13">US state or municipal government pension plan</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType9" value="37" required />
+            <label for="entityType9">Sovereign wealth fund or foreign official institution</label><br />
+
+            <input type="radio" name="entityTypeId" id="entityType14" value="14" required />
+            <label for="entityType14">Other</label><br />
+
+            <div class="show-for-entityTypeId14 hidden">
+                <label class="form-label">Please describe:</label>
+                <input class="form-input-elem" type="text" name="formPfOtherDescription" value="{{formPfOtherDescription}}">
+            </div>
+
+            {{/selectRadio}}
+        </div>
+        <div class="grid_6">
+            <div class="form-heading">US Tax Status*</div>
+
+            {{#selectRadio usTaxStatusId}}
+            <div class="validation-wrapper static"><span class="k-invalid-msg" data-for="usTaxStatusId"></span></div>
+
+            <input type="radio" name="usTaxStatusId" id="taxStatus1" value="6" required />
+            <label for="taxStatus1">US Taxable</label><br />
+
+            <input type="radio" name="usTaxStatusId" id="taxStatus2" value="7" required />
+            <label for="taxStatus2">Non-US</label><br />
+
+            <input type="radio" name="usTaxStatusId" id="taxStatus3" value="8" required />
+            <label for="taxStatus3">US Tax Exempt</label><br />
+
+            <div class="tax-exempt-info hidden">
+                <label style="margin-left: 40px;">What is the basis of your US Tax-exempt Status?*</label><br />
+                <select name="taxExemptBasis" style="margin-left: 40px; width: 250px;" id="us-tax-exempt-statuses" disabled required validationMessage="US Tax Exempt Basis is Required."></select><br />
+
+                <input type="text" name="taxExemptOtherText" id="taxExemptStatusOther" style="margin-left: 40px; display: none;" validationMessage="Please describe your tax-exempt status." value="{{taxExemptOtherText}}" disabled placeholder="Other tax status description..." required />
+            </div>
+            {{/selectRadio}}
+
+            <div class="form-heading">Backup Withholding*</div>   
+            <div class="validation-wrapper static"><span class="k-invalid-msg" data-for="backupWithholdingId"></span></div>         
+            {{#selectRadio backupWithholdingId}}
+            <div class="checkbox-label-wrap">
+                <label><input type="radio" name="backupWithholdingId" id="backupWithholding1" value="1" required> The Investor confirms, under penalties of perjury, that the Investor is not subject to backup withholding because (i) the Investor is exempt from backup withholding, (ii) the Investor has not been notified by the Internal Revenue Service (the "IRS") that the Investor is subject to backup withholding as a result of a failure to report all interest or dividends or (iii) the IRS has notified the Investor that the Investor is no longer subject to backup withholding.</label>
+            </div>
+            <div class="checkbox-label-wrap">
+                <label><input type="radio" name="backupWithholdingId" id="backupWithholding2" value="2" required> The Investor confirms, under penalties of perjury, that the Investor has been notified by the IRS that the Investor is currently subject to backup withholding (e.g., because the Investor has failed to report all interest and dividends on the Investor's tax return).
+                </label>
+            </div>
+            {{/selectRadio}}
+
+            <div class="form-heading">Advisor Fee Structure*</div>
+            <div class="validation-wrapper static"><span class="k-invalid-msg" data-for="isTransactional"></span></div>
+            {{#selectRadio isTransactional}}
+            <input id="transactionalTrue" name="isTransactional" type="radio" value="false" required><label for="transactionalTrue">Advisory</label>
+            <input id="transactionalFalse" name="isTransactional" type="radio" value="true" required><label for="transactionalFalse">Transactional</label>
+            {{/selectRadio}}
+        </div>
+    </div>
+</form>
+
+<div class="control-bar hidden">
+    <div class="primaryButton save continue"><div><span>SAVE & CONTINUE</span></div></div>
+    <div class="primaryButton save"><div><span>SAVE</span></div></div>
+</div>

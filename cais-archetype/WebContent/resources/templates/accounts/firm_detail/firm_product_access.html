@@ -1,0 +1,23 @@
+<div class="product-line container_12 alternatives clearfix">
+    <h3 class="grid_12">Alternatives</h3>
+    {{#user.caisemployee}}
+    <div class="grid_6 available-products">
+        <div class="title">Available Products<div class="select-all">Select All</div></div>
+        <input type="text" placeholder="Find" class="search-input form-input-elem">
+        <div class="selection-section-list">
+            <ul class="selection-list">
+                {{#availableProducts}}<li class="product" id="{{productId}}">{{legalName}}</li>{{/availableProducts}}
+            </ul>
+        </div>
+    </div>
+    {{/user.caisemployee}}
+    <div class="grid_6 selected-products">
+        <div class="title">Selected Products{{#user.caisemployee}}<div class="remove-all">Remove All</div></div>{{/user.caisemployee}}
+        <input type="text" placeholder="Find" class="search-input form-input-elem">
+        <div class="selection-section-list">
+            <ul class="selection-list">
+                {{#selectedProducts}}<li class="product" id="{{productId}}">{{legalName}}</li>{{/selectedProducts}}
+            </ul>
+        </div>                
+    </div>
+</div>

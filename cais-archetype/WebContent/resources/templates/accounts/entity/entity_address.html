@@ -1,0 +1,55 @@
+<form id="entityAddress" class="form" data-panelId="3">
+    <div class="entity-details-container clearfix container_12">
+        <div id="addressCommunicator"></div>  
+        <div class="grid_6">
+            <div class="form-heading">Permanent Address</div>
+
+            <label class="form-label" data-tooltip="Country" maxlength="44">Country*</label>
+            <select data-role="dropdownlist" name="residence_country" value="{{residence_country}}" required validationMessage="Country is required">
+                <option value="">Select country...</option>
+                {{countryOptions residence_country}}
+            </select>
+            
+            <label class="form-label" data-tooltip="Address 1">Address 1*</label>
+            <input class="form-input-elem" name="residence_street1" type="text" maxlength="149" value="{{residence_street1}}" required validationMessage="Address is required" />
+
+            <label class="form-label" data-tooltip="Address 2">Address 2</label>
+            <input class="form-input-elem" name="residence_street2" type="text" maxlength="149" value="{{residence_street2}}" />
+
+            <label class="form-label" data-tooltip="City">City*</label>
+            <input class="form-input-elem" name="residence_city" type="text" maxlength="44" value="{{residence_city}}" required validationMessage="City is required"/>
+
+            <label class="form-label" data-tooltip="State/Province">State/Province*</label>
+            <input class="form-input-elem" name="residence_state" type="text" maxlength="44" value="{{residence_state}}" required validationMessage="State is required"/>
+
+            <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code*</label>
+            <input name="residence_postalCode" class="noparse form-input-elem" type="text" maxlength="44" value="{{residence_postalCode}}" required validationMessage="Postal Code is required" />
+        </div>
+        <div class="grid_6 mailing-address">
+            <div class="form-heading">
+                Mailing Address <label for="sameAsMailing" class="same-as-address"><input type="checkbox" id="sameAsMailing" /> Same as Permanent Address</label>
+            </div>
+
+            <label class="form-label" data-tooltip="Country">Country*</label>
+            <select data-role="dropdownlist" name="mailing_country" value="{{mailing_country}}" required validationMessage="Country is required">
+                <option value="">Select country...</option>
+                {{countryOptions mailing_country}}
+            </select>
+
+            <label class="form-label" data-tooltip="Address 1">Address 1*</label>
+            <input class="form-input-elem" name="mailing_street1" maxlength="144" type="text" value="{{mailing_street1}}" required validationMessage="Address is required"/>
+
+            <label class="form-label" data-tooltip="Address 2">Address 2</label>
+            <input class="form-input-elem" name="mailing_street2" maxlength="144" type="text" value="{{mailing_street2}}" />
+
+            <label class="form-label" data-tooltip="City">City*</label>
+            <input class="form-input-elem" name="mailing_city" maxlength="44" type="text" value="{{mailing_city}}" required validationMessage="City is required"/>
+
+            <label class="form-label" data-tooltip="State/Province">State/Province*</label>
+            <input class="form-input-elem" name="mailing_state" maxlength="44" type="text" value="{{mailing_state}}" required validationMessage="State is required"/>
+
+            <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code*</label>
+            <input name="mailing_postalCode" class="noparse form-input-elem" maxlength="44" type="text" value="{{mailing_postalCode}}" required validationMessage="Postal Code is required" />
+        </div> 
+    </div>
+</form>

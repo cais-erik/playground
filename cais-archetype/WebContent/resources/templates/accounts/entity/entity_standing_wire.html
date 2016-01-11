@@ -1,0 +1,80 @@
+<form id="standingWireInstructions" class="form" data-panelId="9">
+    <div class="entity-details-container clearfix container_12">
+        <div id="standingWireCommunicator"></div>  
+        <div class="grid_6">
+            <div class="form-heading">Bank Information</div>
+            
+            <label class="form-label" data-tooltip="City">Bank Name*</label>
+            <input class="form-input-elem" name="bankName" maxlength="99" type="text" required value="{{bankName}}" validationMessage="Bank Name is required.">
+
+            <label class="form-label" data-tooltip="State/Province">Country</label>
+            <select data-role="dropdownlist" name="country" value="{{country}}">
+                <option value="">Select country...</option>
+                {{countryOptions country}}
+            </select>
+            
+            <label class="form-label" data-tooltip="Address 1">Address 1</label>
+            <input class="form-input-elem" name="street1" maxlength="99" type="text" value="{{street1}}">
+
+            <label class="form-label" data-tooltip="Address 2">Address 2</label>
+            <input class="form-input-elem" name="street2" maxlength="99" type="text" value="{{street2}}">
+
+            <label class="form-label" data-tooltip="City">City*</label>
+            <input class="form-input-elem" name="city" type="text" maxlength="44" value="{{city}}" required validationMessage="City is required.">
+
+            <label class="form-label" data-tooltip="State/Province">State/Province</label>
+            <input class="form-input-elem" name="state" type="text" maxlength="44" value="{{state}}">
+
+            <label class="form-label" data-tooltip="Zip/Postal Code">Zip/Postal Code</label>
+            <input class="noparse form-input-elem" name="postalCode" type="text" maxlength="44" value="{{postalCode}}">
+
+            <label class="form-label" data-tooltip="FATF Country?">Is the wiring bank in a FATF Country? <i  class="tooltip icon-info-circled" data-tooltipcontainer="#isFATF-tooltip"></i></label>
+            <div class="tool-tip-content hidden" id="isFATF-tooltip">
+                <p>The Financial Action Task Force (FATF) is an intergovernmental organization that develops policies and sets standards to combat money laundering and terrorism financing. The FATF monitors the progress of its members in implementing necessary measures, review money laundering and terrorist financing techniques and counter-measures, and promotes the adoption and implementation of appropriate measures globally. To see the list of FATF members, please visit: <a href="http://www.fatf-gafi.org/pages/aboutus/membersandobservers/">http://www.fatf-gafi.org/pages/aboutus/membersandobservers/</a></p>
+            </div>
+            {{#selectRadio isFATF}}
+            <input name="isFATF" id="fatfCountryFalse" type="radio" value="false"><label for="fatfCountryFalse">No</label>
+            <input name="isFATF" id="fatfCountryTrue" type="radio" value="true"><label for="fatfCountryTrue">Yes</label>       
+            {{/selectRadio}}
+        </div>
+        <div class="grid_6">
+            <div class="form-heading">Account Information</div>
+
+            <label class="form-label" data-tooltip="Account Type">Account Type</label>
+            <select data-role="dropdownlist" name="bankAccountType">
+                {{#select bankAccountType}}
+                <option value="Brokerage">Brokerage</option>
+                <option value="Checking">Checking</option>
+                <option value="Savings">Savings</option>
+                {{/select}}
+            </select>
+
+            <label class="form-label" data-tooltip="abachipsNumber">ABA or CHIPS Number*</label>
+            <input class="noparse form-input-elem" name="abachipsNumber" type="text" maxlength="99" required value="{{abachipsNumber}}" validationMessage="ABA or CHIPS Number is required.">
+
+            <label class="form-label" data-tooltip="swift">SWIFT</label>
+            <input class="form-input-elem" name="swift" type="text" maxlength="44" value="{{swift}}">
+
+            <label class="form-label" data-tooltip="bankAccountName">Bank Account Name*</label>
+            <input class="form-input-elem" name="accountName" type="text" maxlength="44" required value="{{accountName}}" validationMessage="Bank Account Name is required.">
+
+            <label class="form-label" data-tooltip="bankAccountNumber">Bank Account Number*</label>
+            <input class="noparse form-input-elem" name="accountNumber" type="text" maxlength="44" required value="{{accountNumber}}" validationMessage="Account Number is required.">
+
+            <label class="form-label" data-tooltip="forFurtherCreditAccountName">For Further Credit Account Name</label>
+            <input class="form-input-elem" name="forFurtherCreditAccountName" maxlength="150" type="text" value="{{forFurtherCreditAccountName}}">
+            
+            <label class="form-label" data-tooltip="forFurtherCreditAccountNo">For Further Credit Account Number</label>
+            <input class="noparse form-input-elem" name="forFurtherCreditAccountNo" type="text" value="{{forFurtherCreditAccountNo}}">
+
+            <label class="form-label">Client Account Name</label>
+            <input class="noparse form-input-elem" name="clientAccountName" type="text" value="{{clientAccountName}}">
+
+            <label class="form-label">Client Account Number</label>
+            <input class="noparse form-input-elem" name="clientAccountNumber" type="text" value="{{clientAccountNumber}}">
+
+            <label class="form-label">Additional Reference</label>
+            <textarea name="additionalReference">{{additionalReference}}</textarea>
+        </div> 
+    </div>
+</form>

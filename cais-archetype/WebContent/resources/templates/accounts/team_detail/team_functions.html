@@ -1,0 +1,61 @@
+<div class="container_12 clearfix">
+	<div class="team-info clearfix">
+        <div class="grid_12">
+            <h2>Add Team Member</h2>
+        </div>
+        <div class="grid_6">
+             <label class="form-label">Select existing firm member</label>
+            <select data-role="dropdownlist" name="existingMembers">
+                <option>Pick a firm above</option>
+            </select>
+            <label class="form-label">First Name*</label validationMessage="First Name is required.">
+            <input name="firstName" type="text" required>
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="firstName"></span></div> 
+
+            <label class="form-label">M.I.</label>
+            <input name="middleInitial" type="text" maxlength="1">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="middleInitial"></span></div> 
+
+            <label class="form-label">Last Name*</label>
+            <input name="lastName" type="text" required validationMessage="Last Name is required."> 
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="lastName"></span></div> 
+
+            <label class="form-label">Email*</label>
+            <input name="email" type="email" required validationMessage="Email is required.">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="email"></span></div> 
+
+            <label class="form-label">Alt. Email</label>
+            <input name="alternateEmail" type="email">
+
+            <label class="form-label">Phone</label>
+            <input name="phone" type="phone">
+        </div>
+        <div class="grid_6">
+            <label class="form-label">Country*</label>
+            <input name="country" type="text" required validationMessage="Country is required.">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="country"></span></div> 
+
+            <label class="form-label">Address 1*</label>
+            <input name="street1" type="text" required validationMessage="Address is required.">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="street1"></span></div> 
+
+            <label class="form-label">Address 2</label>
+            <input name="street2" type="text">
+
+            <label class="form-label">City*</label>
+            <input name="city" type="text" required validationMessage="City is required.">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="city"></span></div> 
+
+            <label class="form-label">State*</label>
+            <input name="state" type="text" required validationMessage="State is required.">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="state"></span></div> 
+
+            <label class="form-label">Postal Code *</label>
+            <input name="postalCode" type="text" required validationMessage="Postal Code is required.">
+            <div class="validation-wrapper"><span class="k-invalid-msg" data-for="postalCode"></span></div> 
+        </div>
+    </div>
+    <div class="grid_6 permList">
+        {{#.}}<label class="form-label"><input class="permission-check" type="checkbox" value="{{permissionId}}">{{permission}}</label>{{/.}}
+    </div>
+</div>

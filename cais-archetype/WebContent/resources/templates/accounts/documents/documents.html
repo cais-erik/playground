@@ -1,0 +1,29 @@
+<div class="tabstrip">
+	<ul>
+		<li class="k-state-active">Fund Communications</li>
+		<li class="">Transaction Documents</li>
+		<!-- <li class="k-state-disabled">KYC</li>  -->
+	</ul>
+	<div class="documents">
+		<div class="title-header">
+			{{#user.caisemployee}}
+			<a class="upload-document" href="#"><i class="icon-upload"></i> Add Document</a>
+			{{/user.caisemployee}}
+			<label for="year">Display Statements for Year</label>
+			<select data-role="dropdownlist" name="year">
+				{{#dates}}<option value="{{.}}">{{.}}</option>{{/dates}}
+			</select>
+		</div>
+		<div class="main-column-content">
+			<div class="document-list"></div>
+		</div>
+	</div>
+	<div class="transactions">
+		<div class="main-column-content">
+			<div class="subscription-doc-list"></div>
+		</div>
+	</div>
+	<!-- <div class="kyc">
+		kyc
+	</div> -->
+</div>

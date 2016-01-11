@@ -1,0 +1,16 @@
+<div class="cancel-dialog cancel-dialog-icon">
+	<i class="icon-cancel"></i>
+</div>
+<div class="base-k-dialog-content">
+	<article class="marketing-media-article clearfix" id="{{model.id}}">
+		<h1>{{model.title}}</h1>
+		<time class="published" datetime="{{publishedDate}}">{{formatDate model.publishedDate 'MMMM d yyyy'}}</time>
+		{{{model.content}}}
+	</article>
+	
+</div>    
+<footer class="base-k-dialog-footer">
+	<ul class="confirm-buttons">
+	    <li class="command-button cancel-dialog"><a><div class="inner">{{options.confirm_text}}</div></a></li>
+	</ul>
+</footer>

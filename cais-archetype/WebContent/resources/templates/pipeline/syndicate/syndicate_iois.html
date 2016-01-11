@@ -1,0 +1,30 @@
+<header class="pipeline-detail-header">
+	<span class="close"><i class="icon-cancel-circled"></i></span>
+	<h1>
+		Order Detail: <span name="issuer"></span> (<span name="ticker"></span>)
+	</h1>
+	{{^if finalized}}
+	<span class="subhead">To edit your IOI prior to allocation, directly click into the cell.</span>
+	{{/if}}
+</header>
+<div class="ioi-view-container">
+	<div class="ioi-grid-container">
+		<div class="ioi-grid cm-pipeline"></div>
+	</div>
+	<h2>Offering Details</h2>
+	<div class="product-viewer"></div>
+</div>
+<footer class="pipeline-detail-footer">
+	<ul class="action-btns">
+		{{#if caisemployee}}<li><a class="button-option save-iois icon-check" href="#">Save</a></li>{{/if}}
+		<li><a class="button-option add-ioi icon-plus" href="#">Add IOI</a></li>
+		{{#if caisemployee}}<li><a class="button-option notify icon-mail" href="#">Notify Accounts</a></li>{{/if}}
+		{{#if caisemployee}}<li><a class="button-option book-transaction icon-suitcase" href="#">Book Transactions</a></li>{{/if}}
+		{{#if caisemployee}}<li><a class="button-option finalize-transaction icon-lock" href="#">Finalize Transaction</a></li>{{/if}}
+		{{#if offering.finalProspectusId}}
+		{{#if caisemployee}}<li><a class="button-option notify-final-prospectus icon-mail" href="#">Notify of Final Prospectus</a></li>{{/if}}
+		<li><a class="button-option download-final-prospectus icon-download" href="/api/document/download?docId={{offering.finalProspectusId}}" target="_blank">View Final Prospectus</a></li>
+		{{/if}}
+		{{#if caisemployee}}<li><input type="file" name="file" class="button-option upload-prospectus"></li>{{/if}}
+	</ul>
+</footer>

@@ -1,0 +1,21 @@
+<form class="container_12 form">
+    <div class="grid_6">
+        <h2>Move Client/Investor:</h2>
+        <input name="investorId" required validationMessage="Select a client">
+    </div>
+    <div class="grid_6">
+        <h2>To Advisor Team:</h2>
+        <input name="advisorTeamId" required validationMessage="Select a team">
+        <!-- <select name="advisorTeamId" data-role="dropdownlist">
+            {{#teams}}
+            <option value="{{advisorTeamId}}">{{advisorName}}</option>
+            {{/teams}}
+        </select> -->
+    </div>
+</form>
+<footer class="base-k-dialog-footer">
+    <ul class="confirm-buttons">
+        <li class="cancel-dialog command-button-black"><a href="#">Cancel</a></li>
+        <li class="move-investor command-button"><a href="#">Move<i class="icon-right-bold"></i></a></li>
+    </ul>
+</footer>

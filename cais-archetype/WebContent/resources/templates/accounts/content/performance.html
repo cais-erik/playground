@@ -1,0 +1,54 @@
+<div class="title-header">Current Holdings</div>
+<div class="commands">
+	<div class="print"></div>
+	<!--<div class="help"></div> -->
+</div>
+<div class="main-column-content">
+	<div class="chart-panel-wrapper">
+		<div class="chart-panel">
+			<div class="header totalHoldings">Total Holdings<!-- <div class="expand expand-chart"></div> --></div>
+			<div class="form date-selectors">
+				NAV Date Range
+				<input class="date-picker" name="from" type="text"> - <input class="date-picker" name="to" type="text">
+			</div>
+			<div class="chart-wrapper">
+				<div class="chart" 
+					data-role="chart" 
+					data-theme="blueopal"
+					data-series="[{ field: 'value', categoryField: 'date'}]" 
+					data-tooltip="{ visible: true, template: valueFormatSelector }"
+					data-series-defaults="{ type: 'line', labels: { visible: false } }" 
+					data-category-axis="{labels: {
+						template: function(data) {
+							return kendo.toString(new Date(data.value), 'M/yy');
+						} 
+					}}"
+					data-value-axis="{ labels: { template: valueFormatSelector }, title: { text: 'Millions US$', font: '14px Arial,Helvetica,sans-serif', margin: 10 } }"
+					data-bind="source: totalHoldingsData" >
+				</div>
+
+			</div>
+			<div class="chart-footer"></div>
+		</div>
+	</div>
+	<div class="charts-wrapper">
+		<div class="chart-panel-wrapper">
+			<div class="chart-panel">
+				<div class="header byFund">Holdings By Fund - Current Totals<!-- <div class="expand expand-chart"></div> --></div>
+				<div class="chart-wrapper">
+					<div class="chart" 
+						data-role="chart" 
+						data-theme="blueopal"  
+						data-series="[{ field: 'totalValue',overlay: {gradient: 'none'}}]" 
+						data-series-defaults="{ type: 'pie', labels: { visible: true }, pie: { categoryField: 'fund', labels: { template: '#= category #' } } }" 
+						data-value-axis="{ labels: { format: '{0:C0}' } }"
+						data-tooltip="{ visible: true, template: valueFormatSelector }"
+						data-legend="{ visible: false }"
+						data-bind="source: holdingsByFundData">
+					</div>
+				</div>
+				<div class="chart-footer"></div>
+			</div>
+		</div>
+	</div>
+</div>

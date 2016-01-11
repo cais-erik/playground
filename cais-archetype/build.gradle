@@ -1,6 +1,9 @@
-apply plugin: 'java'
-apply plugin: 'eclipse-wtp'
-apply plugin: 'war'
+plugins {
+  id "com.eriwen.gradle.js" version "1.12.1"
+  id "java"
+  id "war"
+  id "eclipse-wtp"
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -39,6 +42,14 @@ sourceSets {
     }
 }
 
+javascript.source {
+    custom {
+        js {
+            srcDir 'WebContent/resources/js'
+        }
+    }
+}
+
 dependencies {
 
 	compile	'log4j:log4j:1.2.17'
@@ -61,6 +72,15 @@ dependencies {
 	testRuntime 'org.springframework.security:spring-security-test:4.0.3.RELEASE'
 }
 
+requireJs {
+    source = javascript.source.custom.js.files
+    destDir = file("${buildDir}/caisx-archetype/resources/js")
+   	requirejs.impl = file("WebContent/resources/build/r.js")
+   	requirejs.options = [baseUrl: 'WebContent/resources/js',
+    					mainConfigFile: 'WebContent/resources/js/apps/common.js',
+    					optimize: 'uglify']
+}
+
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.3'
+	gradleVersion = '2.9'
 }

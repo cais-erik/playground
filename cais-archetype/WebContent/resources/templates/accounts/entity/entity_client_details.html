@@ -1,0 +1,62 @@
+<form id="clientInformation" class="form">      
+    <div class="entity-details-container clearfix container_12">
+        {{#newModel}}
+        <p>Enter a Client Name and click "Create New" to add a new client.</p>
+        {{/newModel}}
+        <div id="clientCommunicator"></div>    
+        <div class="grid_6">
+            <div class="form-heading">Client Contact</div>
+
+            <label class="form-label" data-tooltip="The firm this advisor belongs to.">Client Name</label>
+            <input class="form-input-elem" {{#newModel}}name="investorName"{{/newModel}}{{^newModel}}name="name"{{/newModel}} type="text" value="{{name}}" {{^newModel}}disabled="disabled"{{/newModel}} required /> 
+            
+            <label class="form-label" data-tooltip="Office Phone">Phone</label>
+            <input class="form-input-elem" name="phone" type="tel" value="{{phone}}" {{^newModel}}disabled="disabled"{{/newModel}} />
+            <!--
+            <label class="form-label" data-tooltip="Mobile Phone">Phone - Mobile</label>
+            <input type="tel" {{^newModel}}disabled="disabled"{{/newModel}} />
+            -->
+            
+            <label class="form-label" data-tooltip="Fax Number">Fax</label>
+            <input class="form-input-elem" name="fax" type="tel" value="{{fax}}" {{^newModel}}disabled="disabled"{{/newModel}} />
+
+            <label class="form-label" data-tooltip="Advisor Email">Email</label>
+            <input class="form-input-elem" name="email" type="email" value="{{email}}" {{^newModel}}disabled="disabled"{{/newModel}} required /> 
+        </div>
+
+        <div class="grid_6">
+            <div class="form-heading">Client Address</div>
+
+            <label class="form-label" data-tooltip="Address">Address Line 1</label>
+            <input class="form-input-elem" name="street1" type="text" value="{{street1}}" {{^newModel}}disabled="disabled"{{/newModel}} /> 
+
+            <label class="form-label" data-tooltip="Address">Address Line 2</label>
+            <input class="form-input-elem" name="street2" type="text" value="{{street2}}"{{^newModel}}disabled="disabled"{{/newModel}} />
+            <div class="clearfix input-group-wrap">
+                <div class="grid_6 alpha">
+                    <label class="form-label">City</label>
+                    <input class="form-input-elem" name="city" type="text" value="{{city}}" {{^newModel}}disabled="disabled"{{/newModel}} /> 
+                </div>
+                <div class="grid_3">
+                    <label class="form-label">State/Prov.</label>
+                    <input class="form-input-elem" name="state" type="text" value="{{state}}" {{^newModel}}disabled="disabled"{{/newModel}} /> 
+                </div>
+                <div class="grid_3 omega">
+                    <label class="form-label">Zip/Postal</label>
+                    <input class="form-input-elem" name="postalCode" type="text" value="{{postalCode}}" {{^newModel}}disabled="disabled"{{/newModel}} />
+                </div>
+            </div>
+            <label class="form-label" data-tooltip="Country">Country</label>
+            <select data-role="dropdownlist" name="country" value="{{country}}" required validationMessage="Country is required" {{^newModel}}disabled="disabled"{{/newModel}}>
+                <option value="">Select country...</option>
+                {{countryOptions country}}
+            </select>
+        </div>
+    </div>
+</form>
+{{#newModel}}
+<div class="control-bar">
+    <div class="primaryButton save"><div><span>CREATE NEW</span></div></div>
+</div>
+{{/newModel}}
+

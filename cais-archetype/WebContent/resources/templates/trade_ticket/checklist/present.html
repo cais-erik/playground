@@ -1,0 +1,59 @@
+<div id="docs-presented">
+    <div class="details-header"><span>Download or send documents for presentation to clients</span></div>
+    <div class="scrollable-content">
+        <div class="message">
+            <div class="from"><div class="label">From</div><select data-role="dropdownlist" name="fromaddress"></select></div>
+            <div class="to"><div class="label">To*</div><div class="value"><input id="toaddress" type="text" required></div></div>
+            <div style="font-size: .8em; margin: -9px 0 0 81px;"><div class="label">(Please enter multiple email addresses as comma(,) separated)</div></div>
+            <div class="to"><div class="label">Password*</div><div class="value"><input id="attachmentPwd" type="text"  maxlength="10" required></div></div>
+            <div class="to"><div class="label">Subject</div><div class="value"><input id="subject" type="text" /></div></div>
+            <textarea id="message-body"></textarea>
+        </div>
+
+        <div class="documents">
+            <div class="attached-documents">
+                <div class="title">Attached Documents</div>
+                <ul class="docs-presentedList document-list">
+                    {{#collection.docs}}
+                    <li>
+                        <label id="{{documentId}}">
+                            {{#if checkBoxEnabled}}
+                            <input type="checkbox" class="doc-selector" style="margin-top: -6px;" data-docid="{{documentId}}" docname="{{fileName}}" checked>
+                            {{else}}
+                            <input type="checkbox" class="doc-selector" style="margin-top: -6px;" data-docid="{{documentId}}" docname="{{fileName}}" checked disabled>
+                            {{/if}}
+                            <img class="download-doc" style="margin-top: 2px" src="/resources/assets/icons/pdf-icon.png" alt="doc" data-docid="{{documentId}}" />
+                            <span>{{fileName}}</span>
+                        </label>
+                    </li>
+                    {{/collection.docs}}
+                </ul>
+            </div>
+            <div class="title">The following documents cannot be emailed</div>
+            <ul class="docs-restrictedList">
+                {{#collection.paulsonDocs}}
+                <li>
+                    <label id="{{documentId}}">
+                        <input type="checkbox" class="doc-selector" style="margin-top: -6px" data-docid="{{documentId}}" docname="{{fileName}}" checked>
+                        <img class="download-doc" style="margin-top: 2px" src="/resources/assets/icons/pdf-icon.png" alt="doc" data-docid="{{documentId}}">
+                        <span>{{fileName}}</span>
+                    </label>
+                </li>
+                {{/collection.paulsonDocs}}
+            </ul>
+        </div>
+        <div class="additional-documents">
+            <div class="title">Additional Documents</div>
+            <input name="additional-files" id="additional-files" type="file"/>
+            <ul class="docs-additionalList document-list"></ul>
+        </div>
+    </div>
+</div>
+<div class="details-footer">
+    <ul class="commands">
+        <li  id="downloaddocs" class="command-button"><a><div class="inner">DOWNLOAD</div></a></li>
+        <li class="command-button" id="markComplete" style="display: none"><a><div class="inner">Mark As Complete</div></a></li>
+        <li id="senddocs" class="command-button"><a><div class="inner">SEND</div></a></li>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,46 @@
+<section class="container_12 clearfix">
+	<div class="grid_6">
+		<h2>Locations</h2>
+		<ul class="location-list">
+			{{#organization}}
+			<li class="location">
+				<h3>{{name}}</h3>
+				{{location.address1}}<br/>
+				{{#if location.address2}}{{location.address2}} </br>{{/if}}
+				<!-- {{location.suite}} {{location.floor}}<br/> -->
+				{{location.city}}, {{location.state}}, {{location.zipcode}}
+			</li>
+			{{/organization}}
+		</ul>
+	</div>
+	<div class="grid_6 firm-charts">
+	</div>
+</section>
+<section class="container_12 clearfix">
+	<div class="grid_12">
+		<h2>Organization Structure</h2>
+		<ul class="org-list">
+			{{#employeesByGroup}}
+				<li class="business-unit">
+					<h3>{{name}} <span class="count">{{count}} members</span></h3>
+					{{#if members}}
+					<ul>
+						{{#members}}
+						<li class="employee status-{{status}}">
+							<h4 class="name">{{firstName}}{{#if middleInitial}} {{middleInitial}}.{{/if}} {{lastName}}</h4>
+							<h5 class="title">{{title}}</h5>
+							<div class="meta">
+								E: {{#if email}}<a href="mailto:{{email}}">{{email}}</a>{{else}}N/A{{/if}}<br/>
+								O: {{#if phone}}{{phone}}{{else}}N/A{{/if}}<br/>
+								Started: {{#if startDate}}{{formatDate startDate 'y'}}{{else}}N/A{{/if}}<br/>
+								{{#if linkedinUrl}}<a href="{{linkedinUrl}}" target="_blank"><i class="icon-marketing-linkedin-circled"></i>LinkedIn</a>{{else}}<br/>{{/if}}
+							</div>
+						</li>
+						{{/members}}
+					</ul>
+					{{/if}}
+				</li>
+			{{/employeesByGroup}}
+		</ul>
+	</div>
+</section>

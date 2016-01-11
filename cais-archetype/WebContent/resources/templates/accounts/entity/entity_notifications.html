@@ -1,0 +1,24 @@
+<form id="notifications" class="form">
+	<div class="entity-details-container clearfix container_12">
+		<div class="grid_12">
+		    <div id="notificationsCommunicator"></div>  
+		    <div class="form-heading">Notifications</div>
+		    <p style="margin-left: 0;">All investor communications are sent electronically. If an investor requires post mail, please note this responsibility is on the member firm.</p>		    
+		    <div class="notifications-table-container"></div>
+		</div>
+		<div class="grid_6">
+			<label><input name="overRideAdvisorEmail" type="checkbox" value="true" {{#overRideAdvisorEmail}}checked{{/overRideAdvisorEmail}}>Would you like to override the advisor email address seen below?</label>
+			<div class="show-for-alternateAdvisorEmail hidden">
+				<label class="form-label" for="alternateAdvisorEmail">Alternative advisor email for notifications</label>
+				<input class="form-input-elem" type="email" name="alternateAdvisorEmail" value="{{alternateAdvisorEmail}}">
+			</div>
+		</div>
+		<div class="grid_6">
+			<div style="float: right; margin: 10px;" class="secondaryButton create-party">
+		    	<div><span>Create New Interested Party</span></div>
+		    </div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="notification-details-container"></div>
+	 </div>
+</form>

@@ -1,0 +1,56 @@
+<div id="trade-info">
+	<div class="cancel-dialog cancel-dialog-icon">
+        <i class="icon-cancel"></i>
+    </div>
+    <div class="dialog-header">
+    	<!--<img src="/resources/assets/page-dialog/left-icon.png" alt="left" class="left-icon"/>-->
+    	<div id="subscription">Trade Ticket : <span></span></div>
+    	<table class="subscription-details">
+    		<tbody>
+    			<tr>
+    				<td>Firm: <span name="companyName"></span></td>
+    				<td>Fund: <span name="legalName"></span></td>
+    				<td>Investment Date: <span data-dateformatter="d" name="investmentDate"></span></td>
+    			</tr>
+    			<tr>
+    				<td>Advisor: <span name="advisorFirstName"></span> <span name="advisorLastName"></span></td>
+    				<td>Amount: <span data-numberformatter="c0" name="amount"></span></td>
+    				<td>Investment Type: <span name="investmentType" ></span></td>
+    			</tr>
+    			<tr>
+    				<td>Investor: <span name="investorName"></span></td>
+    				<td>Share Class: <span name="shareClass"></span></td>
+    			</tr>
+    			<tr>
+    				<td>Entity: <span name="entityName"></span></td>
+    				<td>Placement Fee: <span name="placementFee"></span></td>
+    			</tr>
+    		</tbody>
+    	</table>
+        <!--<img src="/resources/assets/page-dialog/right-icon.png" alt="right" class="right-icon"/>-->
+    </div>
+
+    <div class="title-wrapper">
+        <div class="account-navigation">
+            <div id="tradeChecklistLink" class="checklist"><a data-bypass href="{{slug}}/checklist">Trade Checklist</a></div>
+            <div id="subscriptionLink" class="subscription"><a data-bypass href="{{slug}}/subscription">Subscription Data</a></div>
+            <div class="events"><a data-bypass href="{{slug}}/events">Event Log</a></div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="ui-feedback hidden">
+            <div id="informationCommunicator" class="communicator visible">
+                <div class="communicatorContent">
+                    <div class="icon-wrap success"><i class="icon-ok"></i></div>
+                    <div class="icon-wrap error"><i class="icon-attention"></i></div>
+                    <span class="message-text"></span>
+                </div>
+                <div class="communicatorClose"><i class="icon-cancel-circled"></i></div>
+            </div>
+        </div>
+        <div class="content-view" id="trade-tasks" style="display:block">           
+
+    	</div>
+    </div>
+</div>

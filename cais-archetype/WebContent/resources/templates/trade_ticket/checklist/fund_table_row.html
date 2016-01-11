@@ -1,0 +1,35 @@
+<tr id="{{productId}}">
+	<td class="fund-select">
+		{{^isNew}}
+		{{legalName}}
+		{{/isNew}}
+		{{#isNew}}
+		<select name="productId" data-role="dropdownlist" required>
+			{{#legalNameList}}
+			<option value="{{productId}}">{{legalName}}</option>
+			{{/legalNameList}}
+		</select>
+		{{/isNew}}
+	</td>
+	<td>
+		<input name="amount" type="number" {{#isNew}}min="{{minimumInvestment}}"{{/isNew}} data-role="numerictextbox" data-format="c0" required>
+	</td>
+	<td class="class-select">
+		<select name="shareClass" data-role="dropdownlist" required>
+			{{#shareClassOptions}}<option value="{{.}}">{{.}}</option>{{/shareClassOptions}}
+		</select>
+	</td>
+	<td class="placement-fee-select">
+	   <select name="placementFee" data-role="dropdownlist" {{^if isPlacementFeeApplicable}}disabled{{/if}} required>
+		   	{{#placementFeeOptions}}<option value="{{placementFeePrct}}">{{placementFeePrct}}</option>{{/placementFeeOptions}}
+	   </select>
+	</td>
+	<td style="text-align: center;">
+		<input name="investmentDate" data-format="MMM dd, yyyy" data-parse-formats="yyyy-MM-dd" type="date" data-role="datepicker" required>
+	<td>
+		<div>
+			<!-- <span class="remove-button round-button"><i class="icon-minus"></i></span> -->
+			<span class="add-button round-button"><i class="icon-plus"></i></span>
+		</div>
+	</td>
+</tr>

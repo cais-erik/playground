@@ -1,0 +1,23 @@
+<div class="trader trade-summary base-k-dialog-content" style="padding: 10px">
+	<h2>Trade Summary</h2>
+	<ul>
+		{{#.}}
+		{{#success}}
+		<li>
+			{{transaction.accountName}} {{transaction.advisorName}} | {{../responseMessage}}
+		</li>
+		{{/success}}
+		{{^success}}
+		<li>
+			Transaction error: {{../responseMessage}}
+		</li>
+		{{/success}}
+		{{/.}}
+	</ul>
+</div>
+<footer class="base-k-dialog-footer">
+	<ul class="confirm-buttons">
+		<li class="cancel-dialog command-button-black"><a href="#">Done</a></li>
+	    <li class="command-button"><a href="/investment-pipeline/cm/grid/0">Go to Pipeline</a></li>
+	</ul>
+</footer>

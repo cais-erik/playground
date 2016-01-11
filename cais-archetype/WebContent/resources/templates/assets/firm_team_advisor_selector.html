@@ -1,0 +1,39 @@
+<div class="firm-selector{{#options.hideFirm}} hidden{{/options.hideFirm}} selector" required>
+	<label class="form-label">1. Pick a Firm</label>
+	<select class="parse-int" data-role="dropdownlist" name="clientId">
+		<option value="">Select a Firm</option>
+		{{#firms}}
+		<option value="{{clientId}}">{{shortname}}</option>
+		{{/firms}}
+	</select>
+</div>
+
+<div class="team-selector{{#options.hideTeam}} hidden{{/options.hideTeam}} selector">
+	<label class="form-label">2. Pick a Team</label>
+	<select class="parse-int" data-role="dropdownlist" name="advisorTeamId" {{^teams}}disabled{{/teams}} data-notblank="true">
+		<option value="">Select a Team</option>
+		{{#teams}}
+		<option value="{{advisorTeamId}}">{{shortname}}</option>
+		{{/teams}}
+	</select>
+</div>
+
+<div class="advisor-selector{{#options.hideAdvisor}} hidden{{/options.hideAdvisor}} selector">
+	<label class="form-label">3. Pick an Advisor</label>
+	<select class="parse-int" data-role="dropdownlist" name="advisorId" {{^advisors}}disabled{{/advisors}}>
+		<option value="0">All</option>
+		{{#advisors}}
+		<option value="{{userId}}">{{shortname}}</option>
+		{{/advisors}}
+	</select>
+</div>
+
+<div class="client-selector{{#options.hideInvestors}} hidden{{/options.hideInvestors}} selector">
+	<label class="form-label">4. Pick a Client</label>
+	<select class="parse-int" data-role="dropdownlist" name="investorId" {{^clients}}disabled{{/clients}}>
+		<option value="">Select a Client</option>
+		{{#clients}}
+		<option value="{{investorId}}">{{shortname}}</option>
+		{{/clients}}
+	</select>
+</div>
