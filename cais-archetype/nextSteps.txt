@@ -5,7 +5,7 @@
  4.05)  find way to run js build-time steps (i.e. requirejs/bowser/grunt/etc)
  			- found a way to do *exactly* what caisx is doing today (committed on separate branch), but should look for a better way
  4.1)	hook in Hystrix, or maybe a Spring analog
- 5.2)	Setup a REST/Jackson example, utilizing web security and hibernate
+ 4.2)	Setup a REST/Jackson example, utilizing web security and hibernate
  5)		Get weird w/ transactions
  5.1)	hook in some Angular 2 for eval
  5.2)	hook in some EmberJS for eval 
