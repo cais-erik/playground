@@ -2,8 +2,8 @@
  2)		Create a MockMvc test/method that goes thru the whole stack thus far, including the db
  3)		Create associations in Hbn and related tests
  4) 	Create the need for OpenSessionInView and related tests
- 4.05)  find an alternate way to uglify the js which is faster 
-			-talk to Gabe about what manual steps he does
+ 4.05)  find an faster alternate way to uglify the js from gradle 
+ 4.06)  compile LESS into CSS from gradle and ask Gabe if there are addt'l steps he needs
  4.1)	hook in Hystrix, or maybe a Spring analog
  4.2)	Setup a REST/Jackson example, utilizing web security and hibernate
  4.5)   automatically update the version # in version.properties via gradle script
