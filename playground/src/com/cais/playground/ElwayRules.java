@@ -1,6 +1,6 @@
 package com.cais.playground;
 
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 public class ElwayRules {
 
@@ -12,5 +12,9 @@ public class ElwayRules {
 
 	public String getJackwagon() {
 		return "Jack.  And his wagon.  Commit 2 while other things branched off.";
+	}
+
+	public String cherryPickThis() {
+		return "bing";
 	}
 }
