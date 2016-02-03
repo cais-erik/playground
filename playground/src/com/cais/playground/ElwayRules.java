@@ -1,6 +1,6 @@
 package com.cais.playground;
 
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 public class ElwayRules {
 
@@ -8,6 +8,7 @@ public class ElwayRules {
 
 	public ElwayRules() {
 		log.info("Commit 1 while other things branched off.  And a third commit.");
+		log.info("First commit for the CherryPick test.");
 	}
 
 	public String getJackwagon() {
