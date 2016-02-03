@@ -8,7 +8,8 @@ public class ElwayRules {
 
 	public ElwayRules() {
 		log.info("Commit 1 while other things branched off.  And a third commit.");
-		log.info("For the CherryPick test:  committing something to master so that no fast-fwd can happen.");
+		log.info(
+				"For the CherryPick test:  committing something else to master thought ought conflict the cherry pick.");
 	}
 
 	public String getJackwagon() {
