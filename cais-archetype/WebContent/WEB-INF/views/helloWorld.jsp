@@ -6,6 +6,7 @@
 	<h1>Hello World, using SpringMvc!</h1>
 	<ul>
 		<li>Echo: ${echo}</li>
+		<li>Hey Tiger, testing branch->tag->merge->delete branch</li>
 	</ul>
 </body>
 
