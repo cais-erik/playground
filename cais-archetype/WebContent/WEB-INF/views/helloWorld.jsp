@@ -7,6 +7,7 @@
 	<ul>
 		<li>Echo: ${echo}</li>
 		<li>Hey Tiger, testing branch->tag->merge->delete branch</li>
+		<li>This line would be on the same git branch, but after the tag.</li>
 	</ul>
 </body>
 
