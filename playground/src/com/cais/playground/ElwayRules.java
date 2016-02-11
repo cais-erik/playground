@@ -8,8 +8,7 @@ public class ElwayRules {
 
 	public ElwayRules() {
 		log.info("Commit 1 while other things branched off.  And a third commit.");
-		log.info(
-				"For the CherryPick test:  committing something else to master thought ought conflict the cherry pick.");
+		log.info("For the CherryPick test:  committing something to master so that no fast-fwd can happen.");
 	}
 
 	public String getJackwagon() {
@@ -19,4 +18,6 @@ public class ElwayRules {
 	public String cherryPickThis() {
 		return "bing";
 	}
+
+	// first commit on theOtherForkInTheRoad
 }
