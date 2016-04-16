@@ -1,4 +1,5 @@
 build:
   image: cogniteev/oracle-java:java8
   commands:
+    - chmod guo+x ./cais-archetype/gradlew
     - ./cais-archetype/gradlew test
